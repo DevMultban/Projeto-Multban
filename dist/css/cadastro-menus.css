@@ -131,14 +131,17 @@ a.nav-link.active.sidebar-menu:hover{
 .btn-tab-compras-realizadas{
     font-size: 13px;
     padding: 5px;
+    padding-block: 1px;
 }
 .coluna-acoes{
     width: 46rem;
 }
+
 /*Botões da table da aba Cartões*/
 .btn-acoes-cartoes{
     font-size: 13px;
-    padding: 5px;
+    padding: 8px;
+    padding-block: 1px;
 }
 
 #btnPesquisarCep{

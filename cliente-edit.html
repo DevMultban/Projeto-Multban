@@ -449,9 +449,9 @@
                   </div>
 
                   <div class="form-group col-md-3">
-                    <label for="clipai">Pais:</label>
+                    <label for="clipai">País:</label>
                     <select id="clipai" name="clipai" class="form-control select2 select2-hidden-accessible"
-                    data-placeholder="PESQUISE O PAÍS" style="width: 100%;" aria-hidden="true">
+                    data-placeholder="Pesquise o País" style="width: 100%;" aria-hidden="true">
                       
                       <option value="34">1058 - BRASIL</option>
                     </select>
@@ -461,13 +461,13 @@
                   <div class="form-group col-md-3">
                     <label for="cliufe">Estado:</label>
                     <select id="cliufe" name="cliufe" class="form-control select2 select2-hidden-accessible"
-                    data-placeholder="PESQUISE O ESTADO" style="width: 100%;" aria-hidden="true">
+                    data-placeholder="Pesquise o Estado" style="width: 100%;" aria-hidden="true">
                                           </select>
                   </div>
                   <div class="form-group col-md-3">
                     <label for="climun">Cidade:</label>
                     <select id="climun" name="climun" class="form-control select2 select2-hidden-accessible"
-                    data-placeholder="PESQUISE O CIDADE" style="width: 100%;" aria-hidden="true">
+                    data-placeholder="Pesquise a cidade" style="width: 100%;" aria-hidden="true">
                                           </select>
                   </div>
                 </div>
@@ -629,7 +629,7 @@
                                 <td>Cartão de Crédito Loja A</td>
                                 <td>R$ 1.500,00</td>
                                 <td>R$ 2.000,00</td>
-                                <td>1.000</td>
+                                <td>5.0</td>
                                 <td>
                                     <button class="btn btn-custom btn-acoes-cartoes">Resetar Senha</button>
                                     <button class="btn btn-custom btn-acoes-cartoes">Alterar</button>
@@ -642,6 +642,21 @@
                           </tbody>
                       </table>
                     </div>
+
+                    <div id="formNovoCartao" style="display: none;">
+                      <!-- Campos para cadastrar um novo cartão -->
+                      <form>
+                          <div class="form-group">
+                              <label for="empresa">Empresa</label>
+                              <input type="text" class="form-control" id="empresa" placeholder="Nome da Empresa">
+                          </div>
+                          <div class="form-group">
+                              <label for="numeroCartao">Número do Cartão</label>
+                              <input type="text" class="form-control" id="numeroCartao" placeholder="Número do Cartão">
+                          </div>
+                          <!-- Adicione mais campos conforme necessário -->
+                      </form>
+                  </div>
 
                     <!-- Modal para Criar Novo Cartão -->
                   <div class="modal fade" id="modalCriarCartao" tabindex="-1" role="dialog" aria-labelledby="modalCriarCartaoLabel" aria-hidden="true">
@@ -680,6 +695,7 @@
                                     <div class="form-group">
                                         <label for="tipoCartao">Tipo de Cartão:</label>
                                         <select class="form-control" id="tipoCartao" name="tipoCartao">
+                                          <option value="credito">Cartão de Crédito</option>
                                             <option value="fidelidade">Fidelidade</option>
                                             <option value="giftCard">Gift Card</option>
                                         </select>
@@ -695,8 +711,8 @@
                                 </form>
                             </div>
                             <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
-                                <button type="button" class="btn btn-primary" id="btnSalvarCartao">Salvar Cartão</button>
+                                <button type="button" class="btn btn-custom" data-dismiss="modal">Fechar</button>
+                                <button type="button" class="btn btn-custom" id="btnSalvarCartao">Salvar Cartão</button>
                             </div>
                         </div>
                     </div>
@@ -861,7 +877,7 @@
   </div>
   <!-- /.modal cnpj-->
 
-<div class="modal fade" id="cnpj-info-modal">
+<!--<div class="modal fade" id="cnpj-info-modal">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
@@ -878,14 +894,11 @@
         <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
       </div>
     </div>
-    <!-- /.modal-content -->
   </div>
-  <!-- /.modal-dialog -->
-</div>
-<!-- /.modal cnpj-->
+</div>-->
+<!-- / .modal cnpj-->
 
-
-<div class="modal fade" id="cep-info-modal">
+<!--<div class="modal fade" id="cep-info-modal">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
@@ -902,17 +915,14 @@
         <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
       </div>
     </div>
-    <!-- /.modal-content -->
   </div>
-  <!-- /.modal-dialog -->
-</div>
+</div>-->
 <!-- /.modal cep-->
 
 <!-- /.content -->
 
         </div>
         <!-- /.content-wrapper -->
-            <!--TEXTO DE COPYRIGHT NO FOOTER-->
             <footer class="main-footer">
               <strong>Copyright &copy; 2023 MULTBAN.</strong>
               Todos os Direitos Reservados - CNPJ: 01.179.943/0001-96 - <a tabindex="-1"
@@ -981,6 +991,7 @@
         }
     </style>
 
+
   <!--Modal para criar novo cartão na aba Cartões-->
   <script>
     $(document).ready(function() {
@@ -1015,6 +1026,7 @@
   });
 
 </script>
+
 <script src="plugins/jquery-validation/jquery.validate.min.js"></script>
 <script src="plugins/jquery-validation/localization/messages_pt_BR.min.js"></script>
 <script src="plugins/jquery-validation/additional-methods.js"></script>
