@@ -1,0 +1,44 @@
+
+
+.nav-link {
+    color: #a702d8;
+}
+.nav-link:hover{
+    color: #8204a8;
+}
+.btn-perfil{
+    color:#fff;
+    background-color: #1c0065;
+    border: #1c0065;
+    border-radius: .25rem;
+}
+.btn-perfil:hover{
+    background-color:#290683;
+    color: #fff;
+}
+.custom-imput{
+    width: 50%;
+}
+.txt-color{
+    color: #999;
+}
+.btn-custom {
+    background-color: #1c0065;
+    color: #fff;
+} 
+.btn-custom:hover {
+    background-color: #290683;
+    color: #fff;
+}
+.btn-delete {
+    background-color: #a702d8;
+    color: #fff;
+}
+.btn-delete:hover{
+    background-color: #9207bd;
+    color:#fff;
+}
+footer{
+    font-size: 13px;
+    text-align: center;
+}

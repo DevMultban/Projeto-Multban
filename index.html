@@ -1,0 +1,857 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+	
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- CSRF Token -->
+		<meta name="csrf-token" content="IyM1RY2lInNFexy3HYntiLGouuRlq8tokrcuUAKB">
+		<title>Home | MULTBAN</title>
+		<!-- Tell the browser to be responsive to screen width -->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- Font Awesome -->
+		<link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
+		<!-- overlayScrollbars -->
+		<link rel="stylesheet" href="plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+		<!-- Ionicons
+		<link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">-->
+		<!-- pace-progress -->
+		<link rel="stylesheet" href="plugins/pace-progress/themes/black/pace-theme-flat-top.css">
+		<link href="plugins/morris/morris.css" rel="stylesheet">
+		<link rel="stylesheet" href="plugins/datatables-checkboxes/css/dataTables.checkboxes.min.css" />
+		<link rel="stylesheet" href="plugins/datatables-select/css/select.bootstrap4.min.css" />
+		<link rel="stylesheet" href="plugins/datatables-bs4/css/dataTables.bootstrap4.min.css" />
+		<link rel="stylesheet" href="plugins/datatables-buttons/css/buttons.bootstrap4.min.css" />
+		<link rel="stylesheet" href="plugins/datatables-fixedheader/css/fixedHeader.bootstrap4.min.css" />
+		<link rel="stylesheet" href="plugins/datatables-responsive/css/responsive.bootstrap4.min.css" />
+		
+		<link rel="stylesheet" href="dist/css/multban.min.css">
+		<link rel="stylesheet" href="plugins/toastr/toastr.min.css">
+		<link rel="stylesheet" href="plugins/sweetalert2/sweetalert2.min.css">
+		
+		<!-- Google Font: Source Sans Pro -->
+		<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+		<link rel="icon" type="image/png"
+		href="dist/img/logo-multcard-minimizado-roxa.png">
+		
+	</head>
+	
+	<body
+    class="hold-transition sidebar-mini layout-fixed pace-primary layout-footer-fixed sidebar-collapse">
+		<div class="se-pre-con"></div>
+		<div class="wrapper">
+			
+			<!-- Navbar -->
+			<nav class="main-header navbar navbar-expand navbar-white navbar-light">
+				<!-- Left navbar links -->
+				<ul class="navbar-nav navbar-nav-pdv">
+					<li class="nav-item">
+						<a class="nav-link" data-widget="pushmenu" href="#"><i class="fas fa-bars"></i></a>
+					</li>
+				</ul>
+				
+				<!-- Right navbar links -->
+				<ul class="navbar-nav ml-auto">
+					<!-- Notifications Dropdown Menu -->
+					
+					<li class="nav-item dropdown">
+						<a class="nav-link" data-toggle="dropdown" href="#">
+							<i class="far fa-bell"></i>
+							<span class="badge badge-warning navbar-badge">2</span>
+						</a>
+						<div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+							<span class="dropdown-item dropdown-header">2 Notificações</span>
+							
+							
+							<div class="dropdown-divider"></div>
+							<a href="#" class="dropdown-item dropdown-footer">Ver todas</a>
+						</div>
+					</li>
+					<!-- User Profile Dropdown Menu -->
+					<li class="nav-item dropdown user-menu">
+						<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">
+							<span class="d-none d-md-inline">Usuário</span>
+						</a>
+						<ul class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+							<!-- User image -->
+							<li class="user-header bg-primary" style="background-color:#1c0065 !important;">
+								<img src="dist/img/no-product-image.png"
+                                class="img-circle elevation-2" alt="User Image">
+								
+								<p>
+									Usuário 
+									<small>Data de cadastro: 16/01/2025</small>
+								</p>
+							</li>
+							<li class="user-footer">
+								<a href="#" class="btn btn-default btn-flat">Perfil</a>
+								<a href="./login.html" class="btn btn-default btn-flat float-right">Sair</a>                           
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</nav>
+			<!-- /.navbar -->
+			
+			<!-- Main Sidebar Container -->
+			<!-- Main Sidebar Container -->
+			<aside class="main-sidebar sidebar-dark-primary elevation-4">
+				
+				<!-- Brand Logo Multcard -->
+				 <!--COR DA SIDEBAR NA PARTE DA LOGO e ALINHAMENTO DA LOGO-->
+				<a href="/" class="brand-link" style="background-color:#1c0065; padding-bottom: 5px;">
+					<!--LOGO MULTCARD MINIMIZADA-->
+					<img src="dist/img/logo-amarela-min.png"
+					alt="MULTBAN"
+					title="MULTBAN"
+					class="brand-image img-circle" style="opacity: .8">
+					<!--IDENTIFICAR ESSA CLASS PRA COLOCAR UM IMG COM A LOGO MULTCARD E VER O CSS DESSE SPAIN PRA SE BASEAR NO TAMANHO DO TXT-->
+					
+					<!--VERIFICAR COMO VER ISSO MELHOR-->
+                    <span class="brand-text font-weight-light">
+						<img src="dist/img/logo-amarela.png" alt="" style="width: 110px; scroll-padding-inline: 0px;">
+						</span>
+				</a>
+				
+				<!-- Sidebar -->
+				<div class="sidebar" style="background-color:#1c0065;">
+					
+					<!-- Sidebar Menu -->
+					<nav class="mt-2">
+						<ul role="menu" data-widget="treeview" data-accordion="false" class="nav nav-pills nav-sidebar flex-column nav-flat nav-child-indent">
+							<li class="nav-item">
+								<a href="/" class="nav-link"><i class="nav-icon fas fa-tachometer-alt"></i> 
+									<p>Home</p>
+								</a>
+							</li>
+							<li class="nav-item">
+								<a href="#" class="nav-link" >
+									<i class="nav-icon fas fa-plus-square"></i>
+								<p>Cadastros <i class="right fas fa-angle-left"></i></p></a>
+								<ul class="nav nav-treeview" style="display: none;">
+									<li class="nav-item">
+										<a class="nav-link" href="./usuario-index.html">
+											<i class="far nav-icon">
+												<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
+												<path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6"/>
+												</svg>
+											</i> 
+											<p>Usuário</p>
+										</a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link" href="./cliente-index.html">
+											<i class="far nav-icon">
+												<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-person-vcard-fill" viewBox="0 0 16 16">
+												<path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm9 1.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 0-1h-4a.5.5 0 0 0-.5.5M9 8a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 0-1h-4A.5.5 0 0 0 9 8m1 2.5a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 0-1h-3a.5.5 0 0 0-.5.5m-1 2C9 10.567 7.21 9 5 9c-2.086 0-3.8 1.398-3.984 3.181A1 1 0 0 0 2 13h6.96q.04-.245.04-.5M7 6a2 2 0 1 0-4 0 2 2 0 0 0 4 0"/>
+												</svg>
+											</i> 
+											<p>Cliente</p>
+										</a>
+									</li>
+									<li class="nav-item"><a href="./empresa-index.html" class="nav-link">
+										<i class="far nav-icon">
+											<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-briefcase-fill" viewBox="0 0 16 16">
+												<path d="M6.5 1A1.5 1.5 0 0 0 5 2.5V3H1.5A1.5 1.5 0 0 0 0 4.5v1.384l7.614 2.03a1.5 1.5 0 0 0 .772 0L16 5.884V4.5A1.5 1.5 0 0 0 14.5 3H11v-.5A1.5 1.5 0 0 0 9.5 1zm0 1h3a.5.5 0 0 1 .5.5V3H6v-.5a.5.5 0 0 1 .5-.5"/>
+												<path d="M0 12.5A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5V6.85L8.129 8.947a.5.5 0 0 1-.258 0L0 6.85z"/>
+											</svg>
+											</i>  
+										<p>Empresa</p>
+									</a>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</nav>
+					<!-- /.sidebar-menu -->
+				</div>
+				<!-- /.sidebar -->
+			</aside>
+			
+			<!-- Content Wrapper. Contains page content -->
+			<div class="content-wrapper">
+				<!-- Content Header (Page header) -->
+				<div class="content-header" style="padding: 0.5rem">
+					<div class="container-fluid">
+						<div class="row mb-2">
+							<div class="col-sm-6">
+								<ol class="breadcrumb ">
+									<li class="breadcrumb-item active">Home</li>
+								</ol>
+							</div><!-- /.col -->
+						</div><!-- /.row -->
+					</div><!-- /.container-fluid -->
+				</div>
+				<!-- /.content-header -->
+				<section class="content">
+					<div class="container-fluid">
+						<div class="row">
+							<div class="col-lg-3 col-xs-6">
+								<!-- small box -->
+								 <!--QUADRADOS COLORIDOS, VERIFICAR SE ESSES QUADROS TERIAM ESSES TITULOS OU SE SERIAM DE OUTRO CONTEUDO-->
+								<div class="small-box bg-info">
+									<div class="inner">
+										<h3>0</h3>
+										<b>
+											<p>VENDAS</p>
+										</b>
+									</div>
+									<div class="icon">
+										<i class="fas fa-money-bill"></i>
+									</div>
+									<div class="small-box-footer">
+										Total de Vendas
+									</div>
+								</div>
+							</div>
+							<!-- ./col -->
+							<div class="col-lg-3 col-xs-6">
+								<!-- small box -->
+								<div class="small-box bg-green">
+									<div class="inner">
+										
+										<h3>0</h3>
+										<b>
+											<p><span>ITENS VENDIDOS</span></p>
+										</b>
+									</div>
+									<div class="icon">
+										<i class="ion ion-stats-bars"></i>
+									</div>
+									<div class="small-box-footer">
+										Total Vendido
+									</div>
+								</div>
+							</div>
+							<!-- ./col -->
+							<div class="col-lg-3 col-xs-6">
+								<!-- small box -->
+								<div class="small-box bg-yellow">
+									<div class="inner">
+										<h3>2</h3>
+										
+										<b>
+											<p>CLIENTES</p> <!--AQUI SERIA CLIENTES OU PACIENTES?-->
+										</b>
+									</div>
+									<div class="icon">
+										<i class="ion ion-person-add"></i>
+									</div>
+									<a href="./cliente-index.html" class="small-box-footer">
+										
+										<i class="fa fa-arrow-circle-right"></i> Ver página
+									</a>
+								</div>
+							</div>
+							<!-- ./col -->
+							<div class="col-lg-3 col-xs-6">
+								<!-- small box -->
+								<div class="small-box bg-red">
+									<div class="inner">
+										<h3>1</h3>
+										<b>
+											<p>PRODUTOS</p>
+										</b>
+									</div>
+									<div class="icon">
+										<i class="fa fa-archive"></i>
+									</div>
+									<a href="#" class="small-box-footer">
+										<i class="fa fa-arrow-circle-right"></i> Ver página
+									</a>
+								</div>
+							</div>
+						</div>
+						
+						<div class="row">
+							<div class="col-lg-12 col-md-12">
+								<div class="card">
+									<div class="card-header ui-sortable-handle">
+										<h3 class="card-title">
+											<i class="fas fa-chart-pie mr-1"></i>
+											Vendas mês a mês
+										</h3>
+										<div class="card-tools">
+											<button type="button" class="btn btn-tool" data-card-widget="collapse"><i
+												class="fas fa-minus"></i>
+											</button>
+										</div>
+									</div><!-- /.card-header -->
+									<div class="card-body">
+										<div id="flotchartMes"></div>
+									</div><!-- /.card-body -->
+								</div>
+							</div>
+						</div>
+						
+						<div class="row">
+							<div class="col-lg-12 col-md-12">
+								<div class="card">
+									<div class="card-header ui-sortable-handle">
+										<h3 class="card-title">
+											<i class="fas fa-chart-pie mr-1"></i>
+											Movimento de Caixa
+										</h3>
+										<div class="card-tools">
+											<button type="button" class="btn btn-tool" data-card-widget="collapse"><i
+												class="fas fa-minus"></i>
+											</button>
+											<!--button type="button" class="btn btn-tool" data-card-widget="remove"><i
+											class="fas fa-times"></i></button-->
+										</div>
+									</div><!-- /.card-header -->
+									<div class="card-body p-0">
+										<div id="flotchartMov"></div>
+									</div><!-- /.card-body -->
+								</div>
+							</div>
+						</div>
+						
+						<div class="row">
+							<div class="col-lg-12 col-md-12">
+								<div class="card">
+									<div class="card-header ui-sortable-handle">
+										<h3 class="card-title">
+											<i class="fas fa-chart-pie mr-1"></i>
+											Novos clientes
+										</h3>
+										<div class="card-tools">
+											<button type="button" class="btn btn-tool" data-card-widget="collapse"><i
+												class="fas fa-minus"></i>
+											</button>
+											<!--button type="button" class="btn btn-tool" data-card-widget="remove"><i
+											class="fas fa-times"></i></button-->
+										</div>
+									</div><!-- /.card-header -->
+									<div class="card-body p-0">
+										<div id="flotchartCadasCli"></div>
+									</div><!-- /.card-body -->
+								</div>
+							</div>
+						</div>
+						
+						<div class="row">
+							<div class="col-md-6">
+								<div class="card">
+									<div class="card-header">
+										<h3 class="card-title">Produtos mais vendidos este mês</h3>
+										<div class="card-tools">
+											<button type="button" class="btn btn-tool" data-card-widget="collapse"><i
+												class="fas fa-minus"></i>
+											</button>
+											<!--button type="button" class="btn btn-tool" data-card-widget="remove"><i
+											class="fas fa-times"></i></button-->
+										</div>
+									</div>
+									<!-- /.card-header -->
+									<div class="card-body p-2">
+										<table id="maisvendidos-table" class="table table-hover">
+											<thead>
+												<tr>
+													<th style="width: 10px">ID</th>
+													<th>Produto</th>
+													<th>Preço</th>
+													<th>Qtde.</th>
+													<th width="80">Total</th>
+													<th>Porcent.</th>
+												</tr>
+											</thead>
+											<tfoot>
+												<tr>
+													<th></th>
+													<th></th>
+													<th></th>
+													<th></th>
+													<th></th>
+													<th></th>
+												</tr>
+											</tfoot>
+										</table>
+									</div>
+									<!-- /.card-body -->
+								</div>
+							</div>
+							<div class="col-md-6">
+							<div class="card card-outline card-primary" style="border-top-color: #a702d8;">
+							<div class="card-header with-border">
+							<h3 class="card-title">Movimentacao caixa</h3>
+							<div class="card-tools">
+							<button type="button" class="btn btn-tool" data-card-widget="collapse">
+							<i class="fas fa-minus"></i>
+							</button>
+							</div>
+							</div>
+							<div class="card-body chart-responsive"><br>
+							<div class="chart" id="sales-chart" style="height: 300px; position: relative;"></div>
+							</div>
+							</div>
+							</div>
+							</div>
+							
+							
+							</div>
+							</section>
+							
+							
+							</div>
+							<!-- /.content-wrapper -->
+							 <footer class="main-footer" style="font-size: 13px;">
+							<strong>Copyright &copy; 2023 MULTBAN.</strong>
+							Todos os Direitos Reservados - CNPJ: 01.179.943/0001-96 - <a tabindex="-1"
+							href="#" style="color: #a702d8;">Desenvolvido por MultTech Softwares.</a>
+							<div class="float-right d-none d-sm-inline-block">
+							<b>Version</b> 1.0.0.0
+							</div>
+							</footer>
+							
+							<!-- Control Sidebar -->
+							<aside class="control-sidebar control-sidebar-dark">
+							<!-- Control sidebar content goes here -->
+							</aside>
+							<!-- /.control-sidebar -->
+							</div>
+							<!-- ./wrapper -->
+							<!-- jQuery -->
+							<script src="plugins/jquery/jquery.min.js"></script>
+							<!-- Bootstrap 4 -->
+							<script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+							<!-- overlayScrollbars -->
+							<script src="plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+							<!-- pace-progress -->
+							<link rel="stylesheet" href="plugins/pace-progress/themes/blue/pace-theme-flash.css" />
+							<script src="plugins/pace-progress/pace.min.js"></script>
+							<!-- multban App -->
+							<script src="dist/js/multban.min.js"></script>
+							<!-- pre loading -->
+							<script src="plugins/modernizr/2.8.3/modernizr.js"></script>
+							<!-- shortcut -->
+							<script src="plugins/shortcut/shortcut.js"></script>
+							
+							<script src="plugins/jquery-mask/jquery.mask.js"></script>
+							<!-- toastr -->
+							<script src="plugins/toastr/toastr.min.js"></script>
+							<!-- sweetalert -->
+							<script src="plugins/sweetalert2/sweetalert2.all.min.js"></script>
+							<!-- lodash -->
+							<script src="plugins/lodash/lodash.min.js"></script>
+							
+							<!-- formatCurrency -->
+							<script src="plugins/formatCurrency/jquery.formatCurrency-1.4.0.js"></script>
+							<script src="plugins/formatCurrency/i18n/jquery.formatCurrency.pt-BR.js"></script>
+							
+							<style>
+							.no-js #loader {
+							display: none;
+							}
+							
+							.js #loader {
+							display: block;
+							position: absolute;
+							left: 100px;
+							top: 0;
+							}
+							
+							.se-pre-con {
+							position: fixed;
+							left: 0px;
+							top: 0px;
+							width: 100%;
+							height: 100%;
+							z-index: 9999;
+							background: url('dist/img/loading/preloader_3.gif') center no-repeat #fff;
+							}
+							</style>
+							<script>
+							// Wait for window load
+							$(window).on('load', function() {
+							// Animate loader off screen
+							$(".se-pre-con").fadeOut("slow");
+							Pace.stop();
+							});
+							</script>
+							
+							<script src="plugins/select2/js/select2.full.min.js"></script>
+							<script src="plugins/highcharts/highcharts.js"></script>
+							<script src="plugins/highcharts/modules/exporting.js"></script>
+							<script src="plugins/highcharts/modules/export-data.js"></script>
+							
+							<script src="plugins/morris/morris.min.js"></script>
+							<script src="plugins/raphael/raphael.min.js"></script>
+							<script src="plugins/chart-js/Chart.js"></script>
+							<script src="plugins/datatables/jquery.dataTables.min.js"></script>
+							<script src="plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+							<script src="plugins/datatables-select/js/dataTables.select.min.js"></script>
+							<script src="plugins/datatables-fixedheader/js/dataTables.fixedHeader.min.js"></script>
+							<script src="plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
+							<script src="plugins/datatables-checkboxes/js/dataTables.checkboxes.min.js"></script>
+							<script src="plugins/datatables-buttons/js/dataTables.buttons.min.js"></script>
+							<script src="plugins/datatables-buttons/js/buttons.bootstrap4.min.js"></script>
+							
+							<script src="plugins/jszip/jszip.min.js"></script>
+							<script src="plugins/pdfmake/pdfmake.min.js"></script>
+							<script src="plugins/pdfmake/vfs_fonts.js"></script>
+							<script src="plugins/datatables-buttons/js/buttons.html5.min.js"></script>
+							<script src="plugins/datatables-buttons/js/buttons.print.min.js"></script>
+							<script src="dist/js/app.js"></script>
+							<script type="text/javascript">
+							$(document).ready(function () {
+							
+							var table = $('#maisvendidos-table').DataTable({
+							//             "dom": "<'row'<'col-sm-12 col-md-6'l><'col-sm-12 text-right col-md-6'fB>>" +
+							// "<'row'<'col-sm-12'tr>>" +
+							// "<'row'<'col-sm-12 col-md-5'i><'col-sm-12 col-md-7'p>>",
+							//                 buttons: [
+							//                     {
+							//                         extend:    'copyHtml5',
+							//                         text:      '<i class="fas fa-copy"></i>',
+							//                         titleAttr: 'Copiar',
+							//                         className:'btn btn-info'
+							//                     },
+							//                     {
+							//                         extend:    'pdfHtml5',
+							//                         text:      '<i class="fas fa-file-pdf"></i>',
+							//                         titleAttr: 'Exportar PDF',
+							//                         className:'btn btn-danger'
+							//                     },
+							//                     {
+							//                         extend:    'excelHtml5',
+							//                         text:      '<i class="fas fa-file-excel"></i>',
+							//                         titleAttr: 'Exportar Excel',
+							//                         className:'btn btn-success'
+							//                     },
+							//                 ],
+							processing: false,
+							//serverSide: true,
+							responsive: true,
+							paging: true,
+							lengthChange: true,
+							searching: false,
+							ordering: true,
+							info: true,
+							autoWidth: false,
+							rowId: "id",
+							language: {
+							select: {
+							rows: {
+							_: "%d itens selecionados",
+							0: "",
+							1: "1 item selecionado",
+							},
+							},
+							sEmptyTable: "Nenhum registro encontrado",
+							sInfo:
+							"Mostrando de _START_ até _END_ de _TOTAL_ registros",
+							sInfoEmpty: "Mostrando 0 até 0 de 0 registros",
+							sInfoFiltered: "(Filtrados de _MAX_ registros)",
+							sInfoPostFix: "",
+							sInfoThousands: ".",
+							sLengthMenu: "_MENU_ resultados por página",
+							sLoadingRecords: "Carregando...",
+							sProcessing: "Processando...",
+							sZeroRecords: "Nenhum registro encontrado",
+							sSearch: "Pesquisar",
+							oPaginate: {
+							sNext: "Próximo",
+							sPrevious: "Anterior",
+							sFirst: "Primeiro",
+							sLast: "Último",
+							},
+							oAria: {
+							sSortAscending:
+							": Ordenar colunas de forma ascendente",
+							sSortDescending:
+							": Ordenar colunas de forma descendente",
+							},
+							},
+							"footerCallback": function ( row, data, start, end, display ) {
+							var api = this.api(), data;
+							
+							// converting to interger to find total
+							var intVal = function ( i ) {
+							return typeof i === 'string' ?
+							i.replace(/[\$,]/g, '')*1 :
+							typeof i === 'number' ?
+							i : 0;
+							};
+							
+							// computing column Total of the complete result
+							var qtdTotal = api
+							.column( 3 )
+							.data()
+							.reduce( function (a, b) {
+							//console.log(a, b)
+							return intVal(a) + intVal(b);
+							}, 0 );
+							
+							var valorTotal = api
+							.column( 4 )
+							.data()
+							.reduce( function (a, b) {
+							//console.log(a, b)
+							return intVal(a) + intVal(b);
+							}, 0 );
+							
+							
+							// Update footer by showing the total with the reference of the column index
+							$( api.column( 0 ).footer() ).html('Total: ');
+							$( api.column( 3 ).footer() ).html($.fn.dataTable.render.number( '.', ',', 2, '' ).display(qtdTotal));
+							$( api.column( 4 ).footer() ).html($.toMoney(valorTotal));
+							},
+							ajax: '',
+							columns: [
+							{ data: 'idproduto', name: 'idproduto' },
+							{ data: 'descricao', name: 'descricao' },
+							{ data: 'preco', name: 'preco', render: $.fn.dataTable.render.number( '.', ',', 2, 'R$ ' ) },
+							{ data: 'quantidade', name: 'quantidade', render: $.fn.dataTable.render.number( '.', ',', 2, '' )},
+							{ data: 'valortotal', name: 'valortotal', render: $.fn.dataTable.render.number( '.', ',', 2, 'R$ ' ) },
+							{ data: 'porcentagem', name: 'porcentagem' },
+							],
+							fixedColumns: true,
+							select: "single",
+							order: [[3, "desc"]],
+							});
+							table.buttons().container()
+							.appendTo( '#maisvendidos-table .col-md-6:eq(0)' );
+							});
+							
+							
+							var cadascli = []
+							var cadasclires = {"January":0,"February":0,"March":0,"April":0,"May":0,"June":0,"July":0,"August":0,"September":0,"October":0,"November":0,"December":0}
+							$.each(cadasclires, function(key, value){
+							cadascli.push(value)
+							})
+							console.log(cadascli)
+							
+							var receita = ('100').replace(',', '.')
+							var despesa = ('20').replace(',', '.')
+							var total = ('80').replace(',', '.')
+							var monthsReceita = [0,0,0,0,0,0,0,0,0,0,0,0]
+							var monthsDespesa = [0,0,0,0,0,0,0,0,0,0,0,0]
+							var monthsTotal = [0,0,0,0,0,0,0,0,0,0,0,0]
+							
+							
+							
+							var donut = new Morris.Donut({
+							element: 'sales-chart',
+							resize: true,
+							colors: ["#28a745", "#dc3545", "#17a2b8"],
+							data: [{
+							label: "Receita",
+							value: receita
+							},
+							{
+							label: "Despesa",
+							value: despesa
+							},
+							{
+							label: "Total",
+							value: total
+							}
+							],
+							formatter: function(x) {
+							var amount = parseFloat(x);
+							return amount.toLocaleString('pr-BR', { style: 'currency', currency: 'BRL' });//parseFloat(x).format()
+							},
+							hideHover: 'auto'
+							});
+							
+							$(function () {
+							
+							
+							var mensalValue = [];
+							$.each({"January":0,"February":0,"March":0,"April":0,"May":0,"June":0,"July":0,"August":0,"September":0,"October":0,"November":0,"December":0}, function(key, value){
+							mensalValue.push(value)
+							})
+							
+							$('#flotchartMes').highcharts({
+							chart: {
+							type: 'column'
+							},
+							title: {
+							text: "Vendas últimos 12 meses"
+							},
+							subtitle: {
+							text: "Últimos 12 meses"
+							},
+							credits: {
+							enabled: false
+							},
+							xAxis: {
+							categories: ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez',]
+							},
+							yAxis: {
+							labels: {
+							formatter: function() {
+							return 'R$'+ Highcharts.numberFormat(this.value, 2, ',', '.');
+							}
+							},
+							min: 0,
+							title: {
+							text: 'Vendas'
+							}
+							},
+							plotOptions: {
+							line: {
+							dataLabels: {
+							enabled: true
+							},
+							enableMouseTracking: false
+							}
+							},
+							series: [
+							{
+							color: '#007bff',
+							name: 'Este Ano',
+							data: mensalValue,
+							dataLabels: {
+							enabled: true,
+							formatter: function() {
+							return 'R$'+ Highcharts.numberFormat(this.y, 2, ',', '.');
+							}
+							}
+							}
+							]
+							});
+							
+							$('#flotchartMov').highcharts({
+							chart: {
+							type: 'line'
+							},
+							title: {
+							text: "Receitas e Despesas"
+							},
+							subtitle: {
+							text: "Receitas - Despesas = Total"
+							},
+							credits: {
+							enabled: false
+							},
+							xAxis: {
+							categories: ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez',],
+							title: {
+							text: null
+							}
+							},
+							yAxis: {
+							labels: {
+							formatter: function() {
+							return 'R$'+ Highcharts.numberFormat(this.value, 2, ',', '.');
+							}
+							},
+							min: 0,
+							title: {
+							text: 'Vendas'
+							}
+							},tooltip: {
+							valueDecimals: 2,
+							valuePrefix: 'R$',
+							formatter: function () {
+							return this.points.reduce(function (s, point) {
+							return s + '<br/> <span style="font-weight: bold;color: '+point.series.color+'">' + point.series.name + '</span>: ' + '<b>R$ ' + Highcharts.numberFormat(point.y, 2, ',', '.') + '</b>';
+							}, '<b>' + this.x + '</b>');
+							},
+							shared: true
+							},
+							plotOptions: {
+							
+							},
+							series: [
+							{
+							color: '#28a745',
+							name: 'Receita',
+							data: monthsReceita,
+							dataLabels: {
+							enabled: true,
+							formatter: function() {
+							return 'R$'+ Highcharts.numberFormat(this.y, 2, ',', '.');
+							}
+							}
+							},
+							{
+							color: '#dc3545',
+							name: 'Despesas',
+							data: monthsDespesa,
+							dataLabels: {
+							enabled: true,
+							formatter: function() {
+							return 'R$'+ Highcharts.numberFormat(this.y, 2, ',', '.');
+							}
+							}
+							},
+							{
+							color: '#17a2b8',
+							name: 'Total',
+							data: monthsTotal,
+							dataLabels: {
+							enabled: true,
+							formatter: function() {
+							return 'R$'+ Highcharts.numberFormat(this.y, 2, '.', ',');
+							}
+							}
+							}
+							]
+							});
+							
+							$('#flotchartCadasCli').highcharts({
+							chart: {
+							type: 'line'
+							},
+							title: {
+							text: "Clientes"
+							},
+							subtitle: {
+							text: "Clientes cadastrados"
+							},
+							credits: {
+							enabled: false
+							},
+							xAxis: {
+							categories: ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez',],
+							title: {
+							text: null
+							}
+							},
+							yAxis: {
+							labels: {
+							formatter: function() {
+							return 'R$'+ Highcharts.numberFormat(this.value, 2, ',', '.');
+							}
+							},
+							min: 0,
+							title: {
+							text: 'Vendas'
+							}
+							},tooltip: {
+							valueDecimals: 2,
+							valuePrefix: 'R$',
+							formatter: function () {
+							return this.points.reduce(function (s, point) {
+							return s + '<br/> <span style="font-weight: bold;color: '+point.series.color+'">' + point.series.name + '</span>: ' + '<b>' + point.y + ' cadastros</b>';
+							}, '<b>' + this.x + '</b>');
+							},
+							shared: true
+							},
+							plotOptions: {
+							
+							},
+							series: [
+							{
+							color: '#28a745',
+							name: 'Clientes',
+							data: cadascli,
+							dataLabels: {
+							enabled: true,
+							formatter: function() {
+							return this.y;
+							}
+							}
+							}
+							]
+							});
+							
+							
+							});
+							</script>
+							</body>
+							</html>
+														
