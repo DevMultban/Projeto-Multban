@@ -322,6 +322,15 @@
                               </select>
                             </div>
 
+                            <div class="form-group col-md-2">
+                              <label for="idioma">Idioma:</label>
+                              <select id="idioma" name="idioma" class="form-control" required>
+                                  <option value="" disabled selected>Selecione o idioma</option>
+                                  <option value="pt">Português</option>
+                                  <option value="en">Inglês</option>
+                                  <option value="es">Espanhol</option>
+                              </select>
+                          </div>
                           </div>
 
                           
@@ -436,26 +445,39 @@
                     <!--ABA DE SENHA-->
                     <div class="tab-pane fade" id="tabs-senha" role="tabpanel" aria-labelledby="tabs-senha-tab">
                       <div class="card card-primary">
-                            
-                        <div class="card-body">
-                          <div class="form-row">
-                            <div class="form-group col-md-12">
-                              <label for="senha">Senha do Usuário:</label>
-                                <input type="password" class="form-control custom-imput" id="senha" name="senha" required placeholder="Digite sua senha">
-                            </div>
-                            <div class="form-group col-md-12">
-                              <label for="repetirSenha">Repetir Senha:</label>
-                                <input type="password" class="form-control custom-imput" id="repetirSenha" name="repetirSenha" required placeholder="Repita sua senha">
-                            </div>
-                          </div>
-                            <div class="form-row">
-                              <div class="form-group col-md-12">
-                                <button type="button" class="btn btn-custom" id="btnEnviarSenha">Enviar Senha por Email</button>
+                          <div class="card-body">
+                              <div class="form-row">
+                                  <div class="form-group col-md-4 mb-3"> <!-- Adiciona margem inferior -->
+                                      <label for="senha">Senha do Usuário:</label>
+                                      <div class="input-group">
+                                          <input type="password" class="form-control custom-input" id="senha" name="senha" required placeholder="Digite sua senha">
+                                          <div class="input-group-append">
+                                              <span class="input-group-text" id="toggleSenha" style="cursor: pointer; background: none; border: none;">
+                                                  <i class="bi bi-eye-fill" id="eyeIcon"></i>
+                                              </span>
+                                          </div>
+                                      </div>
+                                  </div>
+                                  <div class="form-group col-md-4 mb-3"> <!-- Adiciona margem inferior -->
+                                      <label for="repetirSenha">Repetir Senha:</label>
+                                      <div class="input-group">
+                                          <input type="password" class="form-control custom-input" id="repetirSenha" name="repetirSenha" required placeholder="Repita sua senha">
+                                          <div class="input-group-append">
+                                              <span class="input-group-text" id="toggleRepetirSenha" style="cursor: pointer; background: none; border: none;">
+                                                  <i class="bi bi-eye-fill" id="eyeIconRepetir"></i>
+                                              </span>
+                                          </div>
+                                      </div>
+                                  </div>
                               </div>
-                            </div>
-                        </div>
+                              <div class="form-row">
+                                  <div class="form-group col-md-12">
+                                      <button type="button" class="btn btn-custom" id="btnEnviarSenha">Enviar Senha por Email</button>
+                                  </div>
+                              </div>
+                          </div>
                       </div>
-                    </div>
+                  </div>
 
                   
                   </div>
@@ -514,10 +536,37 @@
             </aside>
             <!-- /.control-sidebar -->
     </div>
-
-    
     <!-- ./wrapper -->
 
+    <!-- Link para o Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script>
+        // Função para alternar a visibilidade da senha
+        function togglePasswordVisibility(inputId, iconId) {
+            const input = document.getElementById(inputId);
+            const icon = document.getElementById(iconId);
+            if (input.type === "password") {
+                input.type = "text";
+                icon.classList.remove("bi-eye-fill");
+                icon.classList.add("bi-eye-slash-fill");
+            } else {
+                input.type = "password";
+                icon.classList.remove("bi-eye-slash-fill");
+                icon.classList.add("bi-eye-fill");
+            }
+        }
+
+        // Adicionando eventos de clique para os ícones de visualização de senha
+        document.getElementById('toggleSenha').addEventListener('click', function() {
+            togglePasswordVisibility('senha', 'eyeIcon');
+        });
+
+        document.getElementById('toggleRepetirSenha').addEventListener('click', function() {
+            togglePasswordVisibility('repetirSenha', 'eyeIconRepetir');
+        });
+    </script>
     
     <!-- jQuery -->
     <script src="plugins/jquery/jquery.min.js"></script>

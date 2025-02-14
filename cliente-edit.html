@@ -94,7 +94,7 @@
         <!-- /.navbar -->
 
         <!-- Main Sidebar Container -->
-<aside class="main-sidebar sidebar-dark-primary elevation-4">
+    <aside class="main-sidebar sidebar-dark-primary elevation-4">
 
     <!-- Brand Logo -->
     <a href="/" class="brand-link" style="background-color:#1c0065; padding-bottom: 5px;">
@@ -163,766 +163,657 @@
         <!-- /.sidebar-menu -->
     </div>
     <!-- /.sidebar -->
-</aside>
+    </aside>
 
-        <!-- Content Wrapper. Contains page content -->
-        <div class="content-wrapper">
-            <!-- Content Header (Page header) -->
-            <div class="content-header"  style="padding: 0.5rem">
-                <div class="container-fluid">
-                    <div class="row mb-2">
-                        <div class="col-sm-6">
-                            <ol class="breadcrumb ">
-                                <li class="breadcrumb-item"><a href="./index.html" style="color: #a702d8;">Home</a></li>
-                                <li class="breadcrumb-item"><a href="./cliente-index.html" style="color: #a702d8;">Cliente</a>
-                                </li>
-                                <li class="breadcrumb-item active">Inserir</li>
-                                                            </ol>
-                        </div><!-- /.col -->
-                    </div><!-- /.row -->
-                </div><!-- /.container-fluid -->
-            </div>
-            <!-- /.content-header -->
-            <!-- Main content -->
-            <section class="content">
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper">
+        <!-- Content Header (Page header) -->
+        <div class="content-header"  style="padding: 0.5rem">
+          <div class="container-fluid">
+            <div class="row mb-2">
+              <div class="col-sm-6">
+                <ol class="breadcrumb ">
+                  <li class="breadcrumb-item"><a href="./index.html" style="color: #a702d8;">Home</a></li>
+                    <li class="breadcrumb-item"><a href="./cliente-index.html" style="color: #a702d8;">Cliente</a>
+                    </li>
+                      <li class="breadcrumb-item active">Inserir</li>
+                </ol>
+              </div><!-- /.col -->
+            </div><!-- /.row -->
+          </div><!-- /.container-fluid -->
+        </div>
+        <!-- /.content-header -->
+        <!-- Main content -->
+      <section class="content">
 
-            <form class="form-horizontal" id="formPrincipal" role="form" method="POST"
-                    action="#">
-                    <input type="hidden" name="_method" value="POST">
-                <div class="row">
+        <form class="form-horizontal" id="formPrincipal" role="form" method="POST" action="#">
+          <input type="hidden" name="_method" value="POST">
+            <div class="row">
               <div class="col-md-12">
       
-            </div>
-          </div>
-
-        <div class="row" style="margin-bottom: 80px;">
-          <div class=" navbar-fixed-top fixed fixed nav-opcoes">
-
-            <!--BOTÕES-->
-            <button type="button" class="btn btn-custom"><i class="icon fas fa-plus"></i> Criar</button>
-
-            <button type="button" class="btn btn-custom"><i class="icon fas fa-save"></i> Alterar</button>
-
-            <button type="button" class="btn btn-custom"><i class="bi bi-check-circle"></i> Ativar</button>
-
-            <button type="button" class="btn btn-custom"><i class="fa-solid fa-xmark"></i> Inativar</button>
-
-            <button type="button" class="btn btn-delete"><i class="fa-solid fa-trash"></i> Excluir</button>
-
-            <button type="button" class="btn btn-delete" onclick="location.href='./usuario-index.html'"><i class="icon fas fa-arrow-left"></i> Voltar</button>
-
-          </div>
-        </div>
-
-    <div class="card card-outline card-tabs">
-      <div class="card-header p-0 pt-1 border-bottom-0">
-
-        <!--ABAS/TABS-->
-        <ul class="nav nav-tabs" id="custom-tabs-two-tab" role="tablist" >
-          <li class="nav-item">
-            <a class="nav-link active" id="tabs-dados-tab" data-toggle="pill" href="#tabs-dados" role="tab"
-              aria-controls="tabs-dados" aria-selected="true" >Dados Gerais</a>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link" id="tabs-endereco-tab" data-toggle="pill" href="#tabs-endereco" role="tab"
-              aria-controls="tabs-endereco" aria-selected="false">Endereço</a>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link" id="tabs-cartoes-tab" data-toggle="pill" href="#tabs-cartoes" role="tab"
-               aria-controls="tabs-cartoes" aria-selected="false">Cartões</a>
-          </li>
-        
-          <li class="nav-item">
-            <a class="nav-link" id="tabs-score-tab" data-toggle="pill" href="#tabs-score" role="tab"
-              aria-controls="tabs-score" aria-selected="false">SCORE</a>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link" id="tabs-compras-tab" data-toggle="pill" href="#tabs-compras" role="tab"
-               aria-controls="tabs-compras" aria-selected="false" >Compras Realizadas</a>
-          </li>
-        </ul>
-      </div>
-      
-      <div class="card-body">
-        <div class="tab-content" id="custom-tabs-two-tabContent">
-          
-          <!--ABA DADOS GERAIS-->
-          <div class="tab-pane fade active show" id="tabs-dados" role="tabpanel" aria-labelledby="tabs-dados-tab">
-            <div class="card card-primary">
-              <div class="card-body">
-
-                <div class="form-row" id="serachClient">
-                    <div class="form-group col-md-2">
-                      <label for="cod">Código do Cliente:</label>
-                    <div class="input-group mb-3">       
-                    <!--BTN DE PESQUISA DO CODIGO DO CLIENTE-->
-                    <!--<a href="#" data-toggle="modal" data-target="#pesquisa-cliente-modal">
-                      <i class="far fa-search"></i>
-                      </a>
-                      
-                      <span class="input-group-prepend">
-                        <a href="#" data-toggle="modal" data-target="#pesquisa-cliente-modal" data-placement="top" title="Pesquisar cliente" class="btn btn-default"><a>
-                          <i class="fas fa-search text-success"></i> </a>
-                    </span>
-                    -->
-                      <input autocomplete="off" type="text" autofocus="autofocus"
-                          class="form-control cep" id="cod" name="cod"
-                          value="" placeholder="Código do Cliente" readonly="">
-                      </div>
-                    </div>
-
-                    <div class="form-group col-md-3">
-                      <label for="created_at">Data de Cadastro:</label>
-                        <input autocomplete="off" readonly class="form-control" placeholder="Data de cadastro" name="created_at" type="text" id="created_at"
-                          value="">
-                      </div>
-    
-    
-                      <div class="form-group col-md-3">
-                        <label for="updated_at">Última atualização:</label>
-                        <input autocomplete="off" readonly class="form-control" placeholder="Última atualização" name="updated_at" type="text" id="updated_at"
-                          value="">
-                      </div>
-                </div>
-
-                <div class="form-row">
-                  <div class="form-group col-md-4">
-                  <label for="clides">Nome Completo:*</label>
-                  <input autocomplete="off" class="form-control"
-                    placeholder="Digite o nome completo" name="clides" type="text" id="clides"
-                    value="">
-                  </div>
-
-                  <div class="form-group col-md-4">
-                    <label for="nomeAlternativo">Nome Alternativo:</label>
-                    <input autocomplete="off" class="form-control"
-                        placeholder="Digite o nome alternativo" name="nomeAlternativo" type="text" id="nomeAlternativo" value="">
-                  </div>
-                  
-                  <div class="form-group col-md-4">
-                    <label for="nomeCartao">Nome Impresso no Cartão:</label>
-                    <input autocomplete="off" class="form-control"
-                        placeholder="Digite o nome impresso no cartão" name="nomeCartao" type="text" id="nomeCartao" value="">
-                  </div>
-                </div>    
-
-                <div class="form-row">
-                  <div class="form-group col-md-3">
-                    <label for="clicgc" id="labelclicgc">CNPJ/CPF:*</label>
-                        <div class="input-group mb-3">
-                            <input autocomplete="off" type="text" autofocus="autofocus"
-                            class="form-control" id="clicgc"
-                            name="clicgc" value="" placeholder="Digite o CNPJ/CPF">
-                               <!--<span class="input-group-append">
-                                  <button type="button" id="btnSearchCNPJ" class="btn btn-default"><i
-                                      class="fas fa-search"></i></button>
-                                </span>-->
-                        </div>
-                  </div>
-
-                  <div class="form-group col-md-2">
-                    <label for="idclientetipo">Tipo de cliente:*</label>
-                    <select class="form-control select2" name="idclientetipo" id="idclientetipo"
-                        data-placeholder="Selecione" style="width: 100%;">
-                        <option></option>
-                        <option value="1"> Pessoa Jurídica</option>
-                        <option value="0"> Pessoa Física</option>
-                    </select>
-                  </div>
-
-                  <div class="form-group col-md-3">
-                    <label for="cliram">Status:*</label>
-                    <select id="cliram" name="cliram" class="form-control select2 select2-hidden-accessible"
-                      data-placeholder="Status do Cliente" style="width: 100%;" required
-                      aria-hidden="true">
-                      <option> </option>
-                      <option value="1" > Em Análise</option>
-                      <option value="2" > Autorizado</option>
-                    
-                    </select>
-                  </div>
-
-                </div>
-
-                <div class="form-row">
-                  <div class="form-group col-md-3">
-                    <label for="clite2">Celular:*</label>
-                    <input autocomplete="off" type="text" class="form-control cell_with_ddd" id="clite2" name="clite2"
-                      value="" placeholder="Digite o Celular">
-                  </div>
-
-                  <div class="form-group col-md-3">
-                    <label for="clite1">Telefone Fixo:</label>
-                    <input autocomplete="off" type="clite1" class="form-control phone_with_ddd" id="clite1" name="clite1"
-                      value="" placeholder="Digite o Telefone">
-                  </div>
-
-                  <div class="form-group col-md-3">
-                    <label for="clieml">E-mail:*</label>
-                    <input autocomplete="off" type="email" class="form-control" id="clieml"
-                      name="clieml" value="" placeholder="Digite o E-mail">
-                  </div>
-                  <!--CRIAR UM BTN PRA REENVIAR O E-MAIL DE VALIDAR O CADASTRO-->
-
-
-                  <div class="form-group col-md-3">
-                    <label for="emailSaneado">E-mail Saneado:</label>
-                    <input autocomplete="off" class="form-control"
-                        placeholder="Digite o e-mail saneado" name="emailSaneado" type="email" id="emailSaneado" value="">
-                  </div>
-                  </div>
-
-                  <div class="form-row">
-                    <div class="form-group col-md-4">
-                      <label for="rendaMensal">Renda Mensal Aprox.:*</label>
-                      <input autocomplete="off" class="form-control"
-                          placeholder="Digite a renda mensal aproximada" name="rendaMensal" type="number" id="rendaMensal" value="" required>
-                  </div>
-              
-                  <div class="form-group col-md-4">
-                      <label for="rendaSaneada">Renda Mensal Saneada:</label>
-                      <input autocomplete="off" class="form-control"
-                          placeholder="Digite a renda mensal saneada" name="rendaSaneada" type="number" id="rendaSaneada" value="">
-                  </div>
-              
-                  <div class="form-group col-md-4">
-                      <label for="melhorDiaFechamento">Melhor dia para Fech. da Fat.:*</label>
-                      <input autocomplete="off" class="form-control"
-                          placeholder="Digite o melhor dia para fechamento" name="melhorDiaFechamento" type="text" id="melhorDiaFechamento" value="" required>
-                  </div>
-                </div>
               </div>
-              <!-- /.card-body -->
-            </div>
-              <div class="form-group">
-                <button type="button" class="btn btn-custom" id="btnReenviarSolicitacao">
-                    Reenviar Solicitação de Autorização
-                </button>
-              </div>
-          </div>
-
-          <!--ABA ENDEREÇO-->
-          <div class="tab-pane fade" id="tabs-endereco" role="tabpanel" aria-labelledby="tabs-endereco-tab">
-            <div class="card card-primary"> 
-          
-              <div class="card-body">
-                <div class="form-row">
-                  <div class="form-group col-md-2">
-                    <label for="clicep">CEP:</label>
-                    <a href="#" data-toggle="modal" data-target="#cep-info-modal">
-                      <i class="far fa-question-circle" style="color: #a702d8;"></i>
-                    </a>
-                    <div class="input-group mb-3">
-                      <input autocomplete="off" type="text" autofocus="autofocus"
-                        class="form-control cep" id="clicep" name="clicep"
-                        value="" placeholder="Digite o CEP">
-                      <span class="input-group-append">
-                        <button type="button" id="btnPesquisarCep" class="btn btn-default"><i
-                            class="fa fa-search"></i></button>
-                      </span>
-                    </div>
-                  </div>
-
-                  <div class="form-group col-md-4">
-                    <label for="cliend">Endere&ccedil;o (Logradouro):</label>
-                    <input autocomplete="off" class="form-control" placeholder="Digite o Endereço" name="cliend" type="text" id="cliend">
-                  </div>
-
-                  <div class="form-group col-md-2">
-                    <label for="clinro">N&uacute;mero:</label>
-                    <input autocomplete="off" class="form-control" placeholder="Digite o Número" name="clinro" type="text" id="clinro">
-                  </div>
-
-                  <div class="form-group col-md-4">
-                    <label for="clicmp">Complemento:</label>
-                    <input autocomplete="off" class="form-control" placeholder="Digite o Complemento" name="clicmp" type="text" id="clicmp">
-                  </div>
-                </div>
-
-                <div class="form-row">
-                  <div class="form-group col-md-3">
-                    <label for="clibai">Bairro:</label>
-                    <input autocomplete="off" class="form-control" placeholder="Digite o Bairro" name="clibai" type="text" id="clibai">
-                  </div>
-
-                  <div class="form-group col-md-3">
-                    <label for="clipai">País:</label>
-                    <select id="clipai" name="clipai" class="form-control select2 select2-hidden-accessible"
-                    data-placeholder="Pesquise o País" style="width: 100%;" aria-hidden="true">
-                      
-                      <option value="34">1058 - BRASIL</option>
-                    </select>
-
-                  </div>
-
-                  <div class="form-group col-md-3">
-                    <label for="cliufe">Estado:</label>
-                    <select id="cliufe" name="cliufe" class="form-control select2 select2-hidden-accessible"
-                    data-placeholder="Pesquise o Estado" style="width: 100%;" aria-hidden="true">
-                                          </select>
-                  </div>
-                  <div class="form-group col-md-3">
-                    <label for="climun">Cidade:</label>
-                    <select id="climun" name="climun" class="form-control select2 select2-hidden-accessible"
-                    data-placeholder="Pesquise a cidade" style="width: 100%;" aria-hidden="true">
-                                          </select>
-                  </div>
-                </div>
-              </div>
-            </div><!-- card Endereço -->
-
-            <!--
-            <div class="card card-primary">
-              <div class="card-body">
-              <div class="form-row">
-                  <div class="form-group col-md-6">
-                    <label for="clicic">Situa&ccedil;&atilde;o ICMS:</label>
-                    <select id="clicic" name="clicic"
-                      class="form-control select2 select2-hidden-accessible" data-placeholder="SELECIONE"
-                      style="width: 100%;" aria-hidden="true">
-                      <option></option>
-                      <option value="1" >1 - Contribuinte ICMS</option>
-                      <option value="2" >2 - Contribuinte Isento de Inscrição no Cadastro de contibuintes do ICMS</option>
-                      <option value="9" >9 - Não Contribuinte, pode ou não ter Inscrição Estadual no Cadastro  de contribuinte do ICMS</option>
-                    </select>
-                  </div>
-                  <div class="form-group col-md-6">
-                    <label for="clifre">Modalidade Frete:</label>
-                    <select id="clifre" name="clifre"
-                      class="form-control select2 select2-hidden-accessible" data-placeholder="SELECIONE"
-                      style="width: 100%;" aria-hidden="true">
-                      <option></option>
-                      <option value="0" selected>0 - Contratação do Frete por conta do Remetente (CIF)</option>
-                      <option value="1" >1 - Contratação do Frete por conta do Destinatário (FOB)</option>
-                      <option value="2" >2 - Contratação do Frete por conta de Terceiros</option>
-                      <option value="3" >3 - Transporte Próprio por conta do Remetente</option>
-                      <option value="4" >4 - Transporte Próprio por conta do Destinatário</option>
-                      <option value="9" >9 - Sem Ocorrência de Transporte</option>
-
-                      </select>
-                </div>
-              </div>
-
-              
-
-              <div class="form-row">
-                <div class="form-group col-md-3">
-                    <label for="clifpg">Forma de PGTO:</label>
-                    <select id="clifpg" name="clifpg" class="form-control select2 select2-hidden-accessible"
-                          data-placeholder="SELECIONE" style="width: 100%;" aria-hidden="true">
-                      <option></option>
-                                            <option value="1" >
-                      1 - BOLETO
-                      </option>
-                                            <option value="2" >
-                      2 - CARTEIRA
-                      </option>
-                                            <option value="3" >
-                      3 - CHEQUE
-                      </option>
-                                            <option value="5" >
-                      5 - FORA SEMANA 
-                      </option>
-                                            <option value="6" >
-                      6 - DEBITO C/C
-                      </option>
-                                            <option value="7" >
-                      7 - DOC
-                      </option>
-                                            <option value="8" >
-                      8 - TED
-                      </option>
-                                            <option value="9" >
-                      9 - DEPÓSITO
-                      </option>
-                                            <option value="10" >
-                      10 - APLICACAO
-                      </option>
-                                            <option value="11" >
-                      11 - BOLETO2
-                      </option>
-                                            <option value="12" >
-                      12 - PIX
-                      </option>
-                                          </select>
-                </div>
-
-                <div class="form-group col-md-3">
-                  <label for="cliprz">Prazo de PGTO:</label>
-                  <input autocomplete="off" class="form-control" placeholder="Digite o Prazo de PGTO." name="cliprz" type="number" id="cliprz">
-                </div>
-
-                <div class="form-group col-md-3">
-                  <label for="clipdi">Desconto financeiro %:</label>
-                  <input autocomplete="off" class="form-control porcentagem" placeholder="Digite o Prazo de PGTO." name="clipdi" type="text" id="clipdi">
-                </div>
-
-                <div class="form-group col-md-3">
-                  <label for="clipac">Desconto comercial %:</label>
-                  <input autocomplete="off" class="form-control porcentagem" placeholder="Digite o Prazo de PGTO." name="clipac" type="text" id="clipac">
-                </div>
-
             </div>
 
-            <div class="form-row">
-                <div class="form-group col-md-3">
-                  <label for="clicap">Ag&ecirc;ncia:</label>
-                  <input autocomplete="off" class="form-control" placeholder="Digite a agêcia." name="clicap" type="number" id="clicap">
-                </div>
+            <div class="row" style="margin-bottom: 80px;">
+              <div class=" navbar-fixed-top fixed fixed nav-opcoes">
 
-                <div class="form-group col-md-3">
-                  <label for="clinap">Conta corrente pagto:</label>
-                  <input autocomplete="off" class="form-control" placeholder="Digite a conta com o digito." name="clinap" type="number" id="clinap">
-                </div>
+                <!--BOTÕES-->
+                <button type="button" class="btn btn-custom"><i class="icon fas fa-plus"></i> Criar</button>
+                <button type="button" class="btn btn-custom"><i class="icon fas fa-save"></i> Alterar</button>
+                <button type="button" class="btn btn-custom"><i class="bi bi-check-circle"></i> Ativar</button>
+                <button type="button" class="btn btn-custom"><i class="bi bi-slash-circle"></i> Inativar</button>
+                <button type="button" class="btn btn-delete"><i class="fa-solid fa-trash"></i> Excluir</button>
+                <button type="button" class="btn btn-delete" onclick="location.href='./usuario-index.html'"><i class="icon fas fa-arrow-left"></i> Voltar</button>
 
+              </div>
+            </div>
+
+            <div class="card card-outline card-tabs">
+              <div class="card-header p-0 pt-1 border-bottom-0">
+
+                <!--ABAS/TABS-->
+                <ul class="nav nav-tabs" id="custom-tabs-two-tab" role="tablist" >
+                  <li class="nav-item">
+                    <a class="nav-link active" id="tabs-dados-tab" data-toggle="pill" href="#tabs-dados" role="tab"
+                      aria-controls="tabs-dados" aria-selected="true" >Dados Gerais</a>
+                  </li>
+
+                  <li class="nav-item">
+                    <a class="nav-link" id="tabs-endereco-tab" data-toggle="pill" href="#tabs-endereco" role="tab"
+                      aria-controls="tabs-endereco" aria-selected="false">Endereço</a>
+                  </li>
+
+                  <li class="nav-item">
+                    <a class="nav-link" id="tabs-cartoes-tab" data-toggle="pill" href="#tabs-cartoes" role="tab"
+                      aria-controls="tabs-cartoes" aria-selected="false">Cartões</a>
+                  </li>
                 
-            </div>
+                  <li class="nav-item">
+                    <a class="nav-link" id="tabs-score-tab" data-toggle="pill" href="#tabs-score" role="tab"
+                      aria-controls="tabs-score" aria-selected="false">SCORE</a>
+                  </li>
 
-            <div class="form-row">
-              <div class="form-group col-md-9">
-                <label for="cliobs">Observa&ccedil;&atilde;o:</label>
-                <textarea style="height:150px" class="form-control" placeholder="Digite a Observação" name="cliobs" cols="50" rows="10" id="cliobs"></textarea>
+                  <li class="nav-item">
+                    <a class="nav-link" id="tabs-compras-tab" data-toggle="pill" href="#tabs-compras" role="tab"
+                      aria-controls="tabs-compras" aria-selected="false" >Compras Realizadas</a>
+                  </li>
+                </ul>
               </div>
-            </div>
+              
+              <div class="card-body">
+                <div class="tab-content" id="custom-tabs-two-tabContent">
+                  
+                  <!--ABA DADOS GERAIS-->
+                  <div class="tab-pane fade active show" id="tabs-dados" role="tabpanel" aria-labelledby="tabs-dados-tab">
+                    <div class="card card-primary">
+                      <div class="card-body">
 
-          </div> -->
-          </div>
+                        <div class="form-row" id="serachClient">
+                            <div class="form-group col-md-2">
+                              <label for="cod">Código do Cliente:</label>
+                            <div class="input-group mb-3">       
+                            <!--BTN DE PESQUISA DO CODIGO DO CLIENTE-->
+                            <!--<a href="#" data-toggle="modal" data-target="#pesquisa-cliente-modal">
+                              <i class="far fa-search"></i>
+                              </a>
+                              
+                              <span class="input-group-prepend">
+                                <a href="#" data-toggle="modal" data-target="#pesquisa-cliente-modal" data-placement="top" title="Pesquisar cliente" class="btn btn-default"><a>
+                                  <i class="fas fa-search text-success"></i> </a>
+                            </span>
+                            -->
+                              <input autocomplete="off" type="text" autofocus="autofocus"
+                                  class="form-control cep" id="cod" name="cod"
+                                  value="" placeholder="Código do Cliente" readonly="">
+                              </div>
+                            </div>
 
-          <!-- ABA CARTÕES -->
-          <div class="tab-pane fade" id="tabs-cartoes" role="tabpanel" aria-labelledby="tabs-cartoes-tab">
-            <div class="card card-primary">
-                <div class="card-body">
-                    <div class="form-row">
-                        <div class="form-group col-md-4">
-                            <button type="button" class="btn btn-custom" id="btnCriarCartao">Criar Novo Cartão</button>
+                            <div class="form-group col-md-3">
+                              <label for="created_at">Data de Cadastro:</label>
+                                <input autocomplete="off" readonly class="form-control" placeholder="Data de cadastro" name="created_at" type="text" id="created_at"
+                                  value="">
+                              </div>
+            
+                              <div class="form-group col-md-3">
+                                <label for="updated_at">Última atualização:</label>
+                                <input autocomplete="off" readonly class="form-control" placeholder="Última atualização" name="updated_at" type="text" id="updated_at"
+                                  value="">
+                              </div>
+                        </div>
+
+                        <div class="form-row">
+                          <div class="form-group col-md-4">
+                            <label for="clides">Nome Completo:*</label>
+                              <input autocomplete="off" class="form-control"
+                                placeholder="Digite o nome completo" name="clides" type="text" id="clides"
+                                value="">
+                          </div>
+
+                          <div class="form-group col-md-4">
+                            <label for="nomeAlternativo">Nome Alternativo:</label>
+                              <input autocomplete="off" class="form-control"
+                                placeholder="Digite o nome alternativo" name="nomeAlternativo" type="text" id="nomeAlternativo" value="">
+                          </div>
+                          
+                          <div class="form-group col-md-4">
+                            <label for="nomeCartao">Nome Impresso no Cartão:</label>
+                              <input autocomplete="off" class="form-control"
+                                placeholder="Digite o nome impresso no cartão" name="nomeCartao" type="text" id="nomeCartao" value="">
+                          </div>
+                        </div>    
+
+                        <div class="form-row">
+                          <div class="form-group col-md-3">
+                            <label for="clicgc" id="labelclicgc">CNPJ/CPF:*</label>
+                                <div class="input-group mb-3">
+                                    <input autocomplete="off" type="text" autofocus="autofocus"
+                                    class="form-control" id="clicgc"
+                                    name="clicgc" value="" placeholder="Digite o CNPJ/CPF">
+                                      <!--<span class="input-group-append">
+                                          <button type="button" id="btnSearchCNPJ" class="btn btn-default"><i
+                                              class="fas fa-search"></i></button>
+                                        </span>-->
+                                </div>
+                          </div>
+
+                          <div class="form-group col-md-2">
+                            <label for="idclientetipo">Tipo de cliente:*</label>
+                              <select class="form-control select2" name="idclientetipo" id="idclientetipo"
+                                data-placeholder="Selecione" style="width: 100%;">
+                                <option></option>
+                                <option value="1"> Pessoa Jurídica</option>
+                                <option value="0"> Pessoa Física</option>
+                              </select>
+                          </div>
+
+                          <div class="form-group col-md-3">
+                            <label for="cliram">Status:*</label>
+                              <select id="cliram" name="cliram" class="form-control select2 select2-hidden-accessible"
+                                data-placeholder="Status do Cliente" style="width: 100%;" required
+                                aria-hidden="true">
+                                <option> </option>
+                                <option value="1" > Em Análise</option>
+                                <option value="2" > Autorizado</option>
+                              </select>
+                          </div>
+
+                          <div class="form-group col-md-3">
+                            <label for="numeroPassaporte">Número do Passaporte</label>
+                              <input type="text" class="form-control" id="numeroPassaporte" placeholder="Número do Passaporte">
+                          </div>
+                        
+                        </div>
+
+                        <div class="form-row">
+                          <div class="form-group col-md-3">
+                            <label for="clite2">Celular:*</label>
+                              <input autocomplete="off" type="text" class="form-control cell_with_ddd" id="clite2" name="clite2"
+                              value="" placeholder="Digite o Celular">
+                          </div>
+
+                          <div class="form-group col-md-3">
+                            <label for="clite1">Telefone Fixo:</label>
+                              <input autocomplete="off" type="clite1" class="form-control phone_with_ddd" id="clite1" name="clite1"
+                              value="" placeholder="Digite o Telefone">
+                          </div>
+
+                          <div class="form-group col-md-3">
+                            <label for="clieml">E-mail:*</label>
+                              <input autocomplete="off" type="email" class="form-control" id="clieml"
+                              name="clieml" value="" placeholder="Digite o E-mail">
+                          </div>
+                          <!--CRIAR UM BTN PRA REENVIAR O E-MAIL DE VALIDAR O CADASTRO-->
+                        
+                        </div>
+
+                          <div class="form-row">
+                            <div class="form-group col-md-4">
+                              <label for="rendaMensal">Renda Mensal Aprox.:*</label>
+                                <input autocomplete="off" class="form-control"
+                                  placeholder="Digite a renda mensal aproximada" name="rendaMensal" type="number" id="rendaMensal" value="" required>
+                            </div>
+                      
+                            <div class="form-group col-md-4">
+                              <label for="melhorDiaFechamento">Melhor dia para Fech. da Fat.:*</label>
+                                <input autocomplete="off" class="form-control"
+                                  placeholder="Digite o melhor dia para fechamento" name="melhorDiaFechamento" type="text" id="melhorDiaFechamento" value="" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                          <button type="button" class="btn btn-custom" id="btnReenviarSolicitacao">
+                              Reenviar Solicitação de Autorização
+                          </button> 
+                        </div>
+                      </div>
+                      <!-- /.card-body -->
+                    </div>
+
+                      <!--Campo para os Dados Saneados-->
+                      <div class="form-row">
+                        <div class="card col-lg-12 col-md-12">
+                            <div class="card-header ui-sortable-handle">
+                                <h3 class="card-title">
+                                    <i class="fas fa-chart-pie mr-1"></i>
+                                    Dados Saneados
+                                </h3>
+                                <div class="card-tools">
+                                    <button type="button" class="btn btn-tool" data-card-widget="collapse" id="toggleFields">
+                                        <i class="fas fa-minus" id="toggleIcon"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="card-body" id="fieldsContainer">
+                                <div class="form-group col-md-4">
+                                    <label for="telefoneCelular">Telefone Celular Saneado:</label>
+                                    <input type="text" class="form-control" id="telefoneCelular" placeholder="Telefone Celular Saneado">
+                                </div>
+                                <div class="form-group col-md-4">
+                                    <label for="rendaSaneada">Renda Mensal Saneada:</label>
+                                    <input autocomplete="off" class="form-control"
+                                        placeholder="Digite a renda mensal saneada" name="rendaSaneada" type="number" id="rendaSaneada" value="">
+                                </div>
+                                <div class="form-group col-md-3">
+                                    <label for="emailSaneado">E-mail Saneado:</label>
+                                    <input autocomplete="off" class="form-control"
+                                        placeholder="Digite o e-mail saneado" name="emailSaneado" type="email" id="emailSaneado" value="">
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="table-responsive">
-                    <table class="table table-bordered">
-                        <thead>
-                            <tr>
-                                <th>Empresa</th>
-                                <th>Número do Cartão</th>
-                                <th>Status</th>
-                                <th>Modalidade de Cartão</th>
-                                <th>Categoria</th>
-                                <th>Tipo de Cartão</th>
-                                <th>Descrição do Cartão</th>
-                                <th>Saldo de Crédito</th>
-                                <th>Limite de Crédito</th>
-                                <th>Saldo de Pontos</th>
-                                <th>Ações</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <!-- Exemplo de linha de cartão -->
-                            <tr>
-                                <td>Loja A</td>
-                                <td>**** **** **** 1234</td>
-                                <td>Ativo</td>
-                                <td>Modalidade 1</td>
-                                <td>Pré-Pago</td>
-                                <td>Fidelidade</td>
-                                <td>Cartão de Crédito Loja A</td>
-                                <td>R$ 1.500,00</td>
-                                <td>R$ 2.000,00</td>
-                                <td>5.0</td>
-                                <td>
-                                    <button class="btn btn-custom btn-acoes-cartoes">Resetar Senha</button>
-                                    <button class="btn btn-custom btn-acoes-cartoes">Alterar</button>
-                                    <button class="btn btn-custom btn-acoes-cartoes">Ativar</button>
-                                    <button class="btn btn-custom btn-acoes-cartoes">Inativar</button>
-                                    <button class="btn btn-delete btn-acoes-cartoes">Bloquear</button>
-                                    <button class="btn btn-delete btn-acoes-cartoes">Excluir</button>
-                                </td>
-                            </tr>   
-                          </tbody>
-                      </table>
-                    </div>
-
-                    <div id="formNovoCartao" style="display: none;">
-                      <!-- Campos para cadastrar um novo cartão -->
-                      <form>
-                          <div class="form-group">
-                              <label for="empresa">Empresa</label>
-                              <input type="text" class="form-control" id="empresa" placeholder="Nome da Empresa">
-                          </div>
-                          <div class="form-group">
-                              <label for="numeroCartao">Número do Cartão</label>
-                              <input type="text" class="form-control" id="numeroCartao" placeholder="Número do Cartão">
-                          </div>
-                          <!-- Adicione mais campos conforme necessário -->
-                      </form>
                   </div>
 
-                    <!-- Modal para Criar Novo Cartão -->
-                  <div class="modal fade" id="modalCriarCartao" tabindex="-1" role="dialog" aria-labelledby="modalCriarCartaoLabel" aria-hidden="true">
-                    <div class="modal-dialog" role="document">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title" id="modalCriarCartaoLabel">Criar Novo Cartão</h5>
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
-                                    <span aria-hidden="true">&times;</span>
+                  <!--ABA ENDEREÇO-->
+                  <div class="tab-pane fade" id="tabs-endereco" role="tabpanel" aria-labelledby="tabs-endereco-tab">
+                    <div class="card card-primary"> 
+                  
+                      <div class="card-body">
+                        <div class="form-row">
+                          <div class="form-group col-md-2">
+                            <label for="clicep">CEP:</label>
+                            <a href="#" data-toggle="modal" data-target="#cep-info-modal">
+                              <i class="far fa-question-circle" style="color: #a702d8;"></i>
+                            </a>
+                            <div class="input-group mb-3">
+                              <input autocomplete="off" type="text" autofocus="autofocus"
+                                class="form-control cep" id="clicep" name="clicep"
+                                value="" placeholder="Digite o CEP">
+                              <span class="input-group-append">
+                                <button type="button" id="btnPesquisarCep" class="btn btn-default"><i
+                                    class="fa fa-search"></i></button>
+                              </span>
+                            </div>
+                          </div>
+
+                          <div class="form-group col-md-4">
+                            <label for="cliend">Endere&ccedil;o (Logradouro):</label>
+                            <input autocomplete="off" class="form-control" placeholder="Digite o Endereço" name="cliend" type="text" id="cliend">
+                          </div>
+
+                          <div class="form-group col-md-2">
+                            <label for="clinro">N&uacute;mero:</label>
+                            <input autocomplete="off" class="form-control" placeholder="Digite o Número" name="clinro" type="text" id="clinro">
+                          </div>
+
+                          <div class="form-group col-md-4">
+                            <label for="clicmp">Complemento:</label>
+                            <input autocomplete="off" class="form-control" placeholder="Digite o Complemento" name="clicmp" type="text" id="clicmp">
+                          </div>
+                        </div>
+
+                        <div class="form-row">
+                          <div class="form-group col-md-3">
+                            <label for="clibai">Bairro:</label>
+                            <input autocomplete="off" class="form-control" placeholder="Digite o Bairro" name="clibai" type="text" id="clibai">
+                          </div>
+
+                          <div class="form-group col-md-3">
+                            <label for="clipai">Pais:</label>
+                            <select id="clipai" name="clipai" class="form-control select2 select2-hidden-accessible"
+                            data-placeholder="Pesquise o País" style="width: 100%;" aria-hidden="true">
+                              
+                              <option value="34">1058 - BRASIL</option>
+                            </select>
+
+                          </div>
+
+                          <div class="form-group col-md-3">
+                            <label for="cliufe">Estado:</label>
+                            <select id="cliufe" name="cliufe" class="form-control select2 select2-hidden-accessible"
+                            data-placeholder="Pesquise o estado" style="width: 100%;" aria-hidden="true">
+                            </select>
+                          </div>
+                          <div class="form-group col-md-3">
+                            <label for="climun">Cidade:</label>
+                            <select id="climun" name="climun" class="form-control select2 select2-hidden-accessible"
+                            data-placeholder="Pesquise a cidade" style="width: 100%;" aria-hidden="true">
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+                    </div><!-- card Endereço -->
+
+                    <!--Campo para os Dados Saneados-->
+                    <div class="form-row">
+                      <div class="card col-lg-12 col-md-12">
+                          <div class="card-header ui-sortable-handle">
+                              <h3 class="card-title">
+                                <i class="fas fa-chart-pie mr-1"></i>
+                                Dados Saneados
+                              </h3>
+                              <div class="card-tools">
+                                <button type="button" class="btn btn-tool" data-card-widget="collapse" id="toggleAddressFields">
+                                    <i class="fas fa-minus" id="toggleAddressIcon"></i>
                                 </button>
                             </div>
-                            <div class="modal-body">
-                                <form id="formCriarCartao">
-                                    <div class="form-group">
-                                        <label for="empresa">Empresa:</label>
-                                        <select class="form-control" id="empresa" name="empresa">
-                                            <option value="empresaLogada">Empresa Logada</option>
-                                            <option value="empresaA">Empresa A</option>
-                                            <option value="empresaB">Empresa B</option>
-                                        </select>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="modalidade">Modalidade de Cartão:</label>
-                                        <select class="form-control" id="modalidade" name="modalidade">
-                                            <option value="">Modalidade 1</option>
-                                            <option value="">Modalidade 2</option>
-                                        </select>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="categoria">Categoria:</label>
-                                        <select class="form-control" id="categoria" name="categoria">
-                                            <option value="pos-pago">Pós-Pago</option>
-                                            <option value="pre-pago">Pré-Pago</option>
-                                        </select>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="tipoCartao">Tipo de Cartão:</label>
-                                        <select class="form-control" id="tipoCartao" name="tipoCartao">
-                                          <option value="credito">Cartão de Crédito</option>
-                                            <option value="fidelidade">Fidelidade</option>
-                                            <option value="giftCard">Gift Card</option>
-                                        </select>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="descricao">Descrição do Cartão:</label>
-                                        <input type="text" class="form-control" id="descricao" name="descricao" placeholder="Descrição do Cartão">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="limiteCredito">Limite de Crédito:</label>
-                                        <input type="number" class="form-control" id="limiteCredito" name="limiteCredito" placeholder="Limite de Crédito">
-                                    </div>
-                                </form>
+                          </div>
+                          <div class="card-body" id="addressFieldsContainer">
+                            <div class="form-row">
+                              <div class="form-group col-md-4">
+                                <label for="cep">CEP:</label>
+                                <input type="text" class="form-control" id="cep" placeholder="Digite o CEP">
                             </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-custom" data-dismiss="modal">Fechar</button>
-                                <button type="button" class="btn btn-custom" id="btnSalvarCartao">Salvar Cartão</button>
+                            <div class="form-group col-md-8">
+                                <label for="endereco">Endereço:</label>
+                                <input type="text" class="form-control" id="endereco" placeholder="Digite o endereço">
                             </div>
+                            <div class="form-group col-md-4">
+                                <label for="numero">Número:</label>
+                                <input type="text" class="form-control" id="numero" placeholder="Número">
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label for="complemento">Complemento:</label>
+                                <input type="text" class="form-control" id="complemento" placeholder="Complemento">
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label for="bairro">Bairro:</label> 
+                                  <input type="text" class="form-control" id="bairro" placeholder="Bairro">
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label for="cidade">Cidade:</label>
+                                <input type="text" class="form-control" id="cidade" placeholder="Cidade">
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label for="estado">Estado:</label>
+                                <input type="text" class="form-control" id="estado" placeholder="Estado">
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label for="pais">País:</label>
+                                <input type="text" class="form-control" id="pais" placeholder="País">
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                  </div>
+                  </div>
+
+                  <!-- ABA CARTÕES -->
+                  <div class="tab-pane fade" id="tabs-cartoes" role="tabpanel" aria-labelledby="tabs-cartoes-tab">
+                    <div class="card card-primary">
+                        <div class="card-body">
+                            <div class="form-row">
+                                <div class="form-group col-md-4">
+                                    <button type="button" class="btn btn-custom" id="btnCriarCartao">Criar Novo Cartão</button>
+                                </div>
+                            </div>
+                            <div class="table-responsive">
+                            <table class="table table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th></th>
+                                        <th>Empresa</th>
+                                        <th>Número do Cartão</th>
+                                        <th>Status</th>
+                                        <th>Modalidade do Cartão</th>
+                                        <th>Categoria</th>
+                                        <th>Tipo do Cartão</th>
+                                        <th>Descrição do Cartão</th>
+                                        <th>Saldo do Cartão</th>
+                                        <th>Limite do Cartão</th>
+                                        <th>Saldo de Pontos</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <!-- Exemplo de linha de cartão -->
+                                    <tr>
+                                        <td><input type="radio" name="cartaoSelecionado" value="cartao1"></td>
+                                        <td>Loja A</td>
+                                        <td>**** **** **** 1234</td>
+                                        <td>Ativo</td>
+                                        <td>Crédito</td>
+                                        <td>Ouro</td>
+                                        <td>Pós-Pago</td>
+                                        <td>Cartão de Crédito Loja A</td>
+                                        <td>R$ 1.500,00</td>
+                                        <td>R$ 2.000,00</td>
+                                        <td>1.000</td>
+                                    </tr> 
+                                    <tr>
+                                      <td><input type="radio" name="cartaoSelecionado" value="cartao2"></td>
+                                      <td>Loja B</td>
+                                      <td>**** **** **** 5678</td>
+                                      <td>Ativo</td>
+                                      <td>Fidelidade</td>
+                                      <td>Prata</td>
+                                      <td>Pré-Pago</td>
+                                      <td>Cartão de Fidelidade Loja B</td>
+                                      <td>R$ 800,00</td>
+                                      <td>R$ 1.500,00</td>
+                                      <td>500</td>
+                                  </tr>  
+                                  </tbody>
+                              </table>
+                            </div>
+
+                            <!--Botões-->
+                            <div class="btns-tab-cartoes">
+                              <button class="btn btn-custom btn-acoes-cartoes">Resetar Senha</button>
+                                            <button class="btn btn-custom btn-acoes-cartoes">Alterar</button>
+                                            <button class="btn btn-custom btn-acoes-cartoes">Ativar</button>
+                                            <button class="btn btn-custom btn-acoes-cartoes">Inativar</button>
+                                            <button class="btn btn-delete btn-acoes-cartoes">Bloquear</button>
+                                            <button class="btn btn-delete btn-acoes-cartoes">Excluir</button>
+                            </div>
+
+                            <!-- Modal para Criar Novo Cartão -->
+                          <div class="modal fade" id="modalCriarCartao" tabindex="-1" role="dialog" aria-labelledby="modalCriarCartaoLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="modalCriarCartaoLabel">Criar Novo Cartão</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form id="formCriarCartao">
+                                            <div class="form-group">
+                                                <label for="empresa">Empresa:</label>
+                                                <select class="form-control" id="empresa" name="empresa" >
+                                                  <option value="" disabled selected>Selecione uma empresa</option> <!-- Placeholder -->
+                                                    <option value="empresaLogada">Empresa Logada</option>
+                                                    <option value="empresaA">Empresa A</option>
+                                                    <option value="empresaB">Empresa B</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="modalidade">Modalidade do Cartão:</label>
+                                                <select class="form-control" id="modalidade" name="modalidade">
+                                                  <option value="" disabled selected>Selecione a modalidade</option>
+                                                  <option value="credito">Crédito</option>
+                                                  <option value="fidelidade">Fidelidade</option>
+                                                  <option value="giftCard">Gift Card</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="categoria">Categoria:</label>
+                                                <select class="form-control" id="categoria" name="categoria">
+                                                  <option value="" disabled selected>Selecione a categoria</option>
+                                                  <option value="ouro">Ouro</option>
+                                                    <option value="prata">Prata</option>
+                                                    <option value="bronze">Bronze</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="tipoCartao">Tipo do Cartão:</label>
+                                                <select class="form-control" id="tipoCartao" name="tipoCartao">
+                                                  <option value="" disabled selected>Selecione o tipo do cartão</option>
+                                                  <option value="pos-pago">Pós-Pago</option>
+                                                  <option value="pre-pago">Pré-Pago</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="descricao">Descrição do Cartão:</label>
+                                                <input type="text" class="form-control" id="descricao" name="descricao" placeholder="Descrição do Cartão">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="limiteCredito">Limite do Cartão:</label>
+                                                <input type="number" class="form-control" id="limiteCredito" name="limiteCredito" placeholder="Limite do Cartão">
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-delete" data-dismiss="modal">Fechar</button>
+                                        <button type="button" class="btn btn-custom" id="btnSalvarCartao">Salvar Cartão</button>
+                                    </div>
+                                </div>
+                            </div>
+                          </div>
+                      </div><!-- card Detalhes -->
+                    </div>
+                  </div> 
+
+                  <!-- ABA SCORE -->
+                  <div class="tab-pane fade" id="tabs-score" role="tabpanel" aria-labelledby="tabs-score-tab">
+                    <div class="card card-primary">
+                        <div class="card-body">
+                            <div class="form-row">
+                                <div class="form-group col-md-4">
+                                    <button type="button" class="btn btn-custom" id="btnConsultarScore">Consultar SCORE</button>
+                                </div>
+                            </div>
+                            <div class="table-responsive">
+                            <table class="table table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th>Número do Processo/Protesto</th>
+                                        <th>Tipo do Processo/Protesto</th>
+                                        <th>Descrição do Processo/Protesto</th>
+                                        <th>Status do Processo/Protesto</th>
+                                        <th>Data da Pesquisa</th>
+                                        <th>Data Início do Processo/Protesto</th>
+                                        <th>Data Fim do Processo/Protesto</th>
+                                        <th>Valor do Processo/Protesto</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <!-- Exemplo de linha de SCORE -->
+                                    <tr>
+                                        <td>123456</td>
+                                        <td>Protesto</td>
+                                        <td>Descrição do Protesto</td>
+                                        <td>Ativo</td>
+                                        <td>01/01/2023</td>
+                                        <td>01/01/2020</td>
+                                        <td>01/01/2021</td>
+                                        <td>R$ 500,00</td>
+                                    </tr>
+                                    <tr>
+                                        <td>654321</td>
+                                        <td>Processo Judicial</td>
+                                        <td>Descrição do Processo</td>
+                                        <td>Encerrado</td>
+                                        <td>15/01/2023</td>
+                                        <td>01/01/2019</td>
+                                        <td>01/01/2020</td>
+                                        <td>R$ 1.000,00</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                          </div>
                         </div>
                     </div>
                   </div>
-              </div><!-- card Detalhes -->
-            </div>
-          </div> 
 
-          <!-- ABA SCORE -->
-          <div class="tab-pane fade" id="tabs-score" role="tabpanel" aria-labelledby="tabs-score-tab">
-            <div class="card card-primary">
-                <div class="card-body">
-                    <div class="form-row">
-                        <div class="form-group col-md-4">
-                            <button type="button" class="btn btn-custom" id="btnConsultarScore">Consultar SCORE</button>
-                        </div>
+                  <!-- ABA COMPRAS REALIZADAS --> 
+                  <div class="tab-pane fade" id="tabs-compras" role="tabpanel" aria-labelledby="tabs-compras-tab"> 
+                    <div class="card card-primary"> 
+                      <div class="card-body"> 
+                        <div class="form-row"> 
+                          <div class="form-group col-md-3"> 
+                            <label for="dataCompra">Data da Compra:</label> 
+                            <input type="date" class="form-control" id="dataCompra" name="dataCompra">
+                          </div> 
+                      
+                          <div class="form-group col-md-3"> 
+                            <label for="dataVencimento">Data de Vencimento:</label> <input type="date" class="form-control" id="dataVencimento" name="dataVencimento"> 
+                          </div> 
+                          
+                          <div class="form-group col-md-3"> 
+                            <label for="dataPagamento">Data de Pagamento:</label> 
+                            <input type="date" class="form-control" id="dataPagamento" name="dataPagamento"> 
+                          </div> 
+                          <div class="form-group col-md-3"> 
+                            <button type="button" class="btn btn-custom mt-4" id="btnPesquisarCompras">Pesquisar</button> 
+                          </div> 
+                        </div> 
+                        
+                        <table class="table table-bordered"> 
+                          <thead> 
+                            <tr> 
+                              <th></th>
+                              <th>ID da Transação</th> 
+                              <th>Data da Transação</th> 
+                              <th>Valor da Transação</th> 
+                              <th>Status da Transação</th> 
+                              <th class="acoes-comprasRealizadas">Ações</th> 
+                            </tr> 
+                          </thead> 
+                          <tbody> <!-- Exemplo de linha de compra --> 
+                            <tr> 
+                              <td><input type="checkbox" name="compraSelecionada" value="1"></td>
+                              <td>1</td> 
+                              <td>01/01/2023</td> 
+                              <td>R$ 100,00</td> 
+                              <td>Pago</td> 
+                              <td> 
+                                
+                                <button class="btn btn-tab-compras-realizadas" title="Imprimir Comprovante"><i class="bi bi-eye-fill"></i></button>
+                                
+                              </td> 
+                            </tr> 
+                            <tr> 
+                              <td><input type="checkbox" name="compraSelecionada" value="1"></td>
+                              <td>2</td> 
+                              <td>15/01/2023</td> 
+                              <td>R$ 250,00</td> 
+                              <td>Pendente</td> 
+                              <td> 
+
+                                <button class="btn btn-tab-compras-realizadas" title="Imprimir Comprovante"><i class="bi bi-eye-fill"></i></button>
+                                
+                              </td> 
+                            </tr>
+                          </tbody> 
+                        </table> 
+                      </div> 
+                    </div> 
+
+                    <div>
+                      <button class="btn btn-custom btn-tab-compras-realizadas">Visualizar Transação</button> 
+                                  <button class="btn btn-custom btn-tab-compras-realizadas">Imprimir Comprovante</button>
+                                  <button class="btn btn-custom btn-tab-compras-realizadas">Enviar Link de Pagto da Compra</button> 
+                                  <button class="btn btn-custom btn-tab-compras-realizadas">Enviar Link de Pagto da Fatura</button> 
+                                  <button class="btn btn-custom btn-tab-compras-realizadas">Negociação</button>
                     </div>
-                    <div class="table-responsive">
-                    <table class="table table-bordered">
-                        <thead>
-                            <tr>
-                                <th>Número do Processo/Protesto</th>
-                                <th>Tipo do Processo/Protesto</th>
-                                <th>Descrição do Processo/Protesto</th>
-                                <th>Status do Processo/Protesto</th>
-                                <th>Data da Pesquisa</th>
-                                <th>Data Início do Processo/Protesto</th>
-                                <th>Data Fim do Processo/Protesto</th>
-                                <th>Valor do Processo/Protesto</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <!-- Exemplo de linha de SCORE -->
-                            <tr>
-                                <td>123456</td>
-                                <td>Protesto</td>
-                                <td>Descrição do Protesto</td>
-                                <td>Ativo</td>
-                                <td>01/01/2023</td>
-                                <td>01/01/2020</td>
-                                <td>01/01/2021</td>
-                                <td>R$ 500,00</td>
-                            </tr>
-                            <tr>
-                                <td>654321</td>
-                                <td>Processo Judicial</td>
-                                <td>Descrição do Processo</td>
-                                <td>Encerrado</td>
-                                <td>15/01/2023</td>
-                                <td>01/01/2019</td>
-                                <td>01/01/2020</td>
-                                <td>R$ 1.000,00</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                  </div>
+                  </div> 
                 </div>
-            </div>
-          </div>
-
-          <!-- ABA COMPRAS REALIZADAS --> 
-          <div class="tab-pane fade" id="tabs-compras" role="tabpanel" aria-labelledby="tabs-compras-tab"> 
-            <div class="card card-primary"> 
-              <div class="card-body"> 
-                <div class="form-row"> 
-                  <div class="form-group col-md-3"> 
-                    <label for="dataCompra">Data da Compra:</label> 
-                    <input type="date" class="form-control" id="dataCompra" name="dataCompra">
-                  </div> 
-              
-                  <div class="form-group col-md-3"> 
-                    <label for="dataVencimento">Data de Vencimento:</label> <input type="date" class="form-control" id="dataVencimento" name="dataVencimento"> 
-                  </div> 
-                  
-                  <div class="form-group col-md-3"> 
-                    <label for="dataPagamento">Data de Pagamento:</label> 
-                    <input type="date" class="form-control" id="dataPagamento" name="dataPagamento"> 
-                  </div> 
-                  <div class="form-group col-md-3"> 
-                    <button type="button" class="btn btn-custom mt-4" id="btnPesquisarCompras">Pesquisar</button> 
-                  </div> 
-                </div> 
-                
-                <table class="table table-bordered"> 
-                  <thead> 
-                    <tr> 
-                      <th>ID da Transação</th> 
-                      <th>Data da Transação</th> 
-                      <th>Valor da Transação</th> 
-                      <th>Status da Transação</th> 
-                      <th class="coluna-acoes">Ações</th> 
-                    </tr> 
-                  </thead> 
-                  <tbody> <!-- Exemplo de linha de compra --> 
-                    <tr> 
-                      <td>1</td> 
-                      <td>01/01/2023</td> 
-                      <td>R$ 100,00</td> 
-                      <td>Pago</td> 
-                      <td> 
-                        <button class="btn btn-custom btn-tab-compras-realizadas">Visualizar Transação</button> 
-                        <button class="btn btn-custom btn-tab-compras-realizadas">Imprimir Comprovante</button>
-                        <button class="btn btn-custom btn-tab-compras-realizadas">Enviar Link de Pagto da Compra</button> 
-                        <button class="btn btn-custom btn-tab-compras-realizadas">Enviar Link de Pagto da Fatura</button> 
-                        <button class="btn btn-custom btn-tab-compras-realizadas">Negociação</button>
-                      </td> 
-                    </tr> 
-                    <tr> 
-                      <td>2</td> 
-                      <td>15/01/2023</td> 
-                      <td>R$ 250,00</td> 
-                      <td>Pendente</td> 
-                      <td> 
-                        <button class="btn btn-custom btn-tab-compras-realizadas">Visualizar Transação</button> 
-                        <button class="btn btn-custom btn-tab-compras-realizadas">Imprimir Comprovante</button>
-                        <button class="btn btn-custom btn-tab-compras-realizadas">Enviar Link de Pagto da Compra</button> 
-                        <button class="btn btn-custom btn-tab-compras-realizadas">Enviar Link de Pagto da Fatura</button> 
-                        <button class="btn btn-custom btn-tab-compras-realizadas">Negociação</button>
-                      </td> 
-                    </tr>
-                  </tbody> 
-                </table> 
-              </div> 
-            </div> 
-          </div> 
-      
-  </form>
-
-</section>
-
-<!--<div class="modal fade" id="pesquisa-cliente-modal">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h4 class="modal-title">Informação</h4>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          <p>Digite o CNPJ ou o nome do cliente.</p>
-
-                <div class="form-row">
-                    <div class="form-group col-md-12">
-                        <select id="clicod" name="clicod" autofocus="autofocus"
-                            class="form-control select2 select2-hidden-accessible"
-                            data-placeholder="Digite o CNPJ ou o nome do cliente" style="width: 100%;"
-                            aria-hidden="true">
-                                <option></option>
-
-                        </select>
-                    </div>
-                </div>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-success pull-right" id="btnSearchClient" data-dismiss="modal"><i class="fa fa-check"></i> OK</button>
-        </div>
-      </div>-->
-      <!-- /.modal-content -->
-    </div>
-    <!-- /.modal-dialog -->
-  </div>
-  <!-- /.modal cnpj-->
-
-<!--<div class="modal fade" id="cnpj-info-modal">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h4 class="modal-title">Informação</h4>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <p>Digite o CNPJ e clique no botão <button type="button" class="btn btn-default" disabled><i
-              class="fa fa-search"></i></button>, para preencher as informações da empresa automaticamente&hellip;</p>
-      </div>
-      <div class="modal-footer justify-content-between">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
-      </div>
-    </div>
-  </div>
-</div>-->
-<!-- / .modal cnpj-->
-
-<!--<div class="modal fade" id="cep-info-modal">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h4 class="modal-title">Informação</h4>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <p>Digite o CEP e clique no botão <button type="button" class="btn btn-default" disabled><i
-              class="fa fa-search"></i></button>, para preencher o Endereço automaticamente&hellip;</p>
-      </div>
-      <div class="modal-footer justify-content-between">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
-      </div>
-    </div>
-  </div>
-</div>-->
-<!-- /.modal cep-->
-
-<!-- /.content -->
+              </div>
+        </form>
+      </section>
 
         </div>
         <!-- /.content-wrapper -->
+            <!--TEXTO DE COPYRIGHT NO FOOTER-->
             <footer class="main-footer">
               <strong>Copyright &copy; 2023 MULTBAN.</strong>
               Todos os Direitos Reservados - CNPJ: 01.179.943/0001-96 - <a tabindex="-1"
@@ -991,7 +882,6 @@
         }
     </style>
 
-
   <!--Modal para criar novo cartão na aba Cartões-->
   <script>
     $(document).ready(function() {
@@ -1026,7 +916,6 @@
   });
 
 </script>
-
 <script src="plugins/jquery-validation/jquery.validate.min.js"></script>
 <script src="plugins/jquery-validation/localization/messages_pt_BR.min.js"></script>
 <script src="plugins/jquery-validation/additional-methods.js"></script>

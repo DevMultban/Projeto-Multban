@@ -131,18 +131,26 @@ a.nav-link.active.sidebar-menu:hover{
 .btn-tab-compras-realizadas{
     font-size: 13px;
     padding: 5px;
-    padding-block: 1px;
 }
-.coluna-acoes{
-    width: 46rem;
+.acoes-comprasRealizadas{
+    width: 3rem;
 }
 
-/*Botões da table da aba Cartões*/
+/*Botões da table da aba Cartões de Clientes*/
 .btn-acoes-cartoes{
-    font-size: 13px;
-    padding: 8px;
-    padding-block: 1px;
+    font-size: 15px;
+    padding: 5px;
 }
+.btns-tab-cartoes{
+    padding-top: 20px;
+    padding-bottom: 0;
+}
+/*Checkbox do cartão*/
+/* Estilo para o checkbox */
+input[type="radio"] {
+    color: #443c57;
+}
+
 
 #btnPesquisarCep{
     color: #c1c0c2;
@@ -163,6 +171,11 @@ a.nav-link.active.sidebar-menu:hover{
 } 
 .row {
     margin-bottom: 10px;
+}
+
+/*Icones aba Compras Realizadas*/
+.bi-eye-fill:hover{ /*Visualização*/
+    color: #6d696e;
 }
 
 /*Footer*/
