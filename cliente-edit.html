@@ -26,12 +26,13 @@
     <link rel="stylesheet" href="dist/css/multban.min.css">
     <link rel="stylesheet" href="plugins/toastr/toastr.min.css">
     <link rel="stylesheet" href="plugins/sweetalert2/sweetalert2.min.css">
+
     <link rel="stylesheet" href="dist/css/cadastro-menus.css">
 
     <!-- Google Font: Source Sans Pro -->
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
     
-    <!--LOGO SITE-->
+    <!--Logo Site-->
     <link rel="icon" type="image/png"
         href="dist/img/logo-multcard-minimizado-roxa.png">
 
@@ -79,7 +80,7 @@
                             <img src="dist/img/no-product-image.png"
                                 class="img-circle elevation-2" alt="User Image">
                             <p>
-                                Usuário
+                              USUÁRIO
                                 <small>Data de cadastro: 16/01/2025</small>
                             </p>
                         </li>
@@ -187,13 +188,7 @@
       <section class="content">
 
         <form class="form-horizontal" id="formPrincipal" role="form" method="POST" action="#">
-          <input type="hidden" name="_method" value="POST">
-            <div class="row">
-              <div class="col-md-12">
-      
-              </div>
-            </div>
-
+          
             <div class="row" style="margin-bottom: 80px;">
               <div class=" navbar-fixed-top fixed fixed nav-opcoes">
 
@@ -203,14 +198,13 @@
                 <button type="button" class="btn btn-custom"><i class="bi bi-check-circle"></i> Ativar</button>
                 <button type="button" class="btn btn-custom"><i class="bi bi-slash-circle"></i> Inativar</button>
                 <button type="button" class="btn btn-delete"><i class="fa-solid fa-trash"></i> Excluir</button>
-                <button type="button" class="btn btn-delete" onclick="location.href='./usuario-index.html'"><i class="icon fas fa-arrow-left"></i> Voltar</button>
+                <button type="button" class="btn btn-delete" onclick="location.href='./cliente-index.html'"><i class="icon fas fa-arrow-left"></i> Voltar</button>
 
               </div>
             </div>
 
             <div class="card card-outline card-tabs">
               <div class="card-header p-0 pt-1 border-bottom-0">
-
                 <!--ABAS/TABS-->
                 <ul class="nav nav-tabs" id="custom-tabs-two-tab" role="tablist" >
                   <li class="nav-item">
@@ -359,10 +353,13 @@
 
                           <div class="form-group col-md-3">
                             <label for="clieml">E-mail:*</label>
-                              <input autocomplete="off" type="email" class="form-control" id="clieml"
-                              name="clieml" value="" placeholder="Digite o E-mail">
+                            <div class="input-group">
+                              <input autocomplete="off" type="email" class="form-control" id="clieml" name="clieml" value="" placeholder="Digite o E-mail">
+                              <div class="input-group-append">
+                                  <button class="btn btn-reenviarEmail" type="button">Reenviar</button>
+                              </div>
                           </div>
-                          <!--CRIAR UM BTN PRA REENVIAR O E-MAIL DE VALIDAR O CADASTRO-->
+                          </div>
                         
                         </div>
 
@@ -538,9 +535,19 @@
                     <div class="card card-primary">
                         <div class="card-body">
                             <div class="form-row">
-                                <div class="form-group col-md-4">
-                                    <button type="button" class="btn btn-custom" id="btnCriarCartao">Criar Novo Cartão</button>
+                              <div class="col-md-4">
+                                <button type="button" class="btn btn-custom" id="btnCriarCartao">Criar Novo Cartão</button>
+                            </div>
+                            <div class="col-md-8 text-right">
+                                <div class="form-group d-inline-block">
+                                    <label for="score" class="mr-2">SCORE do Cliente:</label>
+                                    <input type="text" id="score" class="form-control form-control-sm" readonly style="width: 150px; display: inline-block;">
                                 </div>
+                                <div class="form-group d-inline-block ml-2">
+                                  <label for="limiteSugerido" class="mr-2">Limite Sugerido:</label>
+                                  <input type="text" id="limiteSugerido" class="form-control form-control-sm" placeholder="Limite Sugerido" readonly style="width: 150px; display: inline-block;">
+                                </div>
+                            </div>
                             </div>
                             <div class="table-responsive">
                             <table class="table table-bordered">
