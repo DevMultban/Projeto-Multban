@@ -42,7 +42,7 @@ a.nav-link.active.sidebar-menu {
     transition: background-color 0.3s;
 }
 
-/*Cor do menu Cadastros selecionado*/
+/*Cadastros - menu selecionado*/
 .sidebar-dark-primary .nav-sidebar > .nav-item > .nav-link.active{
     background-color: #331a75;
 }
@@ -57,7 +57,7 @@ a.nav-link.active.sidebar-menu:hover{
     transition: border-top-color 0.3s;
 }
 
-/*Cor da borda da aba selecionada (Usuario)*/
+/*Menu Usuario - Cor da borda da aba selecionada*/
 #tabs-dados-tab.active{
     border-top-color: #a702d8;
 }
@@ -70,7 +70,7 @@ a.nav-link.active.sidebar-menu:hover{
     border-width: 3px;
 }
 
-/*Cor da borda da aba selecionada (Cliente)*/
+/*Menu Clientes - Cor da borda da aba selecionada*/
 #tabs-dados-tab.active{
     border-top-color: #a702d8;
 }
@@ -140,13 +140,13 @@ a.nav-link.active.sidebar-menu:hover{
     color:#fff;
 }
 
-/*Aba Dados Gerais pagina Clientes*/
+/*Menu Clientes - Aba Dados Gerais*/
 .header-dadosSaneados{
     background-color: #dedede;
 }
 
 
-/*Botões da table da aba Compras Realizadas*/
+/*Menu Clientes - Botões da table da aba Compras Realizadas*/
 .btn-tab-compras-realizadas{
     font-size: 15px;
     padding: 5px;
@@ -164,7 +164,7 @@ a.nav-link.active.sidebar-menu:hover{
     color: #6d696e;
 }
 
-/*Botões da table da aba Cartões de Clientes*/
+/*Menu Clientes- Botões da table da aba Cartões*/
 .btn-acoes-cartoes{
     font-size: 15px;
     padding: 5px;
