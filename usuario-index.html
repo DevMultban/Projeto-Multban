@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- CSRF Token -->
+    <meta name="csrf-token" content="IyM1RY2lInNFexy3HYntiLGouuRlq8tokrcuUAKB">
+    <title>Usuário | MULTBAN</title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
+    <!-- overlayScrollbars -->
+    <link rel="stylesheet" href="plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+    <!-- Ionicons
+    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">-->
+    <!-- pace-progress -->
+    <link rel="stylesheet" href="plugins/pace-progress/themes/black/pace-theme-flat-top.css">
+
+    <!--Icons Botões-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <!-- Select2 -->
+    <link rel="stylesheet" href="plugins/select2/css/select2.min.css">
+    <link rel="stylesheet" href="plugins/sweetalert2/sweetalert2.min.css">
+    <link rel="stylesheet" href="plugins/datatables-select/css/select.bootstrap4.min.css" />
+    <link rel="stylesheet" href="plugins/datatables-bs4/css/dataTables.bootstrap4.min.css" />
+    <link rel="stylesheet" href="plugins/datatables-fixedheader/css/fixedHeader.bootstrap4.min.css" />
+    <link rel="stylesheet" href="plugins/datatables-responsive/css/responsive.bootstrap4.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="dist/css/multban.min.css">
+    <link rel="stylesheet" href="plugins/toastr/toastr.min.css">
+    <link rel="stylesheet" href="plugins/sweetalert2/sweetalert2.min.css">
+
+
+    <link rel="stylesheet" href="dist/css/menus.css">
+
+    
+    <!-- Google Font: Source Sans Pro -->
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+
+    <!--Icone da pagina-->
+    <link rel="icon" type="image/png"
+        href="dist/img/logo-multcard-minimizado-roxa.png">
+
+</head>
+
+<body
+    class="hold-transition sidebar-mini layout-fixed pace-primary layout-footer-fixed sidebar-collapse">
+    
+    <div class="wrapper">
+
+        <!-- Navbar -->
+        <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+            <!-- Left navbar links -->
+            <ul class="navbar-nav navbar-nav-pdv">
+                <li class="nav-item">
+                    <a class="nav-link" data-widget="pushmenu" href="#"><i class="fas fa-bars"></i></a>
+                </li>
+            </ul>
+
+            <!-- Right navbar links -->
+            <ul class="navbar-nav ml-auto">
+                <!-- Notifications Dropdown Menu -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link" data-toggle="dropdown" href="#">
+                        <i class="far fa-bell"></i>
+                        <span class="badge badge-warning navbar-badge">2</span>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+                        <span class="dropdown-item dropdown-header">2 Notificações</span>
+                        <div class="dropdown-divider"></div>
+                        <a href="#" class="dropdown-item dropdown-footer">Ver todas</a>
+                    </div>
+                </li>
+                <!-- User Profile Dropdown Menu -->
+                <li class="nav-item dropdown user-menu">
+                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">
+                        <span class="d-none d-md-inline">Usuário</span>
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+                        <!-- User image -->
+                        <li class="user-header bg-primary">
+                            <img src="dist/img/no-product-image.png"
+                                class="img-circle elevation-2" alt="Imagem do Usuario">
+                            <p>USUÁRIO
+                                <small>Data de cadastro: 16/01/2025</small>
+                            </p>
+                        </li>                        
+						<li class="user-footer">
+						    <a href="#" class="btn btn-perfil">Perfil</a>
+						    <a href="./login.html" class="btn btn-delete float-right">Sair</a>                           
+						</li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <!-- /.navbar -->
+
+    <!-- Main Sidebar Container -->
+    <aside class="main-sidebar sidebar-dark-primary elevation-4">
+
+        <!-- Brand Logo -->
+        <a href="/" class="brand-link">
+            <img src="dist/img/logo-amarela-min.png" alt="MULTCARD" title="MULTBAN" class="brand-image">
+            <span class="brand-text">
+                <img src="dist/img/logo-amarela.png" alt="Logo Multcard" class="logo-multcard">
+            </span>
+        </a>
+
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <!-- Sidebar Menu -->
+            <nav class="mt-2">
+                <ul role="menu" data-widget="treeview" data-accordion="false" class="nav nav-pills nav-sidebar flex-column nav-flat nav-child-indent">
+                    <li class="nav-item">
+                        <a href="/" class="nav-link"><i class="nav-icon fas fa-tachometer-alt"></i> 
+                            <p>Home</p>
+                        </a>
+                    </li>
+                    <li class="nav-item menu-open">
+                
+                        <a href="#" class="nav-link active">
+                            <i class="nav-icon fas fa-plus-square"></i>
+                        <p>Cadastros <i class="right fas fa-angle-left"></i></p></a>
+                        <ul class="nav nav-treeview">
+                            <li class="nav-item">
+                                <a class="nav-link active" href="./usuario-index.html" style="border-color: #464b52;">
+                                    <i class="far nav-icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
+                                        <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6"/>
+                                        </svg>
+                                    </i> 
+                                    <p>Usuário</p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link sidebar-menu" href="./cliente-index.html">
+                                    <i class="far nav-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-person-vcard-fill" viewBox="0 0 16 16">
+                                    <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm9 1.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 0-1h-4a.5.5 0 0 0-.5.5M9 8a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 0-1h-4A.5.5 0 0 0 9 8m1 2.5a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 0-1h-3a.5.5 0 0 0-.5.5m-1 2C9 10.567 7.21 9 5 9c-2.086 0-3.8 1.398-3.984 3.181A1 1 0 0 0 2 13h6.96q.04-.245.04-.5M7 6a2 2 0 1 0-4 0 2 2 0 0 0 4 0"/>
+                                    </svg>
+                                </i> 
+                                    <p>Cliente</p>
+                                </a>
+                            </li>
+                            <li class="nav-item"><a href="./empresa-index.html" class="nav-link">
+                                <i class="far nav-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-briefcase-fill" viewBox="0 0 16 16">
+                                <path d="M6.5 1A1.5 1.5 0 0 0 5 2.5V3H1.5A1.5 1.5 0 0 0 0 4.5v1.384l7.614 2.03a1.5 1.5 0 0 0 .772 0L16 5.884V4.5A1.5 1.5 0 0 0 14.5 3H11v-.5A1.5 1.5 0 0 0 9.5 1zm0 1h3a.5.5 0 0 1 .5.5V3H6v-.5a.5.5 0 0 1 .5-.5"/>
+                                <path d="M0 12.5A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5V6.85L8.129 8.947a.5.5 0 0 1-.258 0L0 6.85z"/>
+                            </svg>
+                            </i> 
+                                <p>Empresa</p>
+                            </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <!-- /.sidebar-menu -->
+        </div>
+        <!-- /.sidebar -->
+    </aside>
+
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper">
+        <!-- Content Header (Page header) -->
+        <div class="content-header" style="padding: 0.5rem">
+            <div class="container-fluid">
+                <div class="row mb-2">
+                    <div class="col-sm-6">
+                        <ol class="breadcrumb ">
+							<li class="breadcrumb-item"><a href="./index.html" class="breadcrumb-item-color">Home</a></li>
+                            <li class="breadcrumb-item active">Usuário</li>
+                        </ol>
+                    </div><!-- /.col -->
+                </div><!-- /.row -->
+            </div><!-- /.container-fluid -->
+        </div>
+        <!-- /.content-header -->
+        <!-- Main content -->
+			
+        <section class="content">   
+        <div class="card card-outline card-primary" >
+            <div class="card-header">
+                <div class="row" >
+                    <div class="col-md-6">
+                        <label>Empresa:</label>
+                        <select class="form-control select2" id="idempresa" disabled="disabled" data-placeholder="Selecione"
+                            style="width: 100%;">
+                            <option id="1" value="1">00001 - MULTBAN</option>                        
+                        </select>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3">
+                        <label>Usuário:</label>
+                        <input type="text" id="usuario" class="form-control" placeholder="Digite o Usuário">
+                    </div>
+                    <div class="col-md-3">
+                        <label>Nome do Usuário:</label>
+                        <input type="text" id="nome" class="form-control" placeholder="Digite o Nome">
+                    </div>
+                    <div class="col-md-3">
+                        <label>CPF do Usuário:</label>
+                        <input type="text" id="cpf" class="form-control" placeholder="000.000.000-00" onkeypress="mask(this, '000.000.000-00')" maxlength="11">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card card-outline card-primary">
+            <div class="card-header">
+                <a href="./usuario-edit.html" class="btn btn-custom">Criar novo</a>           
+                <a class="btn btn-custom" id="btnPesquisar">Pesquisar</a>
+            </div>
+
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table id="gridtemplate" class="table table-striped table-bordered nowrap">
+                        <thead>
+                            <tr>
+                                <th>Ações</th>
+                                <th>Empresa</th>
+                                <th>Nome</th>
+                                <th>Usuario</th>
+                                <th>CPF</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                    </table>
+                </div>
+            </div>
+        </div>
+        </section>
+    </div>
+    <!-- /.content-wrapper -->
+        <!--Footer Copyright-->
+        <footer class="main-footer">
+			<strong>Copyright &copy; 2023 MULTBAN.</strong>
+			Todos os Direitos Reservados - CNPJ: 01.179.943/0001-96 - <a tabindex="-1"
+	        href="#" style="color: #a702d8;">Desenvolvido por MultTech Softwares.</a>
+			<div class="float-right d-none d-sm-inline-block">
+			    <b>Version</b> 1.0.0.0
+			</div>
+		</footer>
+
+        <!-- Control Sidebar -->
+        <aside class="control-sidebar control-sidebar-dark" sty>
+        <!-- Control sidebar content goes here -->
+        </aside>
+            <!-- /.control-sidebar -->
+    </div>
+
+    
+    <!-- ./wrapper -->
+    <!-- jQuery -->
+    <script src="plugins/jquery/jquery.min.js"></script>
+    <!-- Bootstrap 4 -->
+    <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- overlayScrollbars -->
+    <script src="plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+    <!-- pace-progress -->
+    <link rel="stylesheet" href="plugins/pace-progress/themes/blue/pace-theme-flash.css" />
+    <script src="plugins/pace-progress/pace.min.js"></script>
+    <!-- multban App -->
+    <script src="dist/js/multban.min.js"></script>
+    <!-- pre loading -->
+    <script src="plugins/modernizr/2.8.3/modernizr.js"></script>
+    <!-- shortcut -->
+    <script src="plugins/shortcut/shortcut.js"></script>
+
+    <script src="plugins/jquery-mask/jquery.mask.js"></script>
+    <!-- toastr -->
+    <script src="plugins/toastr/toastr.min.js"></script>
+    <!-- sweetalert -->
+    <script src="plugins/sweetalert2/sweetalert2.all.min.js"></script>
+    <!-- lodash -->
+    <script src="plugins/lodash/lodash.min.js"></script>
+
+    <!-- formatCurrency -->
+    <script src="plugins/formatCurrency/jquery.formatCurrency-1.4.0.js"></script>
+    <script src="plugins/formatCurrency/i18n/jquery.formatCurrency.pt-BR.js"></script>
+       
+    <style>
+        .no-js #loader {
+            display: none;
+        }
+
+        .js #loader {
+            display: block;
+            position: absolute;
+            left: 100px;
+            top: 0;
+        }
+
+        .se-pre-con {
+            position: fixed;
+            left: 0px;
+            top: 0px;
+            width: 100%;
+            height: 100%;
+            z-index: 9999;
+            background: url('dist/img/loading/preloader_3.gif') center no-repeat #fff;
+        }
+    </style>
+    <script>
+        // Wait for window load
+        $(window).on('load', function() {
+            // Animate loader off screen
+             $(".se-pre-con").fadeOut("slow");
+			 Pace.stop();
+        });
+    </script>
+    <!-- Select2 -->
+    <script src="plugins/select2/js/select2.full.min.js"></script>
+    <script src="plugins/sweetalert2/sweetalert2.all.min.js"></script>
+    <script src="plugins/datatables/jquery.dataTables.min.js"></script>
+    <script src="plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+    <script src="plugins/datatables-select/js/dataTables.select.min.js"></script>
+    <script src="plugins/datatables-fixedheader/js/dataTables.fixedHeader.min.js"></script>
+    <script src="plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
+    <script src="dist/js/app.js"></script>
+
+    <!--Ação do btn Pesquisar com resultado da pesquisa-->
+    <script>
+    $(document).ready(function() {
+        // Inicializa o DataTable
+        var table = $('#gridtemplate').DataTable();
+
+        // Evento de tecla para pesquisa
+        $('#inputPesquisa').on('keyup', function(e) {
+            if (e.key === 'Enter') {
+                $("#btnPesquisar").trigger("click");
+            }
+        });
+
+        // Evento de clique no botão "Pesquisar"
+        $('#btnPesquisar').click(function() {
+            // Limpa a tabela antes de adicionar novos dados
+            table.clear().draw();
+
+            //Exemplo de dados
+            var dados = [
+                { empresa: 'Empresa A', nome: 'João Silva', usuario: 'joao.silva', cpf: '123.456.789-00', status: 'Ativo' },
+                { empresa: 'Empresa B', nome: 'Maria Oliveira', usuario: 'maria.oliveira', cpf: '987.654.321-00', status: 'Inativo' }
+            ];
+
+            // Adiciona os dados à tabela
+            dados.forEach(function(usuario) {
+                table.row.add([
+                    //Botões com icons
+                    `<button class="btn btn-icon-usuario btn-sm" id="btnEditar" title="Editar" >
+                                        <span class="bi bi-pencil-fill"></span>
+                                    </button>
+                                    <button class="btn btn-icon-usuario btn-sm" id="btnAtivar" title="Ativar">
+                                        <span class="bi bi-check-circle"></span>
+                                    </button>
+                                    <button class="btn btn-icon-usuario btn-sm" id="btnInativar" title="Inativar">
+                                        <span class="bi bi-slash-circle"></span>
+                                    </button>
+                                    <button class="btn btn-icon-usuario btn-sm" id="btnExcluir" title="Excluir">
+                                        <span class="bi bi-trash"></span>
+                                    </button>`,
+                    usuario.empresa,
+                    usuario.nome,
+                    usuario.usuario,
+                    usuario.cpf,
+                    usuario.status,
+                ]).draw();
+            });
+        });
+    });
+    </script>
+
+<script type="text/javascript">
+
+/*Ação do btn Pesquisar
+$(document).ready(function(){
+
+    $('#inputPesquisa').on('keyup', function(e) {
+            if (e.key === 'Enter') {
+                $("#btnPesquisar").trigger("click");
+            }
+});*/
+
+$(".alert-dismissible")
+.fadeTo(10000, 500)
+.slideUp(500, function() {
+    $(".alert-dismissible").alert("close");
+});
+
+
+
+
+$('#btnPesquisar').click(function(){
+    var totaliza = {};
+    totaliza.qtd = 0;
+    totaliza.vlr = 3;
+    totaliza.totaliza = false;
+    $('#gridtemplate').DataTable().clear().destroy();
+    $('#gridtemplate').DataTable();
+    //ns.gridDataTable(colunas, colunasConfiguracao, true, "single", "cliente", totaliza);
+});
+//Initialize Select2 Elements
+$('.select2').select2();
+
+var colunas = [
+{
+    data: 'id',
+    name: 'id'},
+{
+    data:'clides',
+    name:'clides',
+    autoWidth: true},
+{
+    data:'clicgc',
+    name:'clicgc'},
+{
+    data:'clientetipo',
+    name:'clientetipo'},
+{
+    data: 'ativo',
+    name: 'ativo',
+    searchable: false},
+{
+    data: 'action',
+    name: 'action',
+    orderable: false,
+    searchable: false}
+];
+
+var colunasConfiguracao = [
+{ width: 20, targets: 0 },
+{ width: "auto", targets: 1 },
+{ width: "auto", targets: 2 },
+{ width: "auto", targets: 3 }
+];
+
+// $(document).on('dblclick', 'tbody tr', function () {
+//     var id = $('#gridtemplate').DataTable().row( this ).id();
+//     window.location = '/cliente/'+parseInt(id)+'/alterar';
+// });
+
+$(document).on('click', '#delete_grid_id', function(e){
+    var id = $(this).data('id');
+    ns.swalDelete(id, 'cliente');
+    e.preventDefault();
+});
+
+</script>
+</body>
+</html>
+
