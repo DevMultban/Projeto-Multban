@@ -132,7 +132,7 @@
 
 								<ul class="nav nav-treeview">
 									<li class="nav-item">
-                    <a class="nav-link active" href="./usuario-index.html" style="border-color: #464b52;">
+                    <a class="nav-link active" href="./usuario-index.html" style="border-color: #9fcbe0;">
 											<i class="far nav-icon">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
                           <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6"/>
@@ -243,58 +243,28 @@
                 
                 <div class="card-body">
                   <div class="tab-content" id="custom-tabs-two-tabContent">
-
-                    <!--ABA DADOS GERAIS-->
                     <div class="tab-pane fade active show" id="tabs-dados" role="tabpanel" aria-labelledby="tabs-dados-tab">
+                      <!--ABA DADOS GERAIS-->
                       <div class="card card-primary">
                         <div class="card-body">
-
-                          <div class="form-row" id="serachClient">
-                              <div class="form-group col-md-2">
+                          <div class="form-row">
+                              <div class="form-group col-md-2" id="serachClient">
                                 <label for="cod">Código do Usuário:</label>
                               <div class="input-group mb-3">
                                 <!--O código tem que ser registrado automaticamnete após a criação do usuário-->
                                   <input autocomplete="off"  autofocus="autofocus"
                                     class="form-control cep" id="cod" name="cod"
                                     value="" placeholder="Código do Usuário" readonly="">
-                                  
                               </div>
                             </div>
-                          </div>
-                          <div class="form-row">
-                          
-                          <div class="form-group col-md-4">
-                            <label for="clides">Nome do Usuário:</label>
-                            <input autocomplete="off" class="form-control"
-                              placeholder="Digite o nome do suário" name="clides" type="text" id="clides"
-                              value="">
-                          </div>
-                          <div class="form-group col-md-3">
-                            <label for="clicgc" id="labelclicgc">CPF do Usuário:</label>
-                                <div class="input-group mb-3">
-                                    <input autocomplete="off" type="text" autofocus="autofocus"
-                                    class="form-control" id="clicgc"
-                                    name="clicgc" value="" placeholder="000.000.000-00" onkeypress="mask(this, '000.000.000-00')" maxlength="11">
-                                        <span class="input-group-append">
-                                          <button type="button" id="btnSearchCNPJ" class="btn btn-default"><i
-                                              class="fas fa-search"></i></button>
-                                        </span>
-                                </div>
-                          </div>
                             <div class="form-group col-md-2">
                               <label for="idclientetipo">Status do Usuário:</label>
                               <select class="form-control select2" name="idclientetipo" id="idclientetipo"
-                                  data-placeholder="Selecione o Status" style="width: 100%;">
-                                  <option></option>
-                                  <option value="1">Cliente Autorizado</option>
+                                  data-placeholder="Selecione" style="width: 100%;">
                                   <option value="0">Em análise</option>
+                                  <option value="1">Cliente Autorizado</option>
                               </select>
                             </div>
-
-                          </div>
-
-                          <div class="form-row">
-                            
                             <div class="form-group col-md-3">
                               <label for="cliram">Empresa:</label>
                               <select id="cliram" name="cliram" class="form-control select2 select2-hidden-accessible"
@@ -302,45 +272,67 @@
                                 aria-hidden="true">
                                 <option></option>
                                 <option value="1" >EMPRESA 1</option>
-                                <option value="2" >EMPRESA 2</option>
-                               
+                                <option value="2" >EMPRESA 2</option>   
                               </select>
                             </div>
+                          </div>
+                          
+                          <div class="form-row">
                             <div class="form-group col-md-2">
                               <label for="cliies" id="labelCliies">Usuário:</label>
                               <input autocomplete="off" type="text" class="form-control" id="cliies" name="cliies"
                                 value="" placeholder="Digite o Usuário">
                             </div>
                             <div class="form-group col-md-2">
-                              <label for="clisig">Cargo do Usuário:</label>
+                              <label for="clisig">Cargo:</label>
                               <select class="form-control" name="clisig" id="clisig" required>
                                   <!--Exemplo de cargos-->
-                                  <option value="" disabled selected hidden>Selecione o cargo</option>
+                                  <option value="" disabled selected hidden>Selecione</option>
                                   <option value="">Cargo 1</option>
                                   <option value="">Cargo 2</option>
                               </select>
                             </div>
-
-                            <div class="form-group col-md-2">
-                              <label for="idioma">Idioma:</label>
-                              <select id="idioma" name="idioma" class="form-control" required>
-                                  <option value="" disabled selected>Selecione o idioma</option>
-                                  <option value="pt">Português</option>
-                                  <option value="en">Inglês</option>
-                                  <option value="es">Espanhol</option>
-                              </select>
-                          </div>
-                          </div>
-
-                          <div class="form-row" style="padding-top: 1rem;">
-                            <div class="form-group col-md-3">
-                              <label for="clieml">E-mail do Usuário:</label>
-                              <input autocomplete="off" type="email" class="form-control" id="clieml"
-                                name="clieml" value="" placeholder="Digite o E-mail">
-                            </div>
-
                             <div class="form-group col-md-4">
-                              <label for="clinfe">Perfil de Acesso do Usuário:</label>
+                              <label for="clides">Nome Completo:</label>
+                              <input autocomplete="off" class="form-control"
+                                placeholder="Digite o nome" name="clides" type="text" id="clides"
+                                value="">
+                            </div>
+                            <div class="form-group col-md-3">
+                              <label for="clicgc" id="labelclicgc">CPF do Usuário:</label>
+                                  <div class="input-group mb-3">
+                                      <input autocomplete="off" type="text" autofocus="autofocus"
+                                      class="form-control" id="clicgc"
+                                      name="clicgc" value="" placeholder="000.000.000-00" onkeypress="mask(this, '000.000.000-00')" maxlength="11">
+                                          <span class="input-group-append">
+                                            <button type="button" id="btnSearchCNPJ" class="btn btn-default"><i
+                                                class="fas fa-search"></i></button>
+                                          </span>
+                                  </div>
+                            </div>
+                          </div>
+
+                          <div class="form-row">
+                              <div class="form-group col-md-3">
+                                <label for="clieml">E-mail:</label>
+                                <input autocomplete="off" type="email" class="form-control" id="clieml"
+                                  name="clieml" value="" placeholder="Digite o E-mail">
+                              </div>
+                              <div class="form-group col-md-3">
+                                <label for="clite2">Número de Celular:</label>
+                                <input autocomplete="off" type="text" class="form-control cell_with_ddd" id="clite2" name="clite2"
+                                  value="" placeholder="Digite o Celular">
+                              </div>
+                              <div class="form-group col-md-3">
+                                <label for="clite1">Telefone Fixo:</label>
+                                <input autocomplete="off" type="clite1" class="form-control phone_with_ddd" id="clite1" name="clite1"
+                                  value="" placeholder="Digite o Telefone Fixo">
+                              </div> 
+                          </div>
+
+                          <div class="form-row">
+                            <div class="form-group col-md-3">
+                              <label for="clinfe">Perfil de Acesso:</label>
                               <select class="form-control txt-color" id="clinfe"
                              data-placeholder="Selecione o Perfil de Acesso" name="clinfe" required>
                                 <option value="" disabled selected hidden>Selecione o tipo de acesso do usuário</option>
@@ -357,133 +349,123 @@
                                   <option value="tela1">Tela 1</option>
                                   <option value="tela2">Tela 2</option>
                               </select>
-                          </div>
-                          </div>
-                          
-                          <div class="form-row" style="padding-top: 1rem;">
-                          
-                            <div class="form-group col-md-3">
-                              <label for="clite1">Telefone Fixo do Usuário:</label>
-                              <input autocomplete="off" type="clite1" class="form-control phone_with_ddd" id="clite1" name="clite1"
-                                value="" placeholder="Digite o Telefone Fixo">
                             </div>
-
-                            <div class="form-group col-md-3">
-                              <label for="clite2">Número de Celular do Usuário:</label>
-                              <input autocomplete="off" type="text" class="form-control cell_with_ddd" id="clite2" name="clite2"
-                                value="" placeholder="Digite o Celular">
-                            </div>
-                                         
+                            <div class="form-group col-md-2">
+                              <label for="idioma">Idioma:</label>
+                              <select id="idioma" name="idioma" class="form-control" required>
+                                  <option value="" disabled selected>Selecione o idioma</option>
+                                  <option value="pt">Português</option>
+                                  <option value="en">Inglês</option>
+                                  <option value="es">Espanhol</option>
+                              </select>
                           </div>
-                        </div>
+                          </div>
                         <!-- /.card-body -->
-                      </div>
+                        </div>
                       <!-- /.card -->
-                      
-                    </div> 
+                      </div> 
                         
-                    <!--ABA DE SENHA-->
-                    <div class="tab-pane fade" id="tabs-senha" role="tabpanel" aria-labelledby="tabs-senha-tab">
-                      <div class="card card-primary">
-                          <div class="card-body">
-                              <div class="form-row">
-                                  <div class="form-group col-md-4 mb-3"> <!-- Adiciona margem inferior -->
-                                      <label for="senha">Senha do Usuário:</label>
-                                      <div class="input-group">
-                                          <input type="password" class="form-control custom-input" id="senha" name="senha" required placeholder="Digite sua senha">
-                                          <div class="input-group-append">
-                                              <span class="input-group-text" id="toggleSenha" style="cursor: pointer; background: none; border: none;">
-                                                  <i class="bi bi-eye-fill" id="eyeIcon"></i>
-                                              </span>
-                                          </div>
-                                      </div>
-                                  </div>
-                                  <div class="form-group col-md-4 mb-3"> <!-- Adiciona margem inferior -->
-                                      <label for="repetirSenha">Repetir Senha:</label>
-                                      <div class="input-group">
-                                          <input type="password" class="form-control custom-input" id="repetirSenha" name="repetirSenha" required placeholder="Repita sua senha">
-                                          <div class="input-group-append">
-                                              <span class="input-group-text" id="toggleRepetirSenha" style="cursor: pointer; background: none; border: none;">
-                                                  <i class="bi bi-eye-fill" id="eyeIconRepetir"></i>
-                                              </span>
-                                          </div>
-                                      </div>
-                                  </div>
-                              </div>
-                              <div class="form-row">
-                                  <div class="form-group col-md-12">
-                                      <button type="button" class="btn btn-custom" id="btnEnviarSenha">Enviar Senha por Email</button>
-                                  </div>
-                              </div>
-                          </div>
+                      <!--ABA DE SENHA-->
+                      <div class="tab-pane fade" id="tabs-senha" role="tabpanel" aria-labelledby="tabs-senha-tab">
+                        <div class="card card-primary">
+                            <div class="card-body">
+                                <div class="form-row">
+                                    <div class="form-group col-md-4 mb-3"> <!-- Adiciona margem inferior -->
+                                        <label for="senha">Senha do Usuário:</label>
+                                        <div class="input-group">
+                                            <input type="password" class="form-control custom-input" id="senha" name="senha" required placeholder="Digite sua senha">
+                                            <div class="input-group-append">
+                                                <span class="input-group-text" id="toggleSenha" style="cursor: pointer; background: none; border: none;">
+                                                    <i class="bi bi-eye-fill" id="eyeIcon"></i>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-md-4 mb-3"> <!-- Adiciona margem inferior -->
+                                        <label for="repetirSenha">Repetir Senha:</label>
+                                        <div class="input-group">
+                                            <input type="password" class="form-control custom-input" id="repetirSenha" name="repetirSenha" required placeholder="Repita sua senha">
+                                            <div class="input-group-append">
+                                                <span class="input-group-text" id="toggleRepetirSenha" style="cursor: pointer; background: none; border: none;">
+                                                    <i class="bi bi-eye-fill" id="eyeIconRepetir"></i>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group col-md-12">
+                                        <button type="button" class="btn btn-custom" id="btnEnviarSenha">Enviar Senha por Email</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                       </div>
-                    </div>
 
-                    <!-- ABA DADOS ADICIONAIS -->
-                    <div class="tab-pane fade" id="tabs-adicionais" role="tabpanel" aria-labelledby="tabs-adicionais-tab">
-                      <div class="card card-primary">
-                          <div class="card-body">
-                              <div class="form-row">
-                                  <div class="form-group col-md-4">
-                                      <label for="supervisor">Supervisor do Usuário:</label>
-                                      <select class="form-control txt-color" id="supervisor" name="supervisor">
-                                          <option value="" disabled selected hidden>Selecione</option>
-                                          <option value="usuario1">Usuário 1</option>
-                                          <option value="usuario2">Usuário 2</option>
-                                      </select>
-                                  </div>
-                                  <div class="form-group col-md-4">
-                                      <label>Usuário Comissionado:</label>
-                                      <div>
-                                          <label class="radio-inline">
-                                              <input type="radio" name="comissionado" value="sim"> Sim
-                                          </label>
-                                          <label class="radio-inline">
-                                              <input type="radio" name="comissionado" value="nao"> Não
-                                          </label>
-                                      </div>
-                                  </div>
-                                  <div class="form-group col-md-4">
-                                      <label for="percentualComissao">Percentual de Comissão do Usuário:</label>
-                                      <input type="number" class="form-control" id="percentualComissao" name="percentualComissao" placeholder="%" min="0" max="100">
-                                  </div>
-                              </div>
-                              <div class="form-row">
-                                  <div class="form-group col-md-4">
-                                      <label for="idIntegracao">ID de Integração - Seller:</label>
-                                      <input type="text" class="form-control" id="idIntegracao" name="idIntegracao" placeholder="Digite o ID do Seller">
-                                  </div>
-                                  <div class="form-group col-md-4">
-                                      <label for="cdgBanco">Código do Banco do Usuário:</label>
-                                      <select class="form-control" id="cdgBanco" name="cdgBanco">
-                                          <option value="" disabled selected hidden>Selecione</option>
-                                          <option value="banco1">Banco 1</option>
-                                          <option value="banco2">Banco 2</option>
-                                      </select>
-                                  </div>
-                                  <div class="form-group col-md-4">
-                                      <label for="agencia">Código da Agência Bancária do Usuário:</label>
-                                      <input type="text" class="form-control" id="agencia" name="agencia" placeholder="Digite o código">
-                                  </div>
-                              </div>
-                              <div class="form-row">
-                                  <div class="form-group col-md-4">
-                                      <label for="conta">Código da Conta Corrente do Usuário:</label>
-                                      <input type="text" class="form-control" id="conta" name="conta" placeholder="Digite o Código">
-                                  </div>
-                                  <div class="form-group col-md-4">
-                                      <label for="chavePIX">Chave PIX do Usuário:</label>
-                                      <input type="text" class="form-control" id="chavePIX" name="chavePIX" placeholder="Digite a Chave PIX">
-                                  </div>
-                              </div>
-                              
-                          </div>
+                      <!-- ABA DADOS ADICIONAIS -->
+                      <div class="tab-pane fade" id="tabs-adicionais" role="tabpanel" aria-labelledby="tabs-adicionais-tab">
+                        <div class="card card-primary">
+                            <div class="card-body">
+                                <div class="form-row">
+                                    <div class="form-group col-md-4">
+                                        <label for="supervisor">Supervisor do Usuário:</label>
+                                        <select class="form-control txt-color" id="supervisor" name="supervisor">
+                                            <option value="" disabled selected hidden>Selecione</option>
+                                            <option value="usuario1">Usuário 1</option>
+                                            <option value="usuario2">Usuário 2</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group col-md-4">
+                                        <label>Usuário Comissionado:</label>
+                                        <div>
+                                            <label class="radio-inline">
+                                                <input type="radio" name="comissionado" value="sim"> Sim
+                                            </label>
+                                            <label class="radio-inline">
+                                                <input type="radio" name="comissionado" value="nao"> Não
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-md-4">
+                                        <label for="percentualComissao">Percentual de Comissão do Usuário:</label>
+                                        <input type="number" class="form-control" id="percentualComissao" name="percentualComissao" placeholder="%" min="0" max="100">
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group col-md-4">
+                                        <label for="idIntegracao">ID de Integração - Seller:</label>
+                                        <input type="text" class="form-control" id="idIntegracao" name="idIntegracao" placeholder="Digite o ID do Seller">
+                                    </div>
+                                    <div class="form-group col-md-4">
+                                        <label for="cdgBanco">Código do Banco do Usuário:</label>
+                                        <select class="form-control" id="cdgBanco" name="cdgBanco">
+                                            <option value="" disabled selected hidden>Selecione</option>
+                                            <option value="banco1">Banco 1</option>
+                                            <option value="banco2">Banco 2</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group col-md-4">
+                                        <label for="agencia">Código da Agência Bancária do Usuário:</label>
+                                        <input type="text" class="form-control" id="agencia" name="agencia" placeholder="Digite o código">
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group col-md-4">
+                                        <label for="conta">Código da Conta Corrente do Usuário:</label>
+                                        <input type="text" class="form-control" id="conta" name="conta" placeholder="Digite o Código">
+                                    </div>
+                                    <div class="form-group col-md-4">
+                                        <label for="chavePIX">Chave PIX do Usuário:</label>
+                                        <input type="text" class="form-control" id="chavePIX" name="chavePIX" placeholder="Digite a Chave PIX">
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
                       </div>
-                    </div>
                   </div>
                 </div> 
             </div>
-
           </div>
         </div>
     <!-- /.card -->

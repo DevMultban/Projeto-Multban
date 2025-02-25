@@ -52,6 +52,9 @@ a.nav-link.active.sidebar-menu:hover{
 .nav-link {
     color: #a702d8;
 }
+a.nav-link.active{
+    border-color: #9fcbe0;
+}
 #tabs-dados-tab{
     border-top: 3px solid transparent; /* Borda padrão invisível */
     transition: border-top-color 0.3s;
