@@ -104,7 +104,8 @@
 
     <!-- Brand Logo -->
     <a href="/" class="brand-link" style="background-color:#1c0065; padding-bottom: 5px;">
-		<img src="dist/img/logo-amarela-min.png" alt="MULTCARD" title="MULTBAN" class="brand-image img-circle" style="opacity: .8;">
+		<img src="dist/img/logo-amarela-min.png" alt="MULTCARD" title="MULTBAN" class="brand-image img-circle" 
+        >
             <span class="brand-text font-weight-light">
                 <img src="dist/img/logo-amarela.png" alt="" style="width: 110px; scroll-padding-inline: 0px;">
             </span>
@@ -186,7 +187,7 @@
             <div class="card card-outline card-primary">
                 <div class="card-header">
                     <div class="row">
-                        <div class="col-md-6">
+                        <div class="col-md-5">
                             <label>Empresa:</label>
                             <select class="form-control select2" id="idempresa" disabled="disabled" data-placeholder="Selecione" style="width: 100%;">
                                 <option id="1" value="1">00001 - MULTBAN<option>
@@ -200,7 +201,7 @@
                                 <input type="text" id="nomeCliente" class="form-control" placeholder="Digite o nome do cliente">
                             </div>
                         </div>
-                        <div class="col-md-3">
+                        <div class="col-md-2">
                             <label id="pesquisaData">CPF/CNPJ:</label>
                             <div class="input-group mb-3">
                                 <input type="text" id="inputPesquisa" id="cpf" class="form-control" placeholder="000.000.000-00" onkeypress="mask(this, '000.000.000-00')" maxlength="11">
@@ -221,15 +222,20 @@
                                 <option></option>
                                 <option value="1"> Pessoa Jurídica</option>
                                 <option value="0"> Pessoa Física</option>
-                              </select>
-                          </div>
+                              </select>                    
+                        </div>
+                        <div class="col-md-1 d-flex align-items-center">
+                            <a class="btn btn-custom filtro-pesquisa" id="btnPesquisar">
+                                <i class="fa fa-search"></i>
+                                Pesquisar
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
             <div class="card card-outline card-primary">
                 <div class="card-header">
                     <a href="./cliente-edit.html" class="btn btn-custom">Criar novo</a>
-                    <a class="btn btn-custom" id="btnPesquisar">Pesquisar</a>
                 </div>
 
                 <div class="card-body">

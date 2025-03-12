@@ -22,6 +22,9 @@ a.brand-link{
 th{
     background-color:#fff;
 }
+#btnPesquisar{
+   margin-top: 13px;
+}
 div.card.card-outline{
     border-top-color: #a702d8;
 }
