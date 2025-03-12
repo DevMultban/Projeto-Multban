@@ -62,7 +62,6 @@ a.nav-link.active{
     border-top: 3px solid transparent; /* Borda padrão invisível */
     transition: border-top-color 0.3s;
 }
-
 /*Menu Usuario - Cor da borda da aba selecionada*/
 #tabs-dados-tab.active{
     border-top-color: #a702d8;
@@ -183,6 +182,10 @@ a.nav-link.active{
     padding-top: 20px;
     padding-bottom: 0;
 }
+
+/*Menu Fidelidade / Giftcard*/
+
+
 /*Footer*/
 .main-footer{
     position: fixed;
