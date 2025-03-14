@@ -31,6 +31,9 @@ div.card.card-outline{
 .breadcrumb-item-color{
     color: #a702d8;
 }
+.breadcrumb-item-color:hover {
+    color: #6d696e;
+}
 .btn-reenviarEmail{
     background-color: #1c0065; 
     color: white; 
