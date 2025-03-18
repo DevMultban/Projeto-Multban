@@ -1,0 +1,113 @@
+.nav-opcoes {
+    padding: 8px;
+    background-color: #dedede;
+    position: fixed;
+    z-index: 10;
+    width: 100%;
+    height: 57px;
+    margin-left: 0px;
+}
+
+hr {
+    height: 1px !important;
+    background: black;
+}
+
+h3 {
+    padding: -25px !important;
+}
+
+.table-borda {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+.table-borda th {
+    border: 1px solid black;
+    border-left: 0px solid #000;
+    border-right: 0px solid #000;
+}
+
+.table-borda td {
+    border: 1px solid black;
+    border-left: 0px solid #000;
+    border-right: 0px solid #000;
+}
+
+.table-produto {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+.table-produto th {
+    border: 1px solid black;
+}
+
+.table-produto td {
+    border: 1px solid black;
+}
+
+.table-assiantura {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+.footer {
+    font-size: 12px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: right;
+}
+
+.footer .page:after {
+    content: counter(page);
+}
+
+table {
+    border-collapse: separate;
+    border-spacing: 1px;
+}
+
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+.lista-guiche {
+    list-style-type: none;
+    font-size: 5.8rem;
+    padding-left: 0px;
+}
+
+.lista-guiche-col {
+    -webkit-column-count: 2;
+    -moz-column-count: 2;
+    column-count: 2;
+}
+
+.chamou-guiche {
+    display: inline-block;
+    padding: 0.08em;
+    line-height: 1;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: 100%;
+    border: 5px solid #28a745;
+    width: 130px;
+    height: 130px;
+}
+
+input[type=checkbox]
+{
+  /* Double-sized Checkboxes */
+  -ms-transform: scale(1.35); /* IE */
+  -moz-transform: scale(1.35); /* FF */
+  -webkit-transform: scale(1.35); /* Safari and Chrome */
+  -o-transform: scale(1.35); /* Opera */
+  padding: 10px;
+}

@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- CSRF Token -->
+    <meta name="csrf-token" content="IyM1RY2lInNFexy3HYntiLGouuRlq8tokrcuUAKB">
+    <title>Produtos | MULTBAN</title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
+    <!--Icons Botões-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- overlayScrollbars -->
+    <link rel="stylesheet" href="plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+    <!-- Ionicons
+    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">-->
+    <!-- pace-progress -->
+    <link rel="stylesheet" href="plugins/pace-progress/themes/black/pace-theme-flat-top.css">
+    <link href="plugins/select2/css/select2.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="dist/css/multban.min.css">
+    <link rel="stylesheet" href="plugins/toastr/toastr.min.css">
+    <link rel="stylesheet" href="plugins/sweetalert2/sweetalert2.min.css">
+
+    <link rel="stylesheet" href="dist/css/menus.css">
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script> <!--Campo Tipo de Produto-->
+
+    <!-- Google Font: Source Sans Pro -->
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+    
+    <!--Logo Site-->
+    <link rel="icon" type="image/png"
+        href="dist/img/logo-multcard-minimizado-roxa.png">
+</head>
+
+<body class="hold-transition sidebar-mini layout-fixed pace-primary layout-footer-fixed sidebar-collapse">
+    <div class="se-pre-con"></div>
+    <div class="wrapper">
+
+        <!-- Navbar -->
+        <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+            <!-- Left navbar links -->
+            <ul class="navbar-nav navbar-nav-pdv">
+                <li class="nav-item">
+                    <a class="nav-link" data-widget="pushmenu" href="#"><i class="fas fa-bars"></i></a>
+                </li>
+            </ul>
+
+            <!-- Right navbar links -->
+            <ul class="navbar-nav ml-auto">
+                <!-- Notifications Dropdown Menu -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link" data-toggle="dropdown" href="#">
+                        <i class="far fa-bell"></i>
+                        <span class="badge badge-warning navbar-badge">2</span>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+                        <span class="dropdown-item dropdown-header">2 Notificações</span>
+                        <div class="dropdown-divider"></div>
+                        <a href="#" class="dropdown-item dropdown-footer">Ver todas</a>
+                    </div>
+                </li>
+                <!-- User Profile Dropdown Menu -->
+                <li class="nav-item dropdown user-menu">
+                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">
+                        <span class="d-none d-md-inline">Usuário</span>
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+                        <!-- User image -->
+                        <li class="user-header bg-primary">
+                            <img src="dist/img/no-product-image.png" class="img-circle elevation-2" alt="User Image">
+                            <p>USUÁRIO <small>Data de cadastro: 16/01/2025</small></p>
+                        </li>
+                        <li class="user-footer">
+							<a href="#" class="btn btn-perfil">Perfil</a>
+							<a href="./login.html" class="btn btn-delete float-right">Sair</a>                           
+						</li>
+                    </ul>
+                </li>
+            </ul>
+        </nav><!-- /.navbar -->
+
+    <!-- Main Sidebar Container -->
+    <aside class="main-sidebar sidebar-dark-primary elevation-4">
+        <!-- Brand Logo -->
+        <a href="/" class="brand-link" style="background-color:#1c0065; padding-bottom: 5px;">
+            <img src="dist/img/logo-amarela-min.png" alt="MULTCARD" title="MULTBAN" class="brand-image img-circle" style="opacity: .8;">
+            <span class="brand-text font-weight-light">
+                <img src="dist/img/logo-amarela.png" alt="" style="width: 110px; scroll-padding-inline: 0px;">
+            </span>
+        </a>
+
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <!-- Sidebar Menu -->
+            <nav class="mt-2">
+                <ul role="menu" data-widget="treeview" data-accordion="false" class="nav nav-pills nav-sidebar flex-column nav-flat nav-child-indent">
+                    <li class="nav-item"><a href="/" class="nav-link">
+                        <i class="nav-icon fas fa-tachometer-alt"></i> 
+                        <p>Home</p></a>
+                    </li>
+                    <li class="nav-item menu-open"><a href="#" class="nav-link" >
+                        <i class="nav-icon fas fa-plus-square"></i>
+                        <p>Cadastros <i class="right fas fa-angle-left"></i></p></a>
+                        
+                        <ul class="nav nav-treeview">
+                            <li class="nav-item"><a class="nav-link" href="./usuario-index.html">
+                                <i class="far nav-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16"><path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6"/></svg>
+                                </i><p>Usuário</p></a>
+                            </li>
+                            <li class="nav-item"><a class="nav-link" href="./cliente-index.html">
+                                <i class="far nav-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-person-vcard-fill" viewBox="0 0 16 16"><path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm9 1.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 0-1h-4a.5.5 0 0 0-.5.5M9 8a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 0-1h-4A.5.5 0 0 0 9 8m1 2.5a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 0-1h-3a.5.5 0 0 0-.5.5m-1 2C9 10.567 7.21 9 5 9c-2.086 0-3.8 1.398-3.984 3.181A1 1 0 0 0 2 13h6.96q.04-.245.04-.5M7 6a2 2 0 1 0-4 0 2 2 0 0 0 4 0"/></svg>
+                                </i><p>Cliente</p></a>
+                            </li>
+                            <li class="nav-item"><a href="./empresa-index.html" class="nav-link">
+                                <i class="far nav-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" version="1.0" width="20" height="20" viewBox="0 0 496.000000 497.000000" preserveAspectRatio="xMidYMid meet"><g transform="translate(0.000000,497.000000) scale(0.100000,-0.100000)" fill="currentColor" stroke="none"><path d="M553 4949 c-18 -5 -50 -26 -72 -47 -33 -32 -44 -53 -74 -152 -36 -115 -184 -631 -295 -1022 l-58 -208 613 0 c337 0 613 3 613 8 1 4 65 328 143 720 l142 712 -490 -1 c-271 0 -504 -5 -522 -10z"/><path d="M1985 4938 c-11 -50 -285 -1409 -285 -1415 0 -2 351 -3 780 -3 429 0 780 1 780 3 0 6 -274 1365 -285 1415 l-5 22 -490 0 -490 0 -5 -22z"/><path d="M3537 4248 c78 -392 142 -716 143 -720 0 -5 276 -8 613 -8 l613 0 -64 228 c-152 539 -314 1089 -330 1117 -10 16 -37 43 -61 60 l-43 30 -507 3 -506 3 142 -713z"/><path d="M2 3158 c3 -147 4 -155 35 -221 57 -120 160 -206 284 -237 31 -8 167 -10 429 -8 l385 3 65 31 c117 55 183 130 223 254 l23 72 17 -60 c24 -88 90 -179 165 -229 34 -23 79 -48 100 -55 28 -9 205 -13 732 -16 669 -2 697 -2 760 17 132 40 240 151 277 282 l16 58 24 -71 c42 -123 106 -197 223 -252 l65 -31 405 0 c404 0 405 0 469 24 114 44 213 157 247 285 8 30 14 103 14 179 l0 127 -2481 0 -2481 0 4 -152z"/><path d="M1375 2589 c-38 -26 -106 -60 -150 -76 l-80 -28 -378 -3 c-350 -3 -425 0 -529 24 l-28 6 0 -1176 c0 -1301 -5 -1202 63 -1274 51 -53 101 -62 338 -62 l208 0 3 958 3 957 28 48 c15 26 47 60 69 75 l42 27 560 3 c407 2 572 0 601 -9 56 -16 91 -43 120 -93 l25 -43 3 -959 2 -959 1130 -3 c817 -2 1145 0 1183 8 61 13 113 54 143 111 18 37 19 70 19 1215 l0 1176 -27 -6 c-105 -24 -180 -27 -530 -24 l-378 3 -80 28 c-44 16 -112 50 -151 76 l-71 48 -39 -30 c-59 -45 -172 -95 -249 -112 -103 -22 -1387 -22 -1489 0 -79 17 -181 62 -234 103 -21 16 -41 31 -47 33 -5 3 -41 -16 -80 -42z m2663 -551 c22 -15 54 -49 69 -75 l28 -48 3 -324 c1 -193 -2 -346 -8 -380 -12 -67 -49 -117 -110 -149 l-44 -22 -563 0 c-607 0 -595 -1 -659 53 -65 55 -66 59 -65 464 l1 366 25 43 c27 45 61 74 110 92 20 7 213 10 601 9 l570 -2 42 -27z"/></g></svg>
+                                </i><p>Empresa</p></a>
+                            </li>
+                            <li class="nav-item"><a href="./fidelidade-giftcard-index.html" class="nav-link">
+                                <i class="far nav-icon">
+                                <svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 293.000000 199.000000" preserveAspectRatio="xMidYMid meet" class="icon-svg"><g transform="translate(0.000000,199.000000) scale(0.100000,-0.100000)" fill="currentColor" stroke="none"><path d="M149 1976 c-59 -21 -96 -53 -123 -108 l-26 -52 0 -820 c0 -775 1 -823 19 -861 21 -45 61 -89 106 -113 27 -16 139 -17 1340 -17 1201 0 1313 1 1340 17 45 24 85 68 106 113 18 38 19 86 19 861 l0 822 -28 53 c-20 39 -41 62 -77 84 l-48 30 -1296 2 c-1042 2 -1303 0 -1332 -11z m2490 -382 c27 -34 26 -50 -4 -79 l-24 -25 -358 0 c-402 0 -403 0 -403 65 0 65 1 65 406 65 l363 0 20 -26z m-1883 -218 c17 -13 19 -30 22 -175 3 -160 3 -161 -22 -186 l-25 -25 -206 0 c-271 0 -255 -13 -255 205 0 211 -20 195 253 195 168 0 217 -3 233 -14z m-87 -700 c27 -24 27 -60 1 -86 -19 -19 -31 -20 -192 -18 l-171 3 -20 27 c-17 23 -19 31 -9 53 7 14 22 30 34 35 13 5 93 8 179 7 138 -2 159 -4 178 -21z m551 11 c32 -16 40 -70 14 -98 -16 -17 -33 -19 -186 -19 -155 0 -170 2 -188 20 -32 32 -26 75 15 98 29 16 312 16 345 -1z m579 -11 c27 -24 27 -60 1 -86 -19 -19 -31 -20 -192 -18 l-171 3 -20 27 c-17 23 -19 31 -9 53 7 14 22 30 34 35 13 5 93 8 179 7 138 -2 159 -4 178 -21z m567 2 c22 -21 21 -64 -1 -88 -17 -18 -32 -20 -187 -20 -155 0 -170 2 -188 20 -28 28 -25 64 7 90 26 20 36 21 190 18 135 -2 165 -6 179 -20z m-938 -302 c13 -25 12 -31 -5 -55 l-20 -26 -534 -3 c-294 -1 -544 0 -555 3 -12 2 -27 18 -34 35 -10 25 -10 34 4 55 l17 25 557 -2 557 -3 13 -29z"/></g></svg>
+                                </i><p>Fidelidade / GiftCard</p></a>
+                            </li>
+                            <li class="nav-item"><a href="programa-pontos-index.html" class="nav-link">
+                                <i class="far nav-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" version="1.0" width="20" height="20" viewBox="0 0 144.000000 90.000000" preserveAspectRatio="xMidYMid meet"><g transform="translate(0.000000,90.000000) scale(0.100000,-0.100000)" fill="currentColor" stroke="none"><path d="M95 886 c-41 -18 -83 -69 -90 -109 -3 -18 -5 -177 -3 -354 3 -365 1 -356 88 -401 l44 -22 586 0 586 0 44 23 c88 44 85 31 85 427 0 336 -1 349 -21 376 -11 15 -33 37 -48 48 -27 21 -39 21 -634 23 -489 2 -613 0 -637 -11z m1218 -77 c37 -17 47 -50 47 -154 l0 -95 -640 0 -640 0 0 103 c1 105 6 123 45 145 28 16 1153 17 1188 1z m-224 -394 c24 -58 27 -60 110 -70 l53 -7 -47 -48 -48 -49 10 -63 c6 -35 9 -65 7 -67 -2 -2 -28 11 -59 28 l-55 31 -60 -30 c-67 -34 -67 -34 -50 50 8 44 8 46 -38 92 -25 26 -44 50 -41 52 2 2 31 8 64 13 l60 8 30 57 c17 32 33 58 36 58 3 0 15 -25 28 -55z m-249 -205 l0 -30 -380 0 -380 0 0 30 0 30 380 0 380 0 0 -30z"/></g></svg>
+                                </i><p>Programa de Pontos</p></a>
+                            </li>
+                            <li class="nav-item"><a href="produtos-index.html" class="nav-link active">
+                                <i class="far nav-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" version="1.0" width="20" height="20" viewBox="0 0 512.000000 512.000000" preserveAspectRatio="xMidYMid meet"><g transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)" fill="currentColor" stroke="none"><path d="M1279 4481 l-1104 -637 -2 -1280 -3 -1279 1091 -630 c600 -347 1099 -634 1109 -639 13 -6 57 15 178 85 l161 93 -38 45 c-21 25 -60 79 -86 118 -26 40 -52 73 -57 73 -6 0 -39 -17 -76 -37 l-65 -37 -74 40 -73 39 0 1017 c0 1008 0 1017 -20 1031 -11 8 -409 239 -885 513 l-865 499 0 86 0 86 71 42 c40 22 76 41 81 41 5 0 403 -228 885 -506 667 -385 880 -504 893 -497 46 21 710 408 710 413 0 3 -394 232 -876 509 -487 281 -871 508 -866 513 5 5 71 45 146 88 121 70 140 78 159 68 20 -10 1546 -890 1688 -973 l56 -33 354 205 c195 113 361 207 370 210 8 2 47 -14 87 -37 l72 -42 0 -86 0 -87 -878 -507 -877 -506 -3 -302 -2 -302 62 94 c38 57 104 135 172 203 210 209 451 339 746 402 122 26 440 25 560 -1 166 -36 351 -110 481 -191 l39 -25 -2 742 -3 742 -1070 619 c-588 340 -1086 626 -1106 637 l-36 19 -1104 -638z"/><path d="M3596 2284 c-473 -85 -849 -462 -931 -933 -8 -46 -15 -137 -15 -201 0 -435 237 -822 626 -1022 203 -105 452 -149 667 -118 497 72 877 426 983 915 23 110 24 341 0 450 -104 476 -465 828 -934 910 -107 18 -290 18 -396 -1z m666 -801 c54 -54 98 -102 98 -108 0 -5 -156 -166 -347 -357 l-348 -347 -217 212 -218 212 105 110 105 110 110 -110 110 -110 243 243 c133 133 246 242 252 242 5 0 54 -44 107 -97z"/></g></svg>
+                                </i><p>Produtos</p></a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div><!-- /.sidebar -->
+	</aside>
+
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper">
+        <!-- Content Header (Page header) -->
+        <div class="content-header" style="padding: 0.5rem">
+            <div class="container-fluid">
+                <div class="row mb-2">
+                    <div class="col-sm-6">
+                        <ol class="breadcrumb ">
+							<li class="breadcrumb-item"><a href="./index.html" class="breadcrumb-item-color">Home</a></li>
+                            <li class="breadcrumb-item active">Produtos</li>
+                        </ol>
+                    </div><!-- /.col -->
+                </div><!-- /.row -->
+            </div><!-- /.container-fluid -->
+        </div>
+
+        <!-- Main content -->
+        <section class="content">
+        <form class="form-horizontal" id="formPrincipal" role="form" method="POST" action="#">
+            <div class="row" style="margin-bottom: 80px;">
+              <div class=" navbar-fixed-top fixed fixed nav-opcoes">
+                <!--BOTÕES-->
+                <button type="button" class="btn btn-custom"><i class="icon fas fa-plus"></i> Criar</button>
+                <button type="button" class="btn btn-custom"><i class="icon fas fa-save"></i> Alterar</button>
+                <button type="button" class="btn btn-custom"><i class="bi bi-check-circle"></i> Ativar</button>
+                <button type="button" class="btn btn-custom"><i class="bi bi-slash-circle"></i> Inativar</button>
+                <button type="button" class="btn btn-delete"><i class="fa-solid fa-trash"></i> Excluir</button>
+                <button type="button" class="btn btn-delete" onclick="location.href='./produtos-index.html'"><i class="icon fas fa-arrow-left"></i> Voltar</button>
+              </div>
+            </div>
+
+            <div class="card card-outline card-tabs">
+                <div class="card-header p-0 pt-1 border-bottom-0">
+                    <!--ABA/TAB-->
+                    <ul class="nav nav-tabs" id="custom-tabs-two-tab" role="tablist" >
+                        <li class="nav-item"><a class="nav-link active" id="tabs-dados-tab" data-toggle="pill" href="#tabs-dados" role="tab" aria-controls="tabs-dados" aria-selected="true">Dados Gerais</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="card-body">
+                    <div class="tab-content" id="custom-tabs-two-tabContent">
+                        <!--ABA DADOS GERAIS-->
+                        <div class="tab-pane fade active show" id="tabs-dados" role="tabpanel" aria-labelledby="tabs-dados-tab">
+                            <div class="card card-primary">
+                                <div class="card-body">
+                                <div class="form-row">
+                                    <div class="form-group col-md-2">
+                                        <label for="codigoProduto">Código do Produto:</label>
+                                        <div class="input-group mb-3">
+                                            <input autocomplete="off" type="text" class="form-control" id="codigoProduto" name="codigoProduto" placeholder="Código do Produto" readonly>
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-md-2">
+                                        <label for="created_at">Data de Cadastro:</label>
+                                        <input autocomplete="off" readonly class="form-control" placeholder="Data de cadastro" name="created_at" type="text" id="created_at"
+                                        value="">
+                                    </div>
+                                    <div class="form-group col-md-2">
+                                        <label for="updated_at">Última atualização:</label>
+                                        <input autocomplete="off" readonly class="form-control" placeholder="Última atualização" name="updated_at" type="text" id="updated_at"
+                                        value="">
+                                    </div>
+                                </div>
+                                <div class="form-row" id="descricaoProduto">
+                                    <div class="form-group col-md-4">
+                                        <label for="descricaoCurta">Descrição Curta:</label>
+                                        <div class="input-group mb-3">
+                                            <input autocomplete="off" type="text" class="form-control" id="descricaoCurta" name="descricaoCurta" placeholder="Descrição Curta" required maxlength="15">
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-md-4">
+                                        <label for="descricaoMedia">Descrição Média:</label>
+                                        <div class="input-group mb-3">
+                                            <input autocomplete="off" type="text" class="form-control" id="descricaoMedia" name="descricaoMedia" placeholder="Descrição Média" required maxlength="100">
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-md-4">
+                                        <label for="descricaoLonga">Descrição Longa:</label>
+                                        <div class="input-group mb-3">
+                                            <input autocomplete="off" type="text" class="form-control" id="descricaoLonga" name="descricaoLonga" placeholder="Descrição Longa" required maxlength="255">
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-md-4">
+                                        <label for="descricaoTecnica">Descrição Técnica:</label>
+                                        <div class="input-group mb-3">
+                                            <input autocomplete="off" type="text" class="form-control" id="descricaoTecnica" name="descricaoTecnica" placeholder="Descrição Técnica" maxlength="255">
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-md-2">
+                                        <label for="precoVenda">Preço de Venda:</label>
+                                        <div class="input-group mb-3">
+                                            <input autocomplete="off" type="text" step="0.01" class="form-control" id="precoVenda" name="precoVenda" placeholder="Preço de Venda" required>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--Campo do Tipo de Produto-->
+                                <div class="form-row">
+                                    <div class="form-group col-md-2">
+                                        <label for="statusProduto">Status:</label>
+                                        <div class="input-group mb-3">
+                                            <select class="form-control" id="statusProduto" name="statusProduto">
+                                                <option value="" disabled selected hidden>Selecione o Status</option> <!-- Placeholder -->
+                                                <option value="ativo">Ativo</option>
+                                                <option value="inativo">Inativo</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-md-2">
+                                        <label for="tipoProduto">Tipo de Produto:</label>
+                                        <div class="input-group mb-3">
+                                            <select class="form-control" id="tipoProduto" name="tipoProduto">
+                                                <option value="" disabled selected hidden>Selecione o Tipo de Produto</option>
+                                                <option value="participante">Participante</option>
+                                                <option value="produto">Produto</option>
+                                            </select>
+                                        </div>                               
+                                    </div>
+                                </div>
+                                <!-- Campos para Participante -->
+                                <div id="camposAdicionais" style="display: none;">  
+                                    <div id="camposParticipante" style="display: none;">
+                                        <div class="row">
+                                        <div class="form-group col-md-3">
+                                            <label for="percentParticipacao">% de Participação:</label>
+                                            <input type="number" class="form-control" id="percentParticipacao" name="percentParticipacao" placeholder="% de Participação" step="0.01">
+                                        </div>
+                                        <div class="form-group col-md-3">
+                                            <label for="idIntegracao">Id de Integração - Seller:</label>
+                                            <input type="text" class="form-control" id="idIntegracao" name="idIntegracao" placeholder="Id de Integração">
+                                        </div>
+                            
+                                        <div class="form-group col-md-5">
+                                            <label>Pagar Por:</label><br>
+                                            <div class="form-check form-check-inline">
+                                                <input class="form-check-input" type="radio" name="pagarPor" id="split" value="split">
+                                                <label class="form-check-label" for="split">Split</label>
+                                            </div>
+                                            <div class="form-check form-check-inline">
+                                                <input class="form-check-input" type="radio" name="pagarPor" id="transferencia" value="transferencia">
+                                                <label class="form-check-label" for="transferencia">Transferência Bancária</label>
+                                            </div>
+                                        </div>
+                            
+                                        <div class="form-group col-md-5" id="campoBanco" style="display: none;">
+                                            <label for="cdgBanco">Cdg Banco:</label>
+                                            <select class="form-control" id="cdgBanco" name="cdgBanco">
+                                                <option value="" disabled selected hidden>Selecione o Banco</option>
+                                                <option value="01">Banco 1</option>
+                                                <option value="02">Banco 2</option>
+                                            </select>
+                                        </div>
+                            
+                                        <div class="form-group col-md-5" id="campoAgencia" style="display: none;">
+                                            <label for="agencia">Agência:</label>
+                                            <input type="text" class="form-control" id="agencia" name="agencia" placeholder="Agência">
+                                        </div>
+                            
+                                        <div class="form-group col-md-5" id="campoConta" style="display: none;">
+                                            <label for="conta">Conta:</label>
+                                            <input type="text" class="form-control" id="conta" name="conta" placeholder="Conta">
+                                        </div>
+                            
+                                        <div class="form-group col-md-5" id="campoChavePix" style="display: none;">
+                                            <label for="chavePix">Chave PIX:</label>
+                                            <input type="text" class="form-control" id="chavePix" name="chavePix" placeholder="Chave PIX" maxlength="100">
+                                        </div>
+                                        </div>
+                                    </div>
+                                    <!-- Campos para Produto-->
+                                    <div id="camposProduto" style="display: none;">
+                                        <div class="row">
+                                            <div class="form-group col-md-2">
+                                                <label for="ncm">NCM:</label>
+                                                <input type="text" class="form-control" id="ncm" name="ncm" placeholder="NCM" required maxlength="10">
+                                            </div>
+                                            <div class="form-group col-md-2">
+                                                <label for="peso">Peso em Kg:</label>
+                                                <input type="text" class="form-control" id="peso" name="peso" placeholder="Peso em Kg" required >
+                                            </div>
+                                            <div class="form-group col-md-3">
+                                                <label for="qrcode">QR Code:</label>
+                                                <input type="text" class="form-control" id="qrcode" name="qrcode" placeholder="Digite o QR Code" required maxlength="255">
+                                            </div>
+                                            <div class="form-group col-md-2">
+                                                <label>Controlar Estoque:</label><br>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" id="controlarEstoque" name="controlarEstoque">
+                                                    <label class="form-check-label" for="controlarEstoque">Sim</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> 
+                </div>
+            </div>
+        </form>
+        </section>
+    </div>
+       
+        <footer class="main-footer">
+            <strong>Copyright &copy; 2023 MULTBAN.</strong> Todos os Direitos Reservados - CNPJ: 01.179.943/0001-96 - <a tabindex="-1"
+              href="#" style="color: #a702d8;">Desenvolvido por MultTech Softwares.</a>
+            <div class="float-right d-none d-sm-inline-block"><b>Version</b> 1.0.0.0</div>
+        </footer>
+
+        <!-- Control Sidebar -->
+        <aside class="control-sidebar control-sidebar-dark">
+        </aside>   
+    </div>
+    <!-- ./wrapper -->
+
+    <!-- jQuery -->
+    <script src="plugins/jquery/jquery.min.js"></script>
+    <!-- Bootstrap 4 -->
+    <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- overlayScrollbars -->
+    <script src="plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+    <!-- pace-progress -->
+    <link rel="stylesheet" href="plugins/pace-progress/themes/blue/pace-theme-flash.css" />
+    <script src="plugins/pace-progress/pace.min.js"></script>
+    <!-- multban App -->
+    <script src="dist/js/multban.min.js"></script>
+    <!-- pre loading -->
+    <script src="plugins/modernizr/2.8.3/modernizr.js"></script>
+    <!-- shortcut -->
+    <script src="plugins/shortcut/shortcut.js"></script>
+    <script src="plugins/jquery-mask/jquery.mask.js"></script>
+    <!-- toastr -->
+    <script src="plugins/toastr/toastr.min.js"></script>
+    <!-- sweetalert -->
+    <script src="plugins/sweetalert2/sweetalert2.all.min.js"></script>
+    <!-- lodash -->
+    <script src="plugins/lodash/lodash.min.js"></script>
+    <!-- formatCurrency -->
+    <script src="plugins/formatCurrency/jquery.formatCurrency-1.4.0.js"></script>
+    <script src="plugins/formatCurrency/i18n/jquery.formatCurrency.pt-BR.js"></script>
+
+    <style>
+        .no-js #loader {
+            display: none;
+        }
+        .js #loader {
+            display: block;
+            position: absolute;
+            left: 100px;
+            top: 0;
+        }
+        .se-pre-con {
+            position: fixed;
+            left: 0px;
+            top: 0px;
+            width: 100%;
+            height: 100%;
+            z-index: 9999;
+            background: url('dist/img/loading/preloader_3.gif') center no-repeat #fff;
+        }
+    </style>
+    <script>
+        // Wait for window load
+        $(window).on('load', function() {
+            // Animate loader off screen
+             $(".se-pre-con").fadeOut("slow");
+        });
+    </script>
+    
+    <script type="text/javascript">
+    $(document).ready(function () {
+        $(".alert-dismissible")
+                .fadeTo(10000, 500)
+                .slideUp(500, function() {
+                    $(".alert-dismissible").alert("close");
+                });
+    });
+    </script>
+
+    <!--Campos do Tipo de Produto = Participante -->
+    <script>
+        $(document).ready(function() {
+            $('#tipoProduto').change(function() {
+                $('#camposParticipante').hide();
+                $('#camposProduto').hide();
+                $('#camposAdicionais').hide();
+
+                var tipoSelecionado = $(this).val();
+
+                if (tipoSelecionado === 'participante') {
+                    $('#camposParticipante').show();
+                    $('#camposAdicionais').show();
+                } else if (tipoSelecionado === 'produto') {
+                    $('#camposProduto').show();
+                    $('#camposAdicionais').show();
+                }
+            });
+
+            $('input[name="pagarPor"]').change(function() {
+                var valorSelecionado = $(this).val();
+                if (valorSelecionado === 'transferencia') {
+                    $('#campoBanco').show();
+                    $('#campoAgencia').show();
+                    $('#campoConta').show();
+                    $('#campoChavePix').show();
+                } else {
+                    $('#campoBanco').hide();
+                    $('#campoAgencia').hide();
+                    $('#campoConta').hide();
+                    $('#campoChavePix').hide();
+                }
+            });
+        });
+    </script>
+
+    <script src="plugins/jquery-validation/jquery.validate.min.js"></script>
+    <script src="plugins/jquery-validation/localization/messages_pt_BR.min.js"></script>
+    <script src="plugins/jquery-validation/additional-methods.js"></script>
+    <script src="plugins/select2/js/select2.full.min.js"></script>
+    <script src="plugins/select2/js/i18n/pt-BR.js"></script>
+    <script src="plugins/bs-custom-file-input/bs-custom-file-input.min.js"></script>
+    <!-- InputMask -->
+    <script src="plugins/moment/moment.min.js"></script>
+    <script src="plugins/inputmask/min/jquery.inputmask.bundle.min.js"></script>
+    <!-- Summernote -->
+    <script src="plugins/summernote/summernote-bs4.min.js"></script>
+    <link rel="stylesheet" href="dist/css/app.css" />
+    <script src="dist/js/app.js"></script>
+</body>
+</html>
