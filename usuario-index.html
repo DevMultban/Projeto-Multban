@@ -221,8 +221,7 @@
                         </div>
                         <div class="col-md-3 d-flex align-items-center">
                             <a class="btn btn-custom filtro-pesquisa" id="btnPesquisar">
-                                <i class="fa fa-search"></i>
-                                Pesquisar
+                                <i class="fa fa-search"></i>Pesquisar
                             </a>
                         </div>
                     </div>
@@ -346,7 +345,7 @@
 
     <!--Ação do btn Pesquisar com resultado da pesquisa-->
     <script>
-    $(document).ready(function() {
+        $(document).ready(function() {
         // Inicializa o DataTable
         var table = $('#gridtemplate').DataTable();
 
@@ -411,9 +410,6 @@ $(".alert-dismissible")
 .slideUp(500, function() {
     $(".alert-dismissible").alert("close");
 });
-
-
-
 
 $('#btnPesquisar').click(function(){
     var totaliza = {};

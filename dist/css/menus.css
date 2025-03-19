@@ -191,6 +191,11 @@ a.nav-link.active{
     width: 4rem;
 }
 
+/*Menu Configurações - Sitema Multcard*/
+#tabs-conexao.active{
+    border-top-color: #a702d8;
+}
+
 /*Footer*/
 .main-footer{
     position: fixed;
