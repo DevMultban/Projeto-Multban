@@ -1,0 +1,226 @@
+
+/*Index*/
+.user-header {
+    background-color:#1c0065 !important;
+}
+
+a.brand-link{
+    background-color:#1c0065; 
+    padding-bottom: 5px;
+}
+.logo-multcard{
+    width: 110px; scroll-padding-inline: 0px; margin-bottom: auto;
+}
+.sidebar{
+    background-color:#1c0065;
+}
+.btn_table{
+    /*display: none;*/
+    width: 8rem;
+    background-color: #fff;
+}
+th{
+    background-color:#fff;
+}
+#btnPesquisar{
+   margin-top: 13px;
+}
+div.card.card-outline{
+    border-top-color: #a702d8;
+}
+.breadcrumb-item-color{
+    color: #a702d8;
+}
+.breadcrumb-item-color:hover {
+    color: #6d696e;
+}
+.btn-reenviarEmail{
+    background-color: #1c0065; 
+    color: white; 
+    margin-left: 5px;
+    border-left: 5px;
+}
+
+/*Cor do menu da sidebar não selecionado*/
+a.nav-link.active.sidebar-menu { 
+    background-color: #280d6d;
+    color: #d7d7db;
+    transition: background-color 0.3s;
+}
+
+/*Cadastros - menu selecionado*/
+.sidebar-dark-primary .nav-sidebar > .nav-item > .nav-link.active{
+    background-color: #331a75;
+}
+a.nav-link.active.sidebar-menu:hover{
+    background-color: #280d6d;
+}
+.nav-link {
+    color: #a702d8;
+}
+a.nav-link.active{
+    border-color: #9fcbe0;
+}
+#tabs-dados-tab{
+    border-top: 3px solid transparent; /* Borda padrão invisível */
+    transition: border-top-color 0.3s;
+}
+/*Menu Usuario - Cor da borda da aba selecionada*/
+#tabs-dados-tab.active{
+    border-top-color: #a702d8;
+}
+#tabs-adicionais-tab.active{
+    border-top-color: #a702d8;
+    border-width: 3px;
+}
+#tabs-senha-tab.active{
+    border-top-color: #a702d8;
+    border-width: 3px;
+}
+
+/*Menu Clientes - Cor da borda da aba selecionada*/
+#tabs-dados-tab.active{
+    border-top-color: #a702d8;
+}
+#tabs-endereco-tab.active{
+    border-top-color: #a702d8;
+    border-width: 3px;
+}
+#tabs-compras-tab.active{
+    border-top-color: #a702d8;
+    border-width: 3px;
+}
+#tabs-score-tab.active{
+    border-top-color: #a702d8;
+    border-width: 3px;
+}
+#tabs-cartoes-tab.active{
+    border-top-color: #a702d8;
+    border-width: 3px;
+}
+
+.nav-link:hover{
+    color: #8204a8;
+}
+
+.btn-icon-usuario{
+    width: 20px; 
+    height: 20px; 
+    padding: 0;
+    font-size: 13px;
+    background-color:#1c0065;
+    color: #ffffff;
+    display:inline;
+}
+.btn-icon-usuario:hover{
+    color:#c1c0c2
+}
+.btn-perfil{
+    color:#fff;
+    background-color: #1c0065;
+    border: #1c0065;
+    border-radius: .25rem;
+}
+.btn-perfil:hover{
+    background-color:#290683;
+    color: #fff;
+}
+.custom-imput{
+    width: 50%;
+}
+.txt-color{
+    color: #999;
+}
+.btn-custom {
+    background-color: #1c0065;
+    color: #fff;
+} 
+.btn-custom:hover {
+    background-color: #290683;
+    color: #fff;
+}
+.btn-delete {
+    background-color: #a702d8;
+    color: #fff;
+}
+.btn-delete:hover{
+    background-color: #9207bd;
+    color:#fff;
+}
+
+/*Menu Clientes - Aba Dados Gerais*/
+.header-dadosSaneados{
+    background-color: #dedede;
+}
+
+/*Menu Clientes - Aba Endereço*/
+.far.fa-question-circle{
+    color: #a702d8;
+}
+
+/*Menu Clientes - Botões da table da aba Compras Realizadas*/
+.btn-tab-compras-realizadas{
+    font-size: 15px;
+    padding: 5px;
+}
+.acoes-comprasRealizadas{
+    width: 3rem;
+}
+.checkbox-comprasRealizadas{
+    width: 2rem;
+}
+.bi-eye-fill:hover{ /*Icon de Visualização*/
+    color: #6d696e;
+}
+.bi-printer-fill:hover{ /*Icon Imprimir*/
+    color: #6d696e;
+}
+
+/*Menu Clientes- Botões da table da aba Cartões*/
+.btn-acoes-cartoes{
+    font-size: 15px;
+    padding: 5px;
+}
+.btns-tab-cartoes{
+    padding-top: 20px;
+    padding-bottom: 0;
+}
+
+/*Menu Programa de Pontos*/
+.acoes-programaPontos{
+    width: 4rem;
+}
+
+/*Menu Configurações - Sitema Multcard*/
+#tabs-conexao.active{
+    border-top-color: #a702d8;
+}
+.acoes-aliasDeTabelas{
+    width: 1rem;
+}
+#tabs-conexao-tab.active{
+    border-top-color: #a702d8;
+    border-top-width: 0.2rem;
+}
+#tabs-alias-tab.active{
+    border-top-color: #a702d8;
+    border-top-width: 0.2rem;
+}
+#tabs-apis-tab.active{
+    border-top-color: #a702d8;
+    border-top-width: 0.2rem;
+}
+#tabs-padroes-tab.active{
+    border-top-color: #a702d8;
+    border-top-width: 0.2rem;
+}
+
+/*Footer*/
+.main-footer{
+    position: fixed;
+    bottom: 0;
+    left: 0; 
+    right: 0; 
+    font-size: 13px;
+    text-align: center;
+}
