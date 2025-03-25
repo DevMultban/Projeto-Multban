@@ -191,12 +191,9 @@ a.nav-link.active{
     width: 4rem;
 }
 
-/*Menu Configurações - Sitema Multcard*/
+/* ==== Menu Configurações - Sitema Multcard ==== */
 #tabs-conexao.active{
     border-top-color: #a702d8;
-}
-.acoes-aliasDeTabelas{
-    width: 1rem;
 }
 #tabs-conexao-tab.active{
     border-top-color: #a702d8;
@@ -210,10 +207,17 @@ a.nav-link.active{
     border-top-color: #a702d8;
     border-top-width: 0.2rem;
 }
-#tabs-padroes-tab.active{
+#tabs-padroes-planos-tab.active{
     border-top-color: #a702d8;
     border-top-width: 0.2rem;
 }
+
+/*Tab Alias de Tabelas*/
+.acoes-aliasDeTabelas{ 
+    width: 0.30rem;
+}
+
+
 
 /*Footer*/
 .main-footer{

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- CSRF Token -->
     <meta name="csrf-token" content="IyM1RY2lInNFexy3HYntiLGouuRlq8tokrcuUAKB">
-    <title>Configuração Sistema Mul | MULTBAN</title>
+    <title>Configuração Sistema Multcard | MULTBAN</title>
     <!-- Tell the browser to be responsive to screen width -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Font Awesome -->
@@ -24,11 +24,16 @@
     <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">-->
     <!-- pace-progress -->
     <link rel="stylesheet" href="plugins/pace-progress/themes/black/pace-theme-flat-top.css">
-    <link href="plugins/select2/css/select2.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="plugins/select2/css/select2.min.css">
     <link rel="stylesheet" href="dist/css/multban.min.css">
     <link rel="stylesheet" href="plugins/toastr/toastr.min.css">
     <link rel="stylesheet" href="plugins/sweetalert2/sweetalert2.min.css">
     
+    <!--Padrão tabela-->
+    <link rel="stylesheet" href="plugins/datatables-bs4/css/dataTables.bootstrap4.min.css" />
+    <link rel="stylesheet" href="plugins/datatables-fixedheader/css/fixedHeader.bootstrap4.min.css" />
+    <link rel="stylesheet" href="plugins/datatables-responsive/css/responsive.bootstrap4.min.css" />
+
     <link rel="stylesheet" href="dist/css/menus.css">
 
     <!-- Google Font: Source Sans Pro -->
@@ -290,8 +295,7 @@
                             </li>
                     
                             <li class="nav-item">
-                                <a class="nav-link" id="tabs-padroes-tab" data-toggle="pill" href="#tabs-padroes" role="tab"
-                                   aria-controls="tabs-padroes" aria-selected="false">Padrões dos Planos</a>
+                                <a class="nav-link" id="tabs-padroes-planos-tab" data-toggle="pill" href="#tabs-padroes-planos" role="tab" aria-controls="tabs-padroes-planos" aria-selected="false">Padrões dos Planos</a>
                             </li>
                         </ul>
                     </div>
@@ -312,44 +316,45 @@
                                         </select>
                                     </div>
                                     <div class="col-md-3 d-flex align-items-center">
-                                        <a class="btn btn-custom filtro-pesquisa" id="btnPesquisar">
+                                        <a class="btn btn-custom filtro-pesquisa" id="btnPesquisarConexaoBD">
                                             <i class="fa fa-search"></i> Pesquisar
                                         </a>
                                     </div>
                                 </div>
-                    
-                                <div class="table-responsive">
-                                    <table id="gridConexao" class="table table-striped table-bordered nowrap">
-                                        <thead>
-                                            <tr>
-                                                <th>Ações</th>
-                                                <th>Fornecedor</th>
-                                                <th>Identificação da Conexão</th>
-                                                <th>Host</th>
-                                                <th>Porta</th>
-                                                <th>Nome do Banco de Dados</th>
-                                                <th>Usuário</th>
-                                                <th>Senha</th>
-                                                <th>Token - Autenticação</th>
-                                                <th>SSL Mode</th>
-                                                <th>SSL Certificate</th>
-                                                <th>SSL Key</th>
-                                                <th>SSL CA</th>
-                                                <th>Timeout de Conexão</th>
-                                                <th>Timeout de Consulta</th>
-                                                <th>Pooling de Conexão</th>
-                                                <th>Charset</th>
-                                                <th>Time Zone</th>
-                                                <th>Application Name</th>
-                                                <th>Keep Alive</th>
-                                                <th>Compression</th>
-                                                <th>Read Only</th>
-                                            </tr>
-                                        </thead>
-                                    </table>
+                                <!--Tabela-->
+                                <div class="tab" id="conexaoBD">
+                                    <div class="table-responsive">
+                                        <table id="gridtemplateConexaoBD" class="table table-striped table-bordered nowrap">
+                                            <thead>
+                                                <tr>
+                                                    <th class="acoes-aliasDeTabelas">Ações</th>
+                                                    <th>Fornecedor</th>
+                                                    <th>Identificação da Conexão</th>
+                                                    <th>Host</th>
+                                                    <th>Porta</th>
+                                                    <th>Nome do Banco de Dados</th>
+                                                    <th>Usuário</th>
+                                                    <th>Senha</th>
+                                                    <th>Token - Autenticação</th>
+                                                    <th>SSL Mode</th>
+                                                    <th>SSL Certificate</th>
+                                                    <th>SSL Key</th>
+                                                    <th>SSL CA</th>
+                                                    <th>Timeout de Conexão</th>
+                                                    <th>Timeout de Consulta</th>
+                                                    <th>Pooling de Conexão</th>
+                                                    <th>Charset</th>
+                                                    <th>Time Zone</th>
+                                                    <th>Application Name</th>
+                                                    <th>Keep Alive</th>
+                                                    <th>Compression</th>
+                                                    <th>Read Only</th>
+                                                </tr>
+                                            </thead>
+                                        </table>
+                                    </div>
                                 </div>
                             </div>
-                            <!-- /.card-body -->
                         </div>
                     </div>
     
@@ -367,106 +372,35 @@
                                         </select>
                                     </div>
                                     <div class="col-md-3 d-flex align-items-center">
-                                        <a class="btn btn-custom filtro-pesquisa" id="btnPesquisar">
+                                        <a class="btn btn-custom filtro-pesquisa" id="btnPesquisarAliasTabelas">
                                             <i class="fa fa-search"></i> Pesquisar
                                         </a>
                                     </div>
                                 </div>
-                                
-                                <!--<div class="form-group">
-                                    <label for="nomeTabela">Nome da Tabela:</label>
-                                    <input type="text" class="form-control" id="nomeTabela" placeholder="Digite o nome da tabela">
-                                </div>
-                                <div class="form-group">
-                                    <label for="aliasTabela">Alias da Tabela:</label>
-                                    <input type="text" class="form-control" id="aliasTabela" placeholder="Digite o alias da tabela">
-                                </div>-->
-
+                                <!--Tabela-->
+                                <div class="tab" id="aliasTabelas">
                                     
-                                <div class="tab-content" id="custom-tabs-two-tabContent">
-                                    <div class="tab-pane fade show active" id="tabs-alias" role="tabpanel" aria-labelledby="tabs-alias-tab">
-                                        <div class="card card-outline card-primary mt-3">
-                                            <div class="card-body">
-                                                <div class="table-responsive">
-                                                    <table id="gridtemplate" class="table table-striped table-bordered nowrap">
-                                                        <thead>
-                                                            <tr>
-                                                                <th>Ações</th>
-                                                                <th>Nome da Tabela</th>
-                                                                <th>Alias da Tabela</th>
-                                                            </tr>
-                                                        </thead>
-                                                        <tbody>
-                                                            <tr>
-                                                                <td><button class="btn btn-warning">Editar</button>
-                                                                </td>
-                                                                <td>ExemploTabela</td>
-                                                                <td>ExemploAlias</td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td><button class="btn btn-warning">Editar</button>
-                                                                </td>
-                                                                <td>OutraTabela</td>
-                                                                <td>OutroAlias</td>
-                                                            </tr>
-                                                            <!-- Adicione mais linhas conforme necessário -->
-                                                        </tbody>
-                                                    </table>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                            
-                                    <div class="tab-pane fade" id="tabs-apis" role="tabpanel" aria-labelledby="tabs-apis-tab">
-                                        <div class="card card-primary mt-3">
-                                            <div class="card-body">
-                                                <h5>Configurações da API</h5>
-                                                <div class="table-responsive mt-3">
-                                                    <table id="tabelaAPIs" class="table table-striped table-bordered">
-                                                        <thead>
-                                                            <tr>
-                                                                <th>Ações</th>
-                                                                <th>Fornecedor</th>
-                                                                <th>EndPoint</th>
-                                                                <th>Método HTTP</th>
-                                                                <th>Token de Autenticação</th>
-                                                                <th>Tipo de Dados Enviados</th>
-                                                                <th>Tipo de Dados Aceitos</th>
-                                                                <th>Usuário</th>
-                                                                <th>API Key</th>
-                                                            </tr>
-                                                        </thead>
-                                                        <tbody>
-                                                            <tr>
-                                                                <td>
-                                                                    <button class="btn btn-warning">Editar</button>
-                                                                </td>
-                                                                <td>Fornecedor 1</td>
-                                                                <td>/api/exemplo</td>
-                                                                <td>GET</td>
-                                                                <td>token123</td>
-                                                                <td>JSON</td>
-                                                                <td>JSON</td>
-                                                                <td>usuario1</td>
-                                                                <td>apiKey123</td>
-                                                            </tr>
-                                                            <!-- Adicione mais linhas conforme necessário -->
-                                                        </tbody>
-                                                    </table>
-                                                </div>
-                                            </div>
-                                        </div>
+                                    <div class="table-responsive">
+                                        <table id="gridtemplateAliasTabelas" class="table table-striped table-bordered nowrap">
+                                            <thead>
+                                                <tr>
+                                                    <th class="acoes-aliasDeTabelas">Ações</th>
+                                                    <th>Nome da Tabela</th>
+                                                    <th>Alias da Tabela</th>
+                                                </tr>
+                                            </thead>
+                                        </table>
                                     </div>
                                 </div>
-  
                             </div>
                         </div>
                     </div>
-                        
+
                     <!-- ABA APIS --> 
                     <div class="tab-pane fade" id="tabs-apis" role="tabpanel" aria-labelledby="tabs-apis-tab">
-                        <div class="card card-primary mt-3">
+                        <div class="card card-primary">
                             <div class="card-body">
+                                <!--Codigos pra colocar no modal-->
                                 <div class="form-row">
                                     <div class="form-group col-md-4">
                                         <label for="fornecedor">Fornecedor:</label>
@@ -519,96 +453,103 @@
                                         <input type="text" class="form-control" id="apiKey" placeholder="Digite a API Key">
                                     </div>
                                 </div>
-                                <div class="table-responsive mt-3">
-                                    <table class="table table-striped table-bordered">
+                                <!--./-->
+                                <div class="form-row">
+                                    <div class="form-group col-md-4">
+                                        <a class="btn btn-custom filtro-pesquisa" id="btnPesquisarAPIs">
+                                            <i class="fa fa-search"></i> Pesquisar
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="tab" id="apis">
+                                    <div class="table-responsive">
+                                        <table id="gridtemplateAPIs" class="table table-striped table-bordered nowrap">
+                                            <thead>
+                                                <tr>
+                                                    <th>Ações</th>
+                                                    <th>Fornecedor</th>
+                                                    <th>EndPoint</th>
+                                                    <th>Método HTTP</th>
+                                                    <th>Token de Autenticação</th>
+                                                    <th>Tipo de Dados Enviados</th>
+                                                    <th>Tipo de Dados Aceitos</th>
+                                                    <th>Usuário</th>
+                                                    <th>Senha</th>
+                                                    <th>API Key</th>
+                                                </tr>
+                                            </thead>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ABA PADRÕES DOS PLANOS -->
+                    <div class="tab-pane fade" id="tabs-padroes-planos" role="tabpanel" aria-labelledby="tabs-padroes-planos-tab">
+                        <div class="card card-primary">
+                            <div class="card-body">
+                                <div class="form-row">
+                                    <div class="form-group col-md-4">
+                                        <a class="btn btn-custom filtro-pesquisa" id="btnPesquisarPadroesPlanos">
+                                            <i class="fa fa-search"></i> Pesquisar
+                                        </a>
+                                    </div>
+                                </div>
+                                <!-- Tabela -->
+                                <div class="table-responsive">
+                                    <table id="gridtemplatePadroesPlanos" class="table table-striped table-bordered nowrap">
                                         <thead>
                                             <tr>
                                                 <th>Ações</th>
-                                                <th>Fornecedor</th>
-                                                <th>EndPoint</th>
-                                                <th>Método HTTP</th>
-                                                <th>Token de Autenticação</th>
-                                                <th>Tipo de Dados Enviados</th>
-                                                <th>Tipo de Dados Aceitos</th>
-                                                <th>Usuário</th>
-                                                <th>API Key</th>
+                                                <th>Plano Vendido</th>
+                                                <th>Contrato White Label</th>
+                                                <th>Contrato Private Label</th>
+                                                <th>Aceita Reembolso</th>
+                                                <th>Check Out Boletagem</th>
+                                                <th>Tipo Boletagem</th>
+                                                <th>Check Out Multcard</th>
+                                                <th>Check Out Convencional</th>
+                                                <th>Adquirente</th>
+                                                <th>Liberar Consulta de SCORE</th>
+                                                <th>Intervalo de meses entre Consultas</th>
+                                                <th>Qtde de Consultas Mensal Gratuítas</th>
+                                                <th>Qtde de Consultas Mensal Contratadas</th>
+                                                <th>Cartão Pós Pago Contratado</th>
+                                                <th>Quantidade de Parcelas Liberadas</th>
+                                                <th>Valor PIX</th>
+                                                <th>Valor Boleto</th>
+                                                <th>Valor BolePIX</th>
+                                                <th>Cobrar Multa e Juros por Atraso</th>
+                                                <th>Percentual de Multa: Atraso</th>
+                                                <th>Percentual de Juros: Atraso</th>
+                                                <th>Comissão Multa/Juros Boleto</th>
+                                                <th>Dias de atraso para inativação do cartão</th>
+                                                <th>Isentar PIX / Boleto para parcelas acima de</th>
+                                                <th>Parcelamento com Juros</th>
+                                                <th>Juros a partir da Parcela</th>
+                                                <th>Taxa de Juros Parcelado</th>
+                                                <th>Comissão Parcelamento</th>
+                                                <th>Cartão Pré Pago Contratado</th>
+                                                <th>Taxa Pré-Pago</th>
+                                                <th>Gift Card Contratado</th>
+                                                <th>Taxa Gift Card</th>
+                                                <th>Cartão Fidelidade Contratado</th>
+                                                <th>Taxa Fidelidade</th>
+                                                <th>Prg Pontos - Particular</th>
+                                                <th>Prg Pontos - Franquia</th>
+                                                <th>Prg Pontos - Multcard Pontos</th>
+                                                <th>Prg Pontos - Multcard Valor</th>
                                             </tr>
                                         </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td><button class="btn btn-icon-usuario btn-sm" id="btnEditar" title="Editar" >
-                                                    <span class="bi bi-pencil-fill"></span>
-                                                </button>
-                                                </td>
-                                                <td>Fornecedor 1</td>
-                                                <td>/api/exemplo</td>
-                                                <td>GET</td>
-                                                <td>token123</td>
-                                                <td>JSON</td>
-                                                <td>JSON</td>
-                                                <td>usuario1</td>
-                                                <td>apiKey123</td>
-                                            </tr>
-                                            <!-- Adicione mais linhas conforme necessário -->
-                                        </tbody>
                                     </table>
                                 </div>
                             </div>
                         </div>
                     </div>
-    
-                    <!-- ABA PADRÕES DOS PLANOS -->
-                    <div class="tab-pane fade" id="tabs-score" role="tabpanel" aria-labelledby="tabs-score-tab">
-                        <div class="card card-primary">
-                            <div class="card-body">
-                                <div class="form-row">
-                                    <div class="form-group col-md-4">
-                                        <button type="button" class="btn btn-custom" id="btnConsultarScore">Consultar SCORE</button>
-                                    </div>
-                                </div>
-                                <div class="table-responsive">
-                                <table class="table table-bordered">
-                                    <thead>
-                                        <tr>
-                                            <th>Número do Processo/Protesto</th>
-                                            <th>Tipo do Processo/Protesto</th>
-                                            <th>Descrição do Processo/Protesto</th>
-                                            <th>Status do Processo/Protesto</th>
-                                            <th>Data da Pesquisa</th>
-                                            <th>Data Início do Processo/Protesto</th>
-                                            <th>Data Fim do Processo/Protesto</th>
-                                            <th>Valor do Processo/Protesto</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <!-- Exemplo de linha de SCORE -->
-                                        <tr>
-                                            <td>123456</td>
-                                            <td>Protesto</td>
-                                            <td>Descrição do Protesto</td>
-                                            <td>Ativo</td>
-                                            <td>01/01/2023</td>
-                                            <td>01/01/2020</td>
-                                            <td>01/01/2021</td>
-                                            <td>R$ 500,00</td>
-                                        </tr>
-                                        <tr>
-                                            <td>654321</td>
-                                            <td>Processo Judicial</td>
-                                            <td>Descrição do Processo</td>
-                                            <td>Encerrado</td>
-                                            <td>15/01/2023</td>
-                                            <td>01/01/2019</td>
-                                            <td>01/01/2020</td>
-                                            <td>R$ 1.000,00</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                              </div>
-                            </div>
-                        </div>
-                    </div>
+
                   </div>
+                </div>
                 </div>
             </form>
         </section>
@@ -638,68 +579,6 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-
-    <script>
-        // Função para alternar a visibilidade da senha
-        function togglePasswordVisibility(inputId, iconId) {
-            const input = document.getElementById(inputId);
-            const icon = document.getElementById(iconId);
-            if (input.type === "password") {
-                input.type = "text";
-                icon.classList.remove("bi-eye-fill");
-                icon.classList.add("bi-eye-slash-fill");
-            } else {
-                input.type = "password";
-                icon.classList.remove("bi-eye-slash-fill");
-                icon.classList.add("bi-eye-fill");
-            }
-        }
-
-        // Adicionando eventos de clique para os ícones de visualização de senha
-        document.getElementById('toggleSenha').addEventListener('click', function() {
-            togglePasswordVisibility('senha', 'eyeIcon');
-        });
-
-        document.getElementById('toggleRepetirSenha').addEventListener('click', function() {
-            togglePasswordVisibility('repetirSenha', 'eyeIconRepetir');
-        });
-    </script>
-    
-    <!--Mascara de CPF-->
-    <script>
-      function mask(o) {
-          // Remove todos os caracteres que não são dígitos
-          let v = o.value.replace(/\D/g, '');
-  
-          // Aplica a máscara
-          v = v.replace(/(\d{3})(\d)/, '$1.$2'); // 000.0
-          v = v.replace(/(\d{3})(\d)/, '$1.$2'); // 000.000.0
-          v = v.replace(/(\d{3})(\d{1,2})$/, '$1-$2'); // 000.000.000-00
-  
-          o.value = v;
-      }
-  </script>
-  
-  <!--Coloca % no campo dos Dados Adicionais-->
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-    const percentualComissaoField = document.getElementById('percentualComissao');
-
-    percentualComissaoField.addEventListener('input', function() {
-        // Remove o símbolo de porcentagem se existir
-        let value = percentualComissaoField.value.replace('%', '');
-
-        // Verifica se o valor é um número e está dentro do intervalo permitido
-        if (value >= 0 && value <= 100) {
-            percentualComissaoField.value = value + '%'; // Adiciona o símbolo de porcentagem
-        } else if (value > 100) {
-            percentualComissaoField.value = '100%'; // Limita a 100%
-        } else if (value < 0) {
-            percentualComissaoField.value = '0%'; // Limita a 0%
-        }
-    });
-  });
-  </script>
 
     <!-- jQuery -->
     <script src="plugins/jquery/jquery.min.js"></script>
@@ -758,6 +637,7 @@
              $(".se-pre-con").fadeOut("slow");
         });
     </script>
+
      <!-- Select2 -->
      <script src="plugins/select2/js/select2.full.min.js"></script>
      <script src="plugins/sweetalert2/sweetalert2.all.min.js"></script>
@@ -767,6 +647,226 @@
      <script src="plugins/datatables-fixedheader/js/dataTables.fixedHeader.min.js"></script>
      <script src="plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
      <script src="dist/js/app.js"></script>
+
+     <!--Btn pesquisar da aba Alias de Tabelas-->
+     <script>
+        $(document).ready(function() {
+            // Inicializa o DataTable para cada tabela
+            var tableConexaoBD = $('#gridtemplateConexaoBD').DataTable();
+            var tableAliasTabelas = $('#gridtemplateAliasTabelas').DataTable();
+            var tableAPIs = $('#gridtemplateAPIs').DataTable();
+            var tablePadroesPlanos = $('#gridtemplatePadroesPlanos').DataTable();
+    
+            // Evento de clique para o botão "Pesquisar" da aba Conexão com BD
+        $('#btnPesquisarConexaoBD').on('click', function() {
+            // Adiciona dados fictícios à tabela Conexão com BD
+            tableConexaoBD.clear().rows.add([
+                [
+                    `<button class="btn btn-icon-usuario btn-sm" id="btnEditar" title="Editar">
+                        <span class="bi bi-pencil-fill"></span>
+                    </button>`,
+                    'Fornecedor A',
+                    'Conexao1',
+                    'localhost',
+                    '5432',
+                    'banco_de_dados_a',
+                    'usuario_a',
+                    'senha_a',
+                    'token_a',
+                    'require',
+                    'certificado_a',
+                    'chave_a',
+                    'ca_a',
+                    '30',
+                    '60',
+                    'true',
+                    'UTF8',
+                    'UTC',
+                    'AppNameA',
+                    'true',
+                    'false',
+                    'false'
+                ],
+                [
+                    `<button class="btn btn-icon-usuario btn-sm" id="btnEditar" title="Editar">
+                        <span class="bi bi-pencil-fill"></span>
+                    </button>`,
+                    'Fornecedor B',
+                    'Conexao2',
+                    '192.168.1.1',
+                    '3306',
+                    'banco_de_dados_b',
+                    'usuario_b',
+                    'senha_b',
+                    'token_b',
+                    'prefer',
+                    'certificado_b',
+                    'chave_b',
+                    'ca_b',
+                    '30',
+                    '60',
+                    'false',
+                    'UTF8',
+                    'UTC',
+                    'AppNameB',
+                    'true',
+                    'false',
+                    'true'
+                ]
+            ]).draw();
+        });
+    
+            // Evento de clique para o botão "Pesquisar" da aba Alias de Tabelas
+            $('#btnPesquisarAliasTabelas').on('click', function() {
+                // Adiciona dados fictícios à tabela Alias de Tabelas
+                tableAliasTabelas.clear().rows.add([
+                    [
+                        `<button class="btn btn-icon-usuario btn-sm" id="btnEditar" title="Editar">
+                            <span class="bi bi-pencil-fill"></span>
+                        </button>`,
+                        'TabelaA',
+                        'AliasA'
+                    ],
+                    [
+                        `<button class="btn btn-icon-usuario btn-sm" id="btnEditar" title="Editar">
+                            <span class="bi bi-pencil-fill"></span>
+                        </button>`,
+                        'TabelaB',
+                        'AliasB'
+                    ]
+                ]).draw();
+            });
+    
+            // Evento de clique para o botão "Pesquisar" da aba APIs
+        $('#btnPesquisarAPIs').on('click', function() {
+            // Adiciona dados fictícios à tabela APIs
+            tableAPIs.clear().rows.add([
+                [
+                    `<button class="btn btn-icon-usuario btn-sm" id="btnEditar" title="Editar">
+                        <span class="bi bi-pencil-fill"></span>
+                    </button>`,
+                    'Fornecedor A',
+                    'hapi/exemplo/01',
+                    'GET',
+                    'token_a',
+                    'application/00',
+                    'application/09',
+                    'usuario_a',
+                    'senha_a',
+                    'api_key_a'
+                ],
+                [
+                    `<button class="btn btn-icon-usuario btn-sm" id="btnEditar" title="Editar">
+                        <span class="bi bi-pencil-fill"></span>
+                    </button>`,
+                    'Fornecedor B',
+                    'api/exemplo/02',
+                    'POST',
+                    'token_b',
+                    'application/21',
+                    'application/33',
+                    'usuario_b',
+                    'senha_b',
+                    'api_key_b'
+                ]
+            ]).draw();
+        });
+    
+            // Evento de clique para o botão "Pesquisar" da aba Padrões dos Planos
+        $('#btnPesquisarPadroesPlanos').on('click',function() {
+            // Adiciona dados fictícios à tabela Padrões dos Planos
+            tablePadroesPlanos.clear().rows.add([
+                [
+                    `<button class="btn btn-icon-usuario btn-sm" id="btnEditar" title="Editar">
+                        <span class="bi bi-pencil-fill"></span>
+                    </button>`,
+                    'Plano A',
+                    'Sim',
+                    'Não',
+                    'Sim',
+                    'Sim',
+                    'Tipo A',
+                    'Sim',
+                    'Não',
+                    'Adquirente A',
+                    'Sim',
+                    '6',
+                    '10',
+                    '20',
+                    'Sim',
+                    '12',
+                    'R$ 100,00',
+                    'R$ 50,00',
+                    'R$ 30,00',
+                    'Sim',
+                    '2%',
+                    '1%',
+                    '5%',
+                    '30',
+                    'R$ 200,00',
+                    'Sim',
+                    '5%',
+                    '5%',
+                    'Sim',
+                    '3%',
+                    'Sim',
+                    '2%',
+                    'Sim',
+                    '1%',
+                    'Sim',
+                    '1%',
+                    'Sim',
+                    '1%',
+                    'Sim',
+                    '1%'
+                ],
+                [
+                    `<button class="btn btn-icon-usuario btn-sm" id="btnEditar" title="Editar">
+                        <span class="bi bi-pencil-fill"></span>
+                    </button>`,
+                    'Plano B',
+                    'Sim',
+                    'Sim',
+                    'Não',
+                    'Não',
+                    'Tipo B',
+                    'Não',
+                    'Sim',
+                    'Adquirente B',
+                    'Não',
+                    '12',
+                    '15',
+                    '25',
+                    'Não',
+                    '10',
+                    'R$ 150,00',
+                    'R$ 70,00',
+                    'R$ 40,00',
+                    'Não',
+                    '3%',
+                    '2%',
+                    '6%',
+                    '15',
+                    'R$ 250,00',
+                    'Não',
+                    '6%',
+                    '4%',
+                    'Não',
+                    '2%',
+                    'Não',
+                    '0%',
+                    'Não',
+                    '0%',
+                    'Não',
+                    '0%',
+                    'Não',
+                    '0%',
+                    'Não'
+                ]
+            ]).draw();
+        });
+        });
+    </script>
 
      <!--Tira informações envolta da table-->
      <script>
@@ -788,119 +888,7 @@
                 $(".alert-dismissible").alert("close");
             });
   });
-
 </script>
-    
-<script>
-    $(document).ready(function() {
-        // Inicializa o DataTable
-        var table = $('#gridtemplate').DataTable();
-
-        // Evento de tecla para pesquisa
-        $('#inputPesquisa').on('keyup', function(e) {
-            if (e.key === 'Enter') {
-                $("#btnPesquisar").trigger("click");
-            }
-        });
-
-        // Evento de clique no botão "Pesquisar"
-        $('#btnPesquisar').click(function() {
-            // Limpa a tabela antes de adicionar novos dados
-            table.clear().draw();
-
-        // Exemplo de dados fictícios
-        var dadosConexao = [
-            {
-                fornecedor: 'Fornecedor A',
-                identificacao: 'Conexao 1',
-                host: 'localhost',
-                porta: '5432',
-                nomeBanco: 'banco_a',
-                usuario: 'user_a',
-                senha: 'senha_a',
-                token: 'token_a',
-                sslMode: 'require',
-                sslCert: 'cert_a',
-                sslKey: 'key_a',
-                sslCA: 'ca_a',
-                timeoutConexao: '30s',
-                timeoutConsulta: '10s',
-                pooling: 'true',
-                charset: 'UTF8',
-                timeZone: 'UTC',
-                appName: 'App A',
-                keepAlive: 'true',
-                compression: 'false',
-                readOnly: 'false'
-            },
-            {
-                fornecedor: 'Fornecedor B',
-                identificacao: 'Conexao 2',
-                host: '192.168.1.1',
-                porta: '3306',
-                nomeBanco: 'banco_b',
-                usuario: 'user_b',
-                senha: 'senha_b',
-                token: 'token_b',
-                sslMode: 'prefer',
-                sslCert: 'cert_b',
-                sslKey: 'key_b',
-                sslCA: 'ca_b',
-                timeoutConexao: '30s',
-                timeoutConsulta: '10s',
-                pooling: 'true',
-                charset: 'UTF8',
-                timeZone: 'UTC',
-                appName: 'App B',
-                keepAlive: 'true',
-                compression: 'false',
-                readOnly: 'false'
-            }
-        ];
-
-        // Adiciona os dados à tabela
-        dadosConexao.forEach(function(conexao) {
-            table.row.add([
-                // Botões com ícones
-                `<button class="btn btn-icon-usuario btn-sm" id="btnEditar" title="Editar">
-                    <span class="bi bi-pencil-fill"></span>
-                </button>
-                <button class="btn btn-icon-usuario btn-sm" id="btnAtivar" title="Ativar">
-                    <span class="bi bi-check-circle"></span>
-                </button>
-                <button class="btn btn-icon-usuario btn-sm" id="btnInativar" title="Inativar">
-                    <span class="bi bi-slash-circle"></span>
-                </button>
-                <button class="btn btn-icon-usuario btn-sm" id="btnExcluir" title="Excluir">
-                    <span class="bi bi-trash"></span>
-                </button>`,
-                conexao.fornecedor,
-                conexao.identificacao,
-                conexao.host,
-                conexao.porta,
-                conexao.nomeBanco,
-                conexao.usuario,
-                conexao.senha,
-                conexao.token,
-                conexao.sslMode,
-                conexao.sslCert,
-                conexao.sslKey,
-                conexao.sslCA,
-                conexao.timeoutConexao,
-                conexao.timeoutConsulta,
-                conexao.pooling,
-                conexao.charset,
-                conexao.timeZone,
-                conexao.appName,
-                conexao.keepAlive,
-                conexao.compression,
-                conexao.readOnly
-            ]).draw();
-        });
-    });
-});
-</script>
-
 
 
 <script src="plugins/jquery-validation/jquery.validate.min.js"></script>
