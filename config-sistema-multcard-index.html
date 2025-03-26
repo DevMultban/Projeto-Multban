@@ -354,6 +354,109 @@
                                         </table>
                                     </div>
                                 </div>
+                                <!-- Modal -->
+                                <div class="modal fade" id="editarModal" tabindex="-1" aria-labelledby="editarModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="editarModalLabel">Editar Conexão</h5>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <form id="formEditar">
+                                                    <div class="mb-3">
+                                                        <label for="fornecedor" class="form-label">Fornecedor</label>
+                                                        <input type="text" class="form-control" id="fornecedor" required>
+                                                    </div>
+                                                    <div class="mb-3">
+                                                        <label for="identificacao" class="form-label">Identificação da Conexão</label>
+                                                        <input type="text" class="form-control" id="identificacao" required>
+                                                    </div>
+                                                    <div class="mb-3">
+                                                        <label for="host" class="form-label">Host</label>
+                                                        <input type="text" class="form-control" id="host" required>
+                                                    </div>
+                                                    <div class="mb-3">
+                                                        <label for="porta" class="form-label">Porta</label>
+                                                        <input type="text" class="form-control" id="porta" required>
+                                                    </div>
+                                                    <div class="mb-3">
+                                                        <label for="nomeBanco" class="form-label">Nome do Banco de Dados</label>
+                                                        <input type="text" class="form-control" id="nomeBanco" required>
+                                                    </div>
+                                                    <div class="mb-3">
+                                                        <label for="usuario" class="form-label">Usuário</label>
+                                                        <input type="text" class="form-control" id="usuario" required>
+                                                    </div>
+                                                    <div class="mb-3">
+                                                        <label for="senha" class="form-label">Senha</label>
+                                                        <input type="password" class="form-control" id="senha" required>
+                                                    </div>
+                                                    <div class="mb-3">
+                                                        <label for="token" class="form-label">Token - Autenticação</label>
+                                                        <input type="text" class="form-control" id="token" required>
+                                                    </div>
+                                                    <div class="mb-3">
+                                                        <label for="sslMode" class="form-label">SSL Mode</label>
+                                                        <input type="text" class="form-control" id="sslMode" required>
+                                                    </div>
+                                                    <div class="mb-3">
+                                                        <label for="sslCertificado" class="form-label">SSL Certificate</label>
+                                                        <input type="text" class="form-control" id="sslCertificado" required>
+                                                    </div>
+                                                    <div class="mb-3">
+                                                        <label for="sslKey" class="form-label">SSL Key</label>
+                                                        <input type="text" class="form-control" id="sslKey" required>
+                                                    </div>
+                                                    <div class="mb-3">
+                                                        <label for="sslCA" class="form-label">SSL CA</label>
+                                                        <input type="text" class="form-control" id="sslCA" required>
+                                                    </div>
+                                                    <div class="mb-3">
+                                                        <label for="timeoutConexao" class="form-label">Timeout de Conexão</label>
+                                                        <input type="text" class="form-control" id="timeoutConexao" required>
+                                                    </div>
+                                                    <div class="mb-3">
+                                                        <label for="timeoutConsulta" class="form-label">Timeout de Consulta</label>
+                                                        <input type="text" class="form-control" id="timeoutConsulta" required>
+                                                    </div>
+                                                    <div class="mb-3">
+                                                        <label for="pooling" class="form-label">Pooling de Conexão</label>
+                                                        <input type="text" class="form-control" id="pooling" required>
+                                                    </div>
+                                                    <div class="mb-3">
+                                                        <label for="charset" class="form-label">Charset</label>
+                                                        <input type="text" class="form-control" id="charset" required>
+                                                    </div>
+                                                    <div class="mb-3">
+                                                        <label for="timeZone" class="form-label">Time Zone</label>
+                                                        <input type="text" class="form-control" id="timeZone" required>
+                                                    </div>
+                                                    <div class="mb-3">
+                                                        <label for="appName" class="form-label">Application Name</label>
+                                                        <input type="text" class="form-control" id="appName" required>
+                                                    </div>
+                                                    <div class="mb-3">
+                                                        <label for="keepAlive" class="form-label">Keep Alive</label>
+                                                        <input type="text" class="form-control" id="keepAlive" required>
+                                                    </div>
+                                                    <div class="mb-3">
+                                                        <label for="compression" class="form-label">Compression</label>
+                                                        <input type="text" class="form-control" id="compression" required>
+                                                    </div>
+                                                    <div class="mb-3">
+                                                        <label for="readOnly" class="form-label">Read Only</label>
+                                                        <input type="text" class="form-control" id="readOnly" required>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                                                <button type="button" class="btn btn-primary" id="salvarEdicoes">Salvar alterações</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -648,8 +751,8 @@
      <script src="plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
      <script src="dist/js/app.js"></script>
 
-     <!--Btn pesquisar da aba Alias de Tabelas-->
-     <script>
+    <!--Btn pesquisar da aba Alias de Tabelas-->
+    <script>
         $(document).ready(function() {
             // Inicializa o DataTable para cada tabela
             var tableConexaoBD = $('#gridtemplateConexaoBD').DataTable();
@@ -866,6 +969,76 @@
             ]).draw();
         });
         });
+    </script>
+
+    <!--Modal ABA Conexão com Banco de Dados-->
+    <script>
+        $(document).on('click', '#btnEditar', function() {
+            // Obter os dados da linha correspondente
+            var linha = $(this).closest('tr');
+            var dados = linha.children('td').map(function() {
+                return $(this).text();
+            }).get();
+
+            // Preencher os campos do modal com os dados
+            $('#fornecedor').val(dados[1]);
+            $('#identificacao').val(dados[2]);
+            $('#host').val(dados[3]);
+            $('#porta').val(dados[4]);
+            $('#nomeBanco').val(dados[5]);
+            $('#usuario').val(dados[6]);
+            $('#senha').val(dados[7]);
+            $('#token').val(dados[8]);
+            $('#sslMode').val(dados[9]);
+            $('#sslCertificado').val(dados[10]);
+            $('#sslKey').val(dados[11]);
+            $('#sslCA').val(dados[12]);
+            $('#timeoutConexao').val(dados[13]);
+            $('#timeoutConsulta').val(dados[14]);
+            $('#pooling').val(dados[15]);
+            $('#charset').val(dados[16]);
+            $('#timeZone').val(dados[17]);
+            $('#appName').val(dados[18]);
+            $('#keepAlive').val(dados[19]);
+            $('#compression').val(dados[20]);
+            $('#readOnly').val(dados[21]);
+
+            // Abrir o modal
+            $('#editarModal').modal('show');
+        });
+
+        $('#salvarEdicoes').on('click', function() {
+        // Capturar os dados do formulário
+        var dadosAtualizados = {
+            fornecedor: $('#fornecedor').val(),
+            identificacao: $('#identificacao').val(),
+            host: $('#host').val(),
+            porta: $('#porta').val(),
+            nomeBanco: $('#nomeBanco').val(),
+            usuario: $('#usuario').val(),
+            senha: $('#senha').val(),
+            token: $('#token').val(),
+            sslMode: $('#sslMode').val(),
+            sslCertificado: $('#sslCertificado').val(),
+            sslKey: $('#sslKey').val(),
+            sslCA: $('#sslCA').val(),
+            timeoutConexao: $('#timeoutConexao').val(),
+            timeoutConsulta: $('#timeoutConsulta').val(),
+            pooling: $('#pooling').val(),
+            charset: $('#charset').val(),
+            timeZone: $('#timeZone').val(),
+            appName: $('#appName').val(),
+            keepAlive: $('#keepAlive').val(),
+            compression: $('#compression').val(),
+            readOnly: $('#readOnly').val()
+        };
+
+        // Aqui você pode fazer a chamada para atualizar os dados no servidor ou na tabela
+        // Exemplo: atualizarTabela(dadosAtualizados);
+
+        // Fechar o modal
+        $('#editarModal').modal('hide');
+        });  
     </script>
 
      <!--Tira informações envolta da table-->
