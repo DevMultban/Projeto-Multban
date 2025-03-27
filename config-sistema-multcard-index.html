@@ -359,8 +359,10 @@
                                     <div class="modal-dialog">
                                         <div class="modal-content">
                                             <div class="modal-header">
-                                                <h5 class="modal-title" id="editarModalLabel">Editar Conexão</h5>
-                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                <h5 class="modal-title" id="editarModalLabel">Editar</h5>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
                                             </div>
                                             <div class="modal-body">
                                                 <form id="formEditar">
@@ -451,8 +453,8 @@
                                                 </form>
                                             </div>
                                             <div class="modal-footer">
-                                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
-                                                <button type="button" class="btn btn-primary" id="salvarEdicoes">Salvar alterações</button>
+                                                <button type="button" class="btn btn-delete" data-dismiss="modal">Fechar</button>
+                                                <button type="button" class="btn btn-custom" id="btnSalvar">Salvar</button>
                                             </div>
                                         </div>
                                     </div>
@@ -495,6 +497,35 @@
                                         </table>
                                     </div>
                                 </div>
+                                <!-- Modal para Editar Alias de Tabelas -->
+                                <div class="modal fade" id="editarModalAlias" tabindex="-1" aria-labelledby="editarModalAliasLabel" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="editarModalAliasLabel">Editar</h5>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <form id="formEditarAlias">
+                                                    <div class="mb-3">
+                                                        <label for="nomeTabela" class="form-label">Nome da Tabela</label>
+                                                        <input type="text" class="form-control" id="nomeTabela" required>
+                                                    </div>
+                                                    <div class="mb-3">
+                                                        <label for="aliasTabela" class="form-label">Alias da Tabela</label>
+                                                        <input type="text" class="form-control" id="aliasTabela" required>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-delete" data-dismiss="modal">Fechar</button>
+                                                <button type="button" class="btn btn-custom" id="btnSalvar">Salvar</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -503,60 +534,6 @@
                     <div class="tab-pane fade" id="tabs-apis" role="tabpanel" aria-labelledby="tabs-apis-tab">
                         <div class="card card-primary">
                             <div class="card-body">
-                                <!--Codigos pra colocar no modal
-                                <div class="form-row">
-                                    <div class="form-group col-md-4">
-                                        <label for="fornecedor">Fornecedor:</label>
-                                        <select class="form-control" id="fornecedor">
-                                            <option value="">Selecione um fornecedor</option>
-                                            <option value="1">Fornecedor 1</option>
-                                            <option value="2">Fornecedor 2</option>
-                                        </select>
-                                    </div>
-                                    <div class="form-group col-md-4">
-                                        <label for="endPoint">EndPoint:</label>
-                                        <input type="text" class="form-control" id="endPoint" placeholder="Digite o EndPoint">
-                                    </div>
-                                    <div class="form-group col-md-4">
-                                        <label for="metodoHttp">Método HTTP:</label>
-                                        <select class="form-control" id="metodoHttp">
-                                            <option value="">Selecione o método</option>
-                                            <option value="GET">GET</option>
-                                            <option value="POST">POST</option>
-                                            <option value="PUT">PUT</option>
-                                            <option value="DELETE">DELETE</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="form-row">
-                                    <div class="form-group col-md-4">
-                                        <label for="tokenAutenticacao">Token de Autenticação:</label>
-                                        <input type="text" class="form-control" id="tokenAutenticacao" placeholder="Digite o token">
-                                    </div>
-                                    <div class="form-group col-md-4">
-                                        <label for="tipoDadosEnviados">Tipo de Dados Enviados:</label>
-                                        <input type="text" class="form-control" id="tipoDadosEnviados" placeholder="Ex: JSON">
-                                    </div>
-                                    <div class="form-group col-md-4">
-                                        <label for="tipoDadosAceitos">Tipo de Dados Aceitos:</label>
-                                        <input type="text" class="form-control" id="tipoDadosAceitos" placeholder="Ex: JSON">
-                                    </div>
-                                </div>
-                                <div class="form-row">
-                                    <div class="form-group col-md-4">
-                                        <label for="usuario">Usuário:</label>
-                                        <input type="text" class="form-control" id="usuario" placeholder="Digite o usuário">
-                                    </div>
-                                    <div class="form-group col-md-4">
-                                        <label for="senha">Senha:</label>
-                                        <input type="password" class="form-control" id="senha" placeholder="Digite a senha">
-                                    </div>
-                                    <div class="form-group col-md-4">
-                                        <label for="apiKey">API Key:</label>
-                                        <input type="text" class="form-control" id="apiKey" placeholder="Digite a API Key">
-                                    </div>
-                                </div>-->
-                                
                                 <div class="form-row">
                                     <div class="form-group col-md-4">
                                         <a class="btn btn-custom filtro-pesquisa" id="btnPesquisarAPIs">
@@ -584,6 +561,61 @@
                                         </table>
                                     </div>
                                 </div>
+                                <!-- Modal para Editar APIs -->
+                                <div class="modal fade" id="editarModalAPIs" tabindex="-1" aria-labelledby="editarModalAPIsLabel" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="editarModalAPIsLabel">Editar</h5>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <form id="formEditarAPIs">
+                                                    <div class="mb-3">
+                                                        <label for="fornecedorAPI" class="form-label">Fornecedor</label>
+                                                        <input type="text" class="form-control" id="fornecedorAPI" required>
+                                                    </div>
+                                                    <div class="mb-3">
+                                                        <label for="endPoint" class="form-label">EndPoint</label>
+                                                        <input type="text" class="form-control" id="endPoint" required>
+                                                    </div>
+                                                    <div class="mb-3">
+                                                        <label for="metodoHTTP" class="form-label">Método HTTP</label>
+                                                        <input type="text" class="form-control" id="metodoHTTP" required>
+                                                    </div>
+                                                    <div class="mb-3">
+                                                        <label for="tokenAutenticacao" class="form-label">Token de Autenticação</label>
+                                                        <input type="text" class="form-control" id="tokenAutenticacao" required>
+                                                    </div>
+                                                    <div class="mb-3">
+                                                        <label for="tipoDadosEnviados" class="form-label">Tipo de Dados Enviados</label>
+                                                        <input type="text" class="form-control" id="tipoDadosEnviados" required>
+                                                    </div>
+                                                    <div class="mb-3">
+                                                        <label for="tipoDadosAceitos" class="form-label">Tipo de Dados Aceitos</label>
+                                                        <input type="text" class="form-control" id="tipoDadosAceitos" required>
+                                                    </div>
+                                                    <div class="mb-3">
+                                                        <label for="usuarioAPI" class="form-label">Usuário</label>
+                                                        <input type="text" class="form-control" id="usuarioAPI" required>
+                                                    </div>
+                                                    <div class="mb-3">
+                                                        <label for="senhaAPI" class="form-label">Senha</label>
+                                                        <input type="password" class="form-control" id="senhaAPI" required>
+                                                    </div>
+                                                    <div class="mb-3">
+                                                        <label for="apiKey" class="form-label">API Key</label>
+                                                        <input type="text" class="form-control" id="apiKey" required>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-delete" data-dismiss="modal">Fechar</button>
+                                                <button type="button" class="btn btn-custom" id="btnSalvar">Salvar</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -595,7 +627,7 @@
                                 <div class="form-row">
                                     <div class="form-group col-md-4">
                                         <a class="btn btn-custom filtro-pesquisa" id="btnPesquisarPadroesPlanos">
-                                            <i class="fa fa-search"></i> Pesquisar
+                                            <i class="fa fa-search"></i>Pesquisar
                                         </a>
                                     </div>
                                 </div>
@@ -647,10 +679,180 @@
                                         </thead>
                                     </table>
                                 </div>
+                                <!-- Modal para Editar Padrão dos Planos -->
+                                <div class="modal fade" id="editarModalPlanos" tabindex="-1" aria-labelledby="editarModalPlanosLabel" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="editarModalPlanosLabel">Editar</h5>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <form id="formEditarPlanos">
+                                                    <div class="mb-3">
+                                                        <label for="planoVendido" class="form-label">Plano Vendido</label>
+                                                        <input type="text" class="form-control" id="planoVendido" required>
+                                                    </div>
+                                                    <div class="mb-3">
+                                                        <label for="contratoWhiteLabel" class="form-label">Contrato White Label</label>
+                                                        <input type="text" class="form-control" id="contratoWhiteLabel" required>
+                                                    </div>
+                                                    <div class="mb-3">
+                                                        <label for="contratoPrivateLabel" class="form-label">Contrato Private Label</label>
+                                                        <input type="text" class="form-control" id="contratoPrivateLabel" required>
+                                                    </div>
+                                                    <div class="mb-3">
+                                                        <label for="aceitaReembolso" class="form-label">Aceita Reembolso</label>
+                                                        <input type="text" class="form-control" id="aceitaReembolso" required>
+                                                    </div>
+                                                    <div class="mb-3">
+                                                        <label for="checkOutBoletagem" class="form-label">Check Out Boletagem</label>
+                                                        <input type="text" class="form-control" id="checkOutBoletagem" required>
+                                                    </div>
+                                                    <div class="mb-3">
+                                                        <label for="tipoBoletagem" class="form-label">Tipo Boletagem</label>
+                                                        <input type="text" class="form-control" id="tipoBoletagem" required>
+                                                    </div>
+                                                    <div class="mb-3">
+                                                        <label for="checkOutMultcard" class="form-label">Check Out Multcard</label>
+                                                        <input type="text" class="form-control" id="checkOutMultcard" required>
+                                                    </div>
+                                                    <div class="mb-3">
+                                                        <label for="checkOutConvencional" class="form-label">Check Out Convencional</label>
+                                                        <input type="text" class="form-control" id="checkOutConvencional" required>
+                                                    </div>
+                                                    <div class="mb-3">
+                                                        <label for="adquirente" class="form-label">Adquirente</label>
+                                                        <input type="text" class="form-control" id="adquirente" required>
+                                                    </div>
+                                                    <div class="mb-3">
+                                                        <label for="liberarConsultaScore" class="form-label">Liberar Consulta de SCORE</label>
+                                                        <input type="text" class="form-control" id="liberarConsultaScore" required>
+                                                    </div>
+                                                    <div class="mb-3">
+                                                        <label for="intervaloMesesConsultas" class="form-label">Intervalo de meses entre Consultas</label>
+                                                        <input type="text" class="form-control" id="intervaloMesesConsultas" required>
+                                                    </div>
+                                                    <div class="mb-3">
+                                                        <label for="qtdeConsultasMensaisGratuitas" class="form-label">Qtde de Consultas Mensais Gratuitas</label>
+                                                        <input type="text" class="form-control" id="qtdeConsultasMensaisGratuitas" required>
+                                                    </div>
+                                                    <div class="mb-3">
+                                                        <label for="qtdeConsultasMensaisContratadas" class="form-label">Qtde de Consultas Mensais Contratadas</label>
+                                                        <input type="text" class="form-control" id="qtdeConsultasMensaisContratadas" required>
+                                                    </div>
+                                                    <div class="mb-3">
+                                                        <label for="cartaoPosPagoContratado" class="form-label">Cartão Pós Pago Contratado</label>
+                                                        <input type="text" class="form-control" id="cartaoPosPagoContratado" required>
+                                                    </div>
+                                                    <div class="mb-3">
+                                                        <label for="quantidadeParcelasLiberadas" class="form-label">Quantidade de Parcelas Liberadas</label>
+                                                        <input type="text" class="form-control" id="quantidadeParcelasLiberadas" required>
+                                                    </div>
+                                                    <div class="mb-3">
+                                                        <label for="valorPIX" class="form-label">Valor PIX</label>
+                                                        <input type="text" class="form-control" id="valorPIX" required>
+                                                    </div>
+                                                    <div class="mb-3">
+                                                        <label for="valorBoleto" class="form-label">Valor Boleto</label>
+                                                        <input type="text" class="form-control" id="valorBoleto" required>
+                                                    </div>
+                                                    <div class="mb-3">
+                                                        <label for="valorBolePIX" class="form-label">Valor BolePIX</label>
+                                                        <input type="text" class="form-control" id="valorBolePIX" required>
+                                                    </div>
+                                                    <div class="mb-3">
+                                                        <label for="cobrarMultaJurosAtraso" class="form-label">Cobrar Multa e Juros por Atraso</label>
+                                                        <input type="text" class="form-control" id="cobrarMultaJurosAtraso" required>
+                                                    </div>
+                                                    <div class="mb-3">
+                                                        <label for="percentualMultaAtraso" class="form-label">Percentual de Multa: Atraso</label>
+                                                        <input type="text" class="form-control" id="percentualMultaAtraso" required>
+                                                    </div>
+                                                    <div class="mb-3">
+                                                        <label for="percentualJurosAtraso" class="form-label">Percentual de Juros: Atraso</label>
+                                                        <input type="text" class="form-control" id="percentualJurosAtraso" required>
+                                                    </div>
+                                                    <div class="mb-3">
+                                                        <label for="comissaoMultaJurosBoleto" class="form-label">Comissão Multa/Juros Boleto</label>
+                                                        <input type="text" class="form-control" id="comissaoMultaJurosBoleto" required>
+                                                    </div>
+                                                    <div class="mb-3">
+                                                        <label for="diasAtrasoInativacaoCartao" class="form-label">Dias de atraso para inativação do cartão</label>
+                                                        <input type="text" class="form-control" id="diasAtrasoInativacaoCartao" required>
+                                                    </div>
+                                                    <div class="mb-3">
+                                                        <label for="isentarPIXBoleto" class="form-label">Isentar PIX / Boleto para parcelas acima de</label>
+                                                        <input type="text" class="form-control" id="isentarPIXBoleto" required>
+                                                    </div>
+                                                    <div class="mb-3">
+                                                        <label for="parcelamentoComJuros" class="form-label">Parcelamento com Juros</label>
+                                                        <input type="text" class="form-control" id="parcelamentoComJuros" required>
+                                                    </div>
+                                                    <div class="mb-3">
+                                                        <label for="jurosAPartirParcela" class="form-label">Juros a partir da Parcela</label>
+                                                        <input type="text" class="form-control" id="jurosAPartirParcela" required>
+                                                    </div>
+                                                    <div class="mb-3">
+                                                        <label for="taxaJurosParcelado" class="form-label">Taxa de Juros Parcelado</label>
+                                                        <input type="text" class="form-control" id="taxaJurosParcelado" required>
+                                                    </div>
+                                                    <div class="mb-3">
+                                                        <label for="comissaoParcelamento" class="form-label">Comissão Parcelamento</label>
+                                                        <input type="text" class="form-control" id="comissaoParcelamento" required>
+                                                    </div>
+                                                    <div class="mb-3">
+                                                        <label for="cartaoPrePagoContratado" class="form-label">Cartão Pré Pago Contratado</label>
+                                                        <input type="text" class="form-control" id="cartaoPrePagoContratado" required>
+                                                    </div>
+                                                    <div class="mb-3">
+                                                        <label for="taxaPrePago" class="form-label">Taxa Pré -Pago</label>
+                                                        <input type="text" class="form-control" id="taxaPrePago" required>
+                                                    </div>
+                                                    <div class="mb-3">
+                                                        <label for="giftCardContratado" class="form-label">Gift Card Contratado</label>
+                                                        <input type="text" class="form-control" id="giftCardContratado" required>
+                                                    </div>
+                                                    <div class="mb-3">
+                                                        <label for="taxaGiftCard" class="form-label">Taxa Gift Card</label>
+                                                        <input type="text" class="form-control" id="taxaGiftCard" required>
+                                                    </div>
+                                                    <div class="mb-3">
+                                                        <label for="cartaoFidelidadeContratado" class="form-label">Cartão Fidelidade Contratado</label>
+                                                        <input type="text" class="form-control" id="cartaoFidelidadeContratado" required>
+                                                    </div>
+                                                    <div class="mb-3">
+                                                        <label for="taxaFidelidade" class="form-label">Taxa Fidelidade</label>
+                                                        <input type="text" class="form-control" id="taxaFidelidade" required>
+                                                    </div>
+                                                    <div class="mb-3">
+                                                        <label for="prgPontosParticular" class="form-label">Prg Pontos - Particular</label>
+                                                        <input type="text" class="form-control" id="prgPontosParticular" required>
+                                                    </div>
+                                                    <div class="mb-3">
+                                                        <label for="prgPontosFranquia" class="form-label">Prg Pontos - Franquia</label>
+                                                        <input type="text" class="form-control" id="prgPontosFranquia" required>
+                                                    </div>
+                                                    <div class="mb-3">
+                                                        <label for="prgPontosMultcardPontos" class="form-label">Prg Pontos - Multcard Pontos</label>
+                                                        <input type="text" class="form-control" id="prgPontosMultcardPontos" required>
+                                                    </div>
+                                                    <div class="mb-3">
+                                                        <label for="prgPontosMultcardValor" class="form-label">Prg Pontos - Multcard Valor</label>
+                                                        <input type="text" class="form-control" id="prgPontosMultcardValor" required>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-delete" data-dismiss="modal">Fechar</button>
+                                                <button type="button" class="btn btn-custom" id="btnSalvar">Salvar</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-
                   </div>
                 </div>
                 </div>
@@ -751,7 +953,137 @@
      <script src="plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
      <script src="dist/js/app.js"></script>
 
-    <!--Btn pesquisar da aba Alias de Tabelas-->
+    <!--Modal das ABAS-->
+    <script>
+        // Evento de clique para o botão "Editar" na aba Conexão com Banco de Dados
+        $(document).on('click', '#btnEditarConexao', function() {
+            // Obter os dados da linha correspondente
+            var linha = $(this).closest('tr');
+            var dados = linha.children('td').map(function() {
+                return $(this).text();
+            }).get();
+
+            // Preencher os campos do modal com os dados
+            $('#fornecedor').val(dados[1]);
+            $('#identificacao').val(dados[2]);
+            $('#host').val(dados[3]);
+            $('#porta').val(dados[4]);
+            $('#nomeBanco').val(dados[5]);
+            $('#usuario').val(dados[6]);
+            $('#senha').val(dados[7]);
+            $('#token').val(dados[8]);
+            $('#sslMode').val(dados[9]);
+            $('#sslCertificado').val(dados[10]);
+            $('#sslKey').val(dados[11]);
+            $('#sslCA').val(dados[12]);
+            $('#timeoutConexao').val(dados[13]);
+            $('#timeoutConsulta').val(dados[14]);
+            $('#pooling').val(dados[15]);
+            $('#charset').val(dados[16]);
+            $('#timeZone').val(dados[17]);
+            $('#appName').val(dados[18]);
+            $('#keepAlive').val(dados[19]);
+            $('#compression').val(dados[20]);
+            $('#readOnly').val(dados[21]);
+
+            // Abrir o modal
+            $('#editarModal').modal('show');
+        });
+    
+        // Evento de clique para o botão "Editar" na aba Alias de Tabelas
+        $(document).on('click', '#btnEditarAlias', function() {
+            // Obter os dados da linha correspondente
+            var linha = $(this).closest('tr');
+            var dados = linha.children('td ').map(function() {
+                return $(this).text();
+            }).get();
+
+            // Preencher os campos do modal com os dados
+            $('#nomeTabela').val(dados[1]); // Nome da Tabela
+            $('#aliasTabela').val(dados[2]); // Alias da Tabela
+
+            // Abrir o modal
+            $('#editarModalAlias').modal('show');
+        });
+
+        // Evento de clique para o botão "Editar" na aba APIs
+        $(document).on('click', '#btnEditarAPIs', function() {
+            // Obter os dados da linha correspondente
+            var linha = $(this).closest('tr');
+            var dados = linha.children('td').map(function() {
+                return $(this).text();
+            }).get();
+
+            // Preencher os campos do modal com os dados
+            $('#fornecedorAPI').val(dados[1]); // Fornecedor
+            $('#endPoint').val(dados[2]); // EndPoint
+            $('#metodoHTTP').val(dados[3]); // Método HTTP
+            $('#tokenAutenticacao').val(dados[4]); // Token de Autenticação
+            $('#tipoDadosEnviados').val(dados[5]); // Tipo de Dados Enviados
+            $('#tipoDadosAceitos ').val(dados[6]); // Tipo de Dados Aceitos
+            $('#usuarioAPI').val(dados[7]); // Usuário
+            $('#senhaAPI').val(dados[8]); // Senha
+            $('#apiKey').val(dados[9]); // API Key
+
+            // Abrir o modal
+            $('#editarModalAPIs').modal('show');
+        });
+
+        // Evento de clique para o botão "Editar" na aba Padrão dos Planos
+        $(document).on('click', '#btnEditarPlanos', function() {
+            // Obter os dados da linha correspondente
+            var linha = $(this).closest('tr');
+            var dados = linha.children('td').map(function() {
+                return $(this).text();
+            }).get();
+
+            // Preencher os campos do modal com os dados
+            $('#planoVendido').val(dados[1]); // Plano Vendido
+            $('#contratoWhiteLabel').val(dados[2]); // Contrato White Label
+            $('#contratoPrivateLabel').val(dados[3]); // Contrato Private Label
+            $('#aceitaReembolso').val(dados[4]); // Aceita Reembolso
+            $('#checkOutBoletagem').val(dados[5]); // Check Out Boletagem
+            $('#tipoBoletagem').val(dados[6]); // Tipo Boletagem
+            $('#checkOutMultcard').val(dados[7]); // Check Out Multcard
+            $('#checkOutConvencional').val(dados[8]); // Check Out Convencional
+            $('#adquirente').val(dados[9]); // Adquirente
+            $('#liberarConsultaScore').val(dados[10]); // Liberar Consulta de SCORE
+            $('#intervaloMesesConsultas').val(dados[11]); // Intervalo de meses entre Consultas
+            $('#qtdeConsultasMensaisGratuitas').val(dados[12]); // Qtde de Consultas Mensais Gratuitas
+            $('#qtdeConsultasMensaisContratadas').val(dados[13]); // Qt de de Consultas Mensais Contratadas
+            $('#cartaoPosPagoContratado').val(dados[14]); // Cartão Pós Pago Contratado
+            $('#quantidadeParcelasLiberadas').val(dados[15]); // Quantidade de Parcelas Liberadas
+            $('#valorPIX').val(dados[16]); // Valor PIX
+            $('#valorBoleto').val(dados[17]); // Valor Boleto
+            $('#valorBolePIX').val(dados[18]); // Valor BolePIX
+            $('#cobrarMultaJurosAtraso').val(dados[19]); // Cobrar Multa e Juros por Atraso
+            $('#percentualMultaAtraso').val(dados[20]); // Percentual de Multa: Atraso
+            $('#percentualJurosAtraso').val(dados[21]); // Percentual de Juros: Atraso
+            $('#comissaoMultaJurosBoleto').val(dados[22]); // Comissão Multa/Juros Boleto
+            $('#diasAtrasoInativacaoCartao').val(dados[23]); // Dias de atraso para inativação do cartão
+            $('#isentarPIXBoleto').val(dados[24]); // Isentar PIX / Boleto para parcelas acima de
+            $('#parcelamentoComJuros').val(dados[25]); // Parcelamento com Juros
+            $('#jurosAPartirParcela').val(dados[26]); // Juros a partir da Parcela
+            $('#taxaJurosParcelado').val(dados[27]); // Taxa de Juros Parcelado
+            $('#comissaoParcelamento').val(dados[28]); // Comissão Parcelamento
+            $('#cartaoPrePagoContratado').val(dados[29]); // Cartão Pré Pago Contratado
+            $('#taxaPrePago').val(dados[30]); // Taxa Pré-Pago
+            $('#giftCardContratado').val(dados[31]); // Gift Card Contratado
+            $('#taxaGiftCard').val(dados[32]); // Taxa Gift Card
+            $('#cartaoFidelidadeContratado').val(dados[33]); // Cartão Fidelidade Contratado
+            $('#taxaFidelidade').val(dados[34]); // Taxa Fidelidade
+            $('#prgPontosParticular').val(dados[35]); // Prg Pontos - Particular
+            $('#prgPontosFranquia').val(dados[36]); // Prg Pontos - Franquia
+            $('#prgPontosMultcardPontos').val(dados[37]); // Prg Pontos - Multcard Pontos
+            $('#prgPontosMultcardValor').val(dados[38]); // Prg Pontos - Multcard Valor
+
+            // Abrir o modal
+            $('#editarModalPlanos').modal('show');
+        });
+
+    </script>
+
+    <!--Btn pesquisar das ABAS-->
     <script>
         $(document).ready(function() {
             // Inicializa o DataTable para cada tabela
@@ -760,12 +1092,12 @@
             var tableAPIs = $('#gridtemplateAPIs').DataTable();
             var tablePadroesPlanos = $('#gridtemplatePadroesPlanos').DataTable();
     
-            // Evento de clique para o botão "Pesquisar" da aba Conexão com BD
+        // Evento de clique para o botão "Pesquisar" da aba Conexão com BD
         $('#btnPesquisarConexaoBD').on('click', function() {
             // Adiciona dados fictícios à tabela Conexão com BD
             tableConexaoBD.clear().rows.add([
                 [
-                    `<button class="btn btn-icon-usuario btn-sm" id="btnEditar" title="Editar">
+                    `<button class="btn btn-icon-usuario btn-sm" id="btnEditarConexao" title="Editar">
                         <span class="bi bi-pencil-fill"></span>
                     </button>`,
                     'Fornecedor A',
@@ -791,7 +1123,7 @@
                     'false'
                 ],
                 [
-                    `<button class="btn btn-icon-usuario btn-sm" id="btnEditar" title="Editar">
+                    `<button class="btn btn-icon-usuario btn-sm" id="btnEditarConexao" title="Editar">
                         <span class="bi bi-pencil-fill"></span>
                     </button>`,
                     'Fornecedor B',
@@ -824,14 +1156,14 @@
                 // Adiciona dados fictícios à tabela Alias de Tabelas
                 tableAliasTabelas.clear().rows.add([
                     [
-                        `<button class="btn btn-icon-usuario btn-sm" id="btnEditar" title="Editar">
+                        `<button class="btn btn-icon-usuario btn-sm" id="btnEditarAlias" title="Editar">
                             <span class="bi bi-pencil-fill"></span>
                         </button>`,
                         'TabelaA',
                         'AliasA'
                     ],
                     [
-                        `<button class="btn btn-icon-usuario btn-sm" id="btnEditar" title="Editar">
+                        `<button class="btn btn-icon-usuario btn-sm" id="btnEditarAlias" title="Editar">
                             <span class="bi bi-pencil-fill"></span>
                         </button>`,
                         'TabelaB',
@@ -845,7 +1177,7 @@
             // Adiciona dados fictícios à tabela APIs
             tableAPIs.clear().rows.add([
                 [
-                    `<button class="btn btn-icon-usuario btn-sm" id="btnEditar" title="Editar">
+                    `<button class="btn btn-icon-usuario btn-sm" id="btnEditarAPIs" title="Editar">
                         <span class="bi bi-pencil-fill"></span>
                     </button>`,
                     'Fornecedor A',
@@ -859,7 +1191,7 @@
                     'api_key_a'
                 ],
                 [
-                    `<button class="btn btn-icon-usuario btn-sm" id="btnEditar" title="Editar">
+                    `<button class="btn btn-icon-usuario btn-sm" id="btnEditarAPIs" title="Editar">
                         <span class="bi bi-pencil-fill"></span>
                     </button>`,
                     'Fornecedor B',
@@ -880,7 +1212,7 @@
             // Adiciona dados fictícios à tabela Padrões dos Planos
             tablePadroesPlanos.clear().rows.add([
                 [
-                    `<button class="btn btn-icon-usuario btn-sm" id="btnEditar" title="Editar">
+                    `<button class="btn btn-icon-usuario btn-sm" id="btnEditarPlanos" title="Editar">
                         <span class="bi bi-pencil-fill"></span>
                     </button>`,
                     'Plano A',
@@ -924,7 +1256,7 @@
                     '1%'
                 ],
                 [
-                    `<button class="btn btn-icon-usuario btn-sm" id="btnEditar" title="Editar">
+                    `<button class="btn btn-icon-usuario btn-sm" id="btnEditarPlanos" title="Editar">
                         <span class="bi bi-pencil-fill"></span>
                     </button>`,
                     'Plano B',
@@ -969,76 +1301,6 @@
             ]).draw();
         });
         });
-    </script>
-
-    <!--Modal ABA Conexão com Banco de Dados-->
-    <script>
-        $(document).on('click', '#btnEditar', function() {
-            // Obter os dados da linha correspondente
-            var linha = $(this).closest('tr');
-            var dados = linha.children('td').map(function() {
-                return $(this).text();
-            }).get();
-
-            // Preencher os campos do modal com os dados
-            $('#fornecedor').val(dados[1]);
-            $('#identificacao').val(dados[2]);
-            $('#host').val(dados[3]);
-            $('#porta').val(dados[4]);
-            $('#nomeBanco').val(dados[5]);
-            $('#usuario').val(dados[6]);
-            $('#senha').val(dados[7]);
-            $('#token').val(dados[8]);
-            $('#sslMode').val(dados[9]);
-            $('#sslCertificado').val(dados[10]);
-            $('#sslKey').val(dados[11]);
-            $('#sslCA').val(dados[12]);
-            $('#timeoutConexao').val(dados[13]);
-            $('#timeoutConsulta').val(dados[14]);
-            $('#pooling').val(dados[15]);
-            $('#charset').val(dados[16]);
-            $('#timeZone').val(dados[17]);
-            $('#appName').val(dados[18]);
-            $('#keepAlive').val(dados[19]);
-            $('#compression').val(dados[20]);
-            $('#readOnly').val(dados[21]);
-
-            // Abrir o modal
-            $('#editarModal').modal('show');
-        });
-
-        $('#salvarEdicoes').on('click', function() {
-        // Capturar os dados do formulário
-        var dadosAtualizados = {
-            fornecedor: $('#fornecedor').val(),
-            identificacao: $('#identificacao').val(),
-            host: $('#host').val(),
-            porta: $('#porta').val(),
-            nomeBanco: $('#nomeBanco').val(),
-            usuario: $('#usuario').val(),
-            senha: $('#senha').val(),
-            token: $('#token').val(),
-            sslMode: $('#sslMode').val(),
-            sslCertificado: $('#sslCertificado').val(),
-            sslKey: $('#sslKey').val(),
-            sslCA: $('#sslCA').val(),
-            timeoutConexao: $('#timeoutConexao').val(),
-            timeoutConsulta: $('#timeoutConsulta').val(),
-            pooling: $('#pooling').val(),
-            charset: $('#charset').val(),
-            timeZone: $('#timeZone').val(),
-            appName: $('#appName').val(),
-            keepAlive: $('#keepAlive').val(),
-            compression: $('#compression').val(),
-            readOnly: $('#readOnly').val()
-        };
-
-        // Aqui você pode fazer a chamada para atualizar os dados no servidor ou na tabela
-        // Exemplo: atualizarTabela(dadosAtualizados);
-
-        // Fechar o modal
-        $('#editarModal').modal('hide');
-        });  
     </script>
 
      <!--Tira informações envolta da table-->
