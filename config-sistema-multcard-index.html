@@ -309,16 +309,16 @@
                             <div class="card-body">
                                 <!-- Filtro -->
                                 <div class="form-row" id="searchConnection">
-                                    <div class="form-group col-md-4">
+                                    <div class="form-group col-md-5">
                                         <label for="empresa">Empresa:</label>
-                                        <select class="form-control select2" id="idempresa" data-placeholder="Selecione" style="width: 100%;">
-                                            <option id="1" value="1">00001 - MULTBAN<option>
-                                        </select>
-                                    </div>
-                                    <div class="col-md-3 d-flex align-items-center">
-                                        <a class="btn btn-custom filtro-pesquisa" id="btnPesquisarConexaoBD">
-                                            <i class="fa fa-search"></i> Pesquisar
-                                        </a>
+                                        <div class="d-flex">
+                                            <select class="form-control select2" id="idempresa" data-placeholder="Selecione" style="width: 100%;">
+                                                <option id="1" value="1">00001 - MULTBAN</option>
+                                            </select>
+                                            <a class="btn btn-custom filtro-pesquisa ml-2 d-flex align-items-center" id="btnPesquisarConexaoBD">
+                                                <i class="fa fa-search mr-1"></i>Pesquisar
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
                                 <!--Tabela-->
@@ -469,22 +469,21 @@
                             <div class="card-body">
                                 <!-- Filtro -->
                                 <div class="form-row" id="searchConnection">
-                                    <div class="form-group col-md-4">
+                                    <div class="form-group col-md-5">
                                         <label for="empresa">Empresa:</label>
-                                        <select class="form-control select2" id="idempresa" data-placeholder="Selecione" style="width: 100%;">
-                                            <option></option>
-                                            <option id="1" value="1">00001 - MULTBAN<option>
-                                        </select>
-                                    </div>
-                                    <div class="col-md-3 d-flex align-items-center">
-                                        <a class="btn btn-custom filtro-pesquisa" id="btnPesquisarAliasTabelas">
-                                            <i class="fa fa-search"></i> Pesquisar
-                                        </a>
+                                        <div class="d-flex">
+                                            <select class="form-control select2" id="idempresa" data-placeholder="Selecione" style="width: 100%;">
+                                                <option id="1" value="1">00001 - MULTBAN</option>
+                                            </select>
+                                            <a class="btn btn-custom filtro-pesquisa ml-2 d-flex align-items-center" id="btnPesquisarAliasTabelas">
+                                                <i class="fa fa-search mr-1"></i>Pesquisar
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
+                                
                                 <!--Tabela-->
                                 <div class="tab" id="aliasTabelas">
-                                    
                                     <div class="table-responsive">
                                         <table id="gridtemplateAliasTabelas" class="table table-striped table-bordered nowrap">
                                             <thead>
@@ -1300,18 +1299,6 @@
                 ]
             ]).draw();
         });
-        });
-    </script>
-
-     <!--Tira informações envolta da table-->
-     <script>
-        $(document).ready(function() {
-            $('#gridtemplate').DataTable({
-                "searching": false,
-                "paging": false,
-                "info": false,
-                "lengthChange": false
-            });
         });
     </script>
     
